@@ -88,7 +88,9 @@ SOURCES += main.cpp\
     settng_bypass.cpp \
     data/data_tcn.cpp \
     data/trainbean.cpp \
-    simulation.cpp
+    simulation.cpp \
+    data/data_tcu.cpp \
+    data/data_riom.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -159,7 +161,9 @@ HEADERS  += widget.h \
     settng_bypass.h \
     data/data_tcn.h \
     data/trainbean.h \
-    simulation.h
+    simulation.h \
+    data/data_tcu.h \
+    data/data_riom.h
 
 FORMS    += widget.ui \
     header.ui \
