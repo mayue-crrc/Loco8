@@ -96,9 +96,10 @@ void Navigator::NBpressEvent()
         default:
         break;
     }
+
     QList<QString> t_style;
     t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
-    if(m_position == uMiddleMainPage)
+    if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
         this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
         for(int i = 0;i<buttons2.size();i++)
@@ -122,7 +123,7 @@ void Navigator::NBpressEvent()
 }
 void Navigator::N2BpressEvent()
 {
-    if(m_position == uMiddleMainPage)
+    if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
 
     }else

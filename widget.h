@@ -18,6 +18,7 @@ class Navigator;
 class VehicleRunStatePage;
 class CrrcMvb;
 class CrrcFault;
+class Simulation;
 
 class MainData_TrainOutline;
 class Settng_Bypass;
@@ -48,6 +49,7 @@ private:
     Header *header;
     CrrcMvb* crrcMvb;
     CrrcFault* crrcFault;
+    Simulation* simulation;
 
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
