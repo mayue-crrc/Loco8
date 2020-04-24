@@ -85,7 +85,10 @@ SOURCES += main.cpp\
     cxExtDev/externaldevicelib.cpp \
     data/data_ccu.cpp \
     maindata_trainoutline.cpp \
-    settng_bypass.cpp
+    settng_bypass.cpp \
+    data/data_tcn.cpp \
+    data/trainbean.cpp \
+    simulation.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -153,14 +156,18 @@ HEADERS  += widget.h \
     cxExtDev/externaldevicelib.h \
     data/data_ccu.h \
     maindata_trainoutline.h \
-    settng_bypass.h
+    settng_bypass.h \
+    data/data_tcn.h \
+    data/trainbean.h \
+    simulation.h
 
 FORMS    += widget.ui \
     header.ui \
     navigator.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
-    settng_bypass.ui
+    settng_bypass.ui \
+    simulation.ui
 
 RESOURCES += \
     Resource.qrc

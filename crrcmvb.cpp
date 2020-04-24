@@ -187,11 +187,11 @@ void CrrcMvb::synchronizeMvbData()
             //检测写取是否成功
             if(result != MUE_RESULT_OK)
             {
-                qDebug("dugon Write Error");
+                //qDebug("dugon Write Error");
                 return;
             }else
             {
-                qDebug("dugon Write OK");
+                //qDebug("dugon Write OK");
 
             }
         }
