@@ -8,77 +8,88 @@ public:
     Data_BCU();
     void updateData();
 
-    ;bool    B_BC2_Valid
-    ;bool    B_BRAKE_BACK
-    ;bool    B_DBI1_FEEDBACK
-    ;bool    B_DBI2_FEEDBACK
-    ;bool    B_FREIGHT_PASSENGER
-    ;bool    B_BP_Valid
-    ;bool    B_MR_Valid
-    ;bool    B_ER_Valid
-    ;bool    B_BC1_Valid
-    ;bool    B_E_BRAKE_Valid
-    ;bool    B_BCU_Penalty_ACT
-    ;bool    B_CAB_STATE
-    ;bool    B_CAB2_STATE
-    ;bool    B_BCU_STATE1
-    ;bool    B_BCU_STATE2
-    ;bool    B_BCU_EB_ACT
-    ;bool    B_LOCO_EBRAKE_ACT
-    ;bool    B_ATP_Penalty_ACT
-    ;bool    B_TRA_BLK_ACT
-    ;bool    B_Bail_ACT
-    ;bool    B_Bail_NULL
-    ;bool    B_ABH_RUN
-    ;bool    B_ABH_MIN
-    ;bool    B_ABH_SERV_Z
-    ;bool    B_ABH_FULL_SERV
-    ;bool    B_ABH_SUPPRESS
-    ;bool    B_ABH_MU
-    ;bool    B_ABH_EMG
-    ;bool    B_AIH_RUN
-    ;bool    B_AIH_SERV_Z
-    ;bool    B_AIH_FULL_SERV
-    ;bool    B_BCU_FAULT1
-    ;bool    B_BCU_FAULT2
-    ;bool    B_BCU_FAULT3
-    ;bool    B_BCU_FAULT4
-    ;bool    B_BCU_FAULT5
-    ;bool    B_BCU_FAULT6
-    ;bool    B_BCU_FAULT7
-    ;bool    B_BCU_FAULT8
-    ;bool    B_BCU_FAULT9
-    ;bool    B_BCU_FAULT10
-    ;bool    B_BCU_FAULT11
-    ;bool    B_BCU_FAULT12
-    ;bool    B_BCU_FAULT13
-    ;bool    B_BCU_FAULT14
-    ;bool    B_BCU_FAULT15
-    ;bool    B_BCU_FAULT16
-    ;bool    B_BCU_FAULT17
-    ;bool    B_BCU_FAULT18
-    ;bool    B_BCU_FAULT19
-    ;bool    B_BCU_FAULT20
-    ;bool    B_BCU_FAULT21
-    ;bool    B_BCU_FAULT22
-    ;bool    B_BCU_FAULT23
-    ;bool    B_BCU_FAULT24
-    ;bool    B_BCU_FAULT25
-    ;bool    B_BCU_FAULT26
-    ;bool    B_BCU_FAULT27
-    ;bool    B_BCU_FAULT28;
+    ;bool	BP_Valid
+    ;bool	MR_Valid
+    ;bool	ER_Valid
+    ;bool	BC1_Valid
+    ;bool	E_BRAKE_Valid
+    ;bool	BCU_Penalty_ACT
+    ;bool	CAB_STATE
+    ;bool	BCU_STATE1
+    ;bool	BCU_STATE2
+    ;bool	BCU_EB_ACT
+    ;bool	BC2_Valid
+    ;bool	ATP_Penalty_ACT
+    ;bool	TRA_BLK_ACT
+    ;bool	Bail_ACT
+    ;bool	Bail_NULL
+    ;bool	STATE_DBI1
+    ;bool	STATE_DBI2
+    ;bool	ABC_MOVED
+    ;bool	EMG_BRK_ISO
+    ;bool	PARK_BRK_ISO
+    ;bool	BRK_CYL_ISO
+    ;bool	ABH_RUN
+    ;bool	ABH_MIN
+    ;bool	ABH_SERV_Z
+    ;bool	ABH_FULL_SERV
+    ;bool	ABH_SUPPRESS
+    ;bool	ABH_MU
+    ;bool	ABH_EMG
+    ;bool	BCU_FAULT1
+    ;bool	BCU_FAULT2
+    ;bool	BCU_FAULT3
+    ;bool	BCU_FAULT4
+    ;bool	BCU_FAULT5
+    ;bool	BCU_FAULT6
+    ;bool	BCU_FAULT7
+    ;bool	BCU_FAULT8
+    ;bool	BCU_FAULT9
+    ;bool	BCU_FAULT10
+    ;bool	BCU_FAULT11
+    ;bool	BCU_FAULT12
+    ;bool	BCU_FAULT13
+    ;bool	BCU_FAULT14
+    ;bool	BCU_FAULT15
+    ;bool	BCU_FAULT16
+    ;bool	BCU_FAULT17
+    ;bool	BCU_FAULT18
+    ;bool	BCU_FAULT19
+    ;bool	BCU_FAULT20
+    ;bool	BCU_FAULT21
+    ;bool	BCU_FAULT22
+    ;bool	BCU_FAULT23
+    ;bool	BCU_FAULT24
+    ;bool	BCU_FAULT25
+    ;bool	BCU_FAULT26
+    ;bool	BCU_FAULT27
+    ;bool	BCU_FAULT28
+    ;bool	AIH_RUN
+    ;bool	AIH_SERV_Z
+    ;bool	AIH_FULL_SERV;
+    ;unsigned short int	BP_PRES
+    ;unsigned short int	MR_PRES
+    ;unsigned short int	ER_PRES
+    ;unsigned short int	BC1_PRES
+    ;unsigned short int	BC2_PRES
+    ;unsigned short int	EG_PRES
+    ;unsigned short int	FLOW
+    ;unsigned short int	EBRAKE
+    ;unsigned short int	Version;
+    unsigned char BCU_LIFE;
 
-    unsigned short int N_BP_PRES
-    ;unsigned short int N_MR_PRES
-    ;unsigned short int N_ER_PRES
-    ;unsigned short int N_BC1_PRES
-    ;unsigned short int N_EBRAKE
-    ;unsigned short int N_FLOW
-    ;unsigned short int N_BC2_PRES
-    ;unsigned short int N_Version
-    ;unsigned short int N_RCR;
-    unsigned char 	N_BCU_ID;
-    unsigned char 	N_BCU_LIFE;
+    ;bool	LocoSpeedValid
+
+    ;bool	PenaltyBrakeRQ
+    ;bool	EmerBrakeRQ
+    ;bool	TRAIL
+    ;bool	DBI1_RQ
+    ;bool	DBI2_RQ
+    ;bool	Cab_Act;
+
+    unsigned char	LocoSpeed;
+    unsigned char	MPU_LIFE;
+    unsigned int DateTime;
 
 };
 
