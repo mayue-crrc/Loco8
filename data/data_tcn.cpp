@@ -820,7 +820,7 @@ void Data_TCN::updateData()
             }
         }
     }
-
+    //本项目无法从TCN端口读取本车TCN数据，在此把本车数据赋给train数组对象。方便调用
     if(CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,18) < 5 && CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,18)>0)
     {
         train[CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,18)-1] = TrainLocal;
