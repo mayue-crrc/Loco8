@@ -65,7 +65,7 @@ void Navigator::NBpressEvent()
         break;
         case uMiddleTrainData:
         buttonIndexList<<uMainData_TrainOutline<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;
-        buttonNameList<<"机车概况"<<""<<""<<""<<""<<""<<""<<"";
+        buttonNameList<<QString("机车概况")<<""<<""<<""<<""<<""<<""<<"";
         break;
         case uMiddleControl:
         buttonIndexList<<uSettng_Bypass<<uSettng_Panto<<uSettng_Test<<uSettng_Distance<<uNULL<<uNULL<<uNULL<<uNULL;

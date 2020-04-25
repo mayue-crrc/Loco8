@@ -88,7 +88,11 @@ SOURCES += main.cpp\
     settng_bypass.cpp \
     data/data_tcn.cpp \
     data/trainbean.cpp \
-    simulation.cpp
+    simulation.cpp \
+    datainputwheelpage.cpp \
+    datainputdatetimepage.cpp \
+    datainputother.cpp \
+    datainputidpage.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -159,7 +163,11 @@ HEADERS  += widget.h \
     settng_bypass.h \
     data/data_tcn.h \
     data/trainbean.h \
-    simulation.h
+    simulation.h \
+    datainputwheelpage.h \
+    datainputdatetimepage.h \
+    datainputother.h \
+    datainputidpage.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -167,7 +175,11 @@ FORMS    += widget.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
-    simulation.ui
+    simulation.ui \
+    datainputwheelpage.ui \
+    datainputdatetimepage.ui \
+    datainputother.ui \
+    datainputidpage.ui
 
 RESOURCES += \
     Resource.qrc
