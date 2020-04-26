@@ -9,6 +9,7 @@
 #include "crrcmvb.h"
 #include "crrcfault.h"
 #include "simulation.h"
+#include "devicedata_online.h"
 #ifdef QT_VERSION_5_6
 #include "qdesktopwidget.h"
 #endif
@@ -75,10 +76,16 @@ Widget::Widget(QWidget *parent) :
     this->settng_Bypass->setMyBase(uMiddleControl,QString("隔离"));
     this->settng_Bypass->hide();
 
+    //add device_data pages
+    this->deviceData_Online = new DeviceData_Online(this);
+    this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
+    this->deviceData_Online->hide();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
+
+    this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
