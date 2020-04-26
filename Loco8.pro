@@ -89,7 +89,11 @@ SOURCES += main.cpp\
     data/data_tcn.cpp \
     data/trainbean.cpp \
     simulation.cpp \
-    devicedata_online.cpp
+    devicedata_online.cpp\
+    data/data_tcu.cpp \
+    data/data_riom.cpp \
+    data/data_acu.cpp \
+    data/data_bcu.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -161,7 +165,11 @@ HEADERS  += widget.h \
     data/data_tcn.h \
     data/trainbean.h \
     simulation.h \
-    devicedata_online.h
+    devicedata_online.h\
+    data/data_tcu.h \
+    data/data_riom.h \
+    data/data_acu.h \
+    data/data_bcu.h
 
 FORMS    += widget.ui \
     header.ui \
