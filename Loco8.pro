@@ -92,7 +92,12 @@ SOURCES += main.cpp\
     datainputwheelpage.cpp \
     datainputdatetimepage.cpp \
     datainputother.cpp \
-    datainputidpage.cpp
+    datainputidpage.cpp\
+    devicedata_online.cpp\
+    data/data_tcu.cpp \
+    data/data_riom.cpp \
+    data/data_acu.cpp \
+    data/data_bcu.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -167,7 +172,12 @@ HEADERS  += widget.h \
     datainputwheelpage.h \
     datainputdatetimepage.h \
     datainputother.h \
-    datainputidpage.h
+    datainputidpage.h\
+    devicedata_online.h\
+    data/data_tcu.h \
+    data/data_riom.h \
+    data/data_acu.h \
+    data/data_bcu.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -179,7 +189,8 @@ FORMS    += widget.ui \
     datainputwheelpage.ui \
     datainputdatetimepage.ui \
     datainputother.ui \
-    datainputidpage.ui
+    datainputidpage.ui\
+    devicedata_online.ui
 
 RESOURCES += \
     Resource.qrc
