@@ -172,6 +172,210 @@ public:
     ;unsigned char	DADMAN_TIMESPACE
     ;unsigned char	DADMAN_ALARMTIME;
 
+
+    //DDU-MPU
+    ;bool	TC4_BOGIE1_ISO_RQ
+    ;bool	TC4_4Q1_ISO_RQ
+    ;bool	TC4_4Q2_ISO_RQ
+    ;bool	TC4_AXLE1_ISO_RQ
+    ;bool	TC4_AXLE2_ISO_RQ
+    ;bool	TC4_AUX1_ISO_RQ
+    ;bool	TC4_BOGIE2_ISO_RQ
+    ;bool	TC4_4Q3_ISO_RQ
+    ;bool	TC4_4Q4_ISO_RQ
+    ;bool	TC4_AXLE3_ISO_RQ
+    ;bool	TC4_AXLE4_ISO_RQ
+    ;bool	TC4_AUX2_ISO_RQ
+    ;bool	TC4_DAMAN_ISO_RQ
+    ;bool	TC4_EBRK_ISO_RQ
+    ;bool	TC4_CPR_ISO_RQ
+    ;bool	TC4_FLL_ISO_RQ
+    ;bool	TC4_BOGIE1_ISO_REL_RQ
+    ;bool	TC4_4Q1_ISO_REL_RQ
+    ;bool	TC4_4Q2_ISO_REL_RQ
+    ;bool	TC4_AXLE1_ISO_REL_RQ
+    ;bool	TC4_AXLE2_ISO_REL_RQ
+    ;bool	TC4_AUX1_ISO_REL_RQ
+    ;bool	TC4_BOGIE2_ISO_REL_RQ
+    ;bool	TC4_4Q3_ISO_REL_RQ
+    ;bool	TC4_4Q4_ISO_REL_RQ
+    ;bool	TC4_AXLE3_ISO_REL_RQ
+    ;bool	TC4_AXLE4_ISO_REL_RQ
+    ;bool	TC4_AUX2_ISO_REL_RQ
+    ;bool	TC4_DAMAN_ISO_REL_RQ
+    ;bool	TC4_EBRK_ISO_REL_RQ
+    ;bool	TC4_CPR_ISO_REL_RQ
+    ;bool	TC4_FLL_ISO_REL_RQ
+    ;bool	TC1_BOGIE1_ISO_RQ
+    ;bool	TC1_4Q1_ISO_RQ
+    ;bool	TC1_4Q2_ISO_RQ
+    ;bool	TC1_AXLE1_ISO_RQ
+    ;bool	TC1_AXLE2_ISO_RQ
+    ;bool	TC1_AUX1_ISO_RQ
+    ;bool	TC1_BOGIE2_ISO_RQ
+    ;bool	TC1_4Q3_ISO_RQ
+    ;bool	TC1_4Q4_ISO_RQ
+    ;bool	TC1_AXLE3_ISO_RQ
+    ;bool	TC1_AXLE4_ISO_RQ
+    ;bool	TC1_AUX2_ISO_RQ
+    ;bool	TC1_DAMAN_ISO_RQ
+    ;bool	TC1_EBRK_ISO_RQ
+    ;bool	TC1_CPR_ISO_RQ
+    ;bool	TC1_FLL_ISO_RQ
+    ;bool	TC1_BOGIE1_ISO_REL_RQ
+    ;bool	TC1_4Q1_ISO_REL_RQ
+    ;bool	TC1_4Q2_ISO_REL_RQ
+    ;bool	TC1_AXLE1_ISO_REL_RQ
+    ;bool	TC1_AXLE2_ISO_REL_RQ
+    ;bool	TC1_AUX1_ISO_REL_RQ
+    ;bool	TC1_BOGIE2_ISO_REL_RQ
+    ;bool	TC1_4Q3_ISO_REL_RQ
+    ;bool	TC1_4Q4_ISO_REL_RQ
+    ;bool	TC1_AXLE3_ISO_REL_RQ
+    ;bool	TC1_AXLE4_ISO_REL_RQ
+    ;bool	TC1_AUX2_ISO_REL_RQ
+    ;bool	TC1_DAMAN_ISO_REL_RQ
+    ;bool	TC1_EBRK_ISO_REL_RQ
+    ;bool	TC1_CPR_ISO_REL_RQ
+    ;bool	TC1_FLL_ISO_REL_RQ
+    ;bool	TC2_BOGIE1_ISO_RQ
+    ;bool	TC2_4Q1_ISO_RQ
+    ;bool	TC2_4Q2_ISO_RQ
+    ;bool	TC2_AXLE1_ISO_RQ
+    ;bool	TC2_AXLE2_ISO_RQ
+    ;bool	TC2_AUX1_ISO_RQ
+    ;bool	TC2_BOGIE2_ISO_RQ
+    ;bool	TC2_4Q3_ISO_RQ
+    ;bool	TC2_4Q4_ISO_RQ
+    ;bool	TC2_AXLE3_ISO_RQ
+    ;bool	TC2_AXLE4_ISO_RQ
+    ;bool	TC2_AUX2_ISO_RQ
+    ;bool	TC2_DAMAN_ISO_RQ
+    ;bool	TC2_EBRK_ISO_RQ
+    ;bool	TC2_CPR_ISO_RQ
+    ;bool	TC2_FLL_ISO_RQ
+    ;bool	TC2_BOGIE1_ISO_REL_RQ
+    ;bool	TC2_4Q1_ISO_REL_RQ
+    ;bool	TC2_4Q2_ISO_REL_RQ
+    ;bool	TC2_AXLE1_ISO_REL_RQ
+    ;bool	TC2_AXLE2_ISO_REL_RQ
+    ;bool	TC2_AUX1_ISO_REL_RQ
+    ;bool	TC2_BOGIE2_ISO_REL_RQ
+    ;bool	TC2_4Q3_ISO_REL_RQ
+    ;bool	TC2_4Q4_ISO_REL_RQ
+    ;bool	TC2_AXLE3_ISO_REL_RQ
+    ;bool	TC2_AXLE4_ISO_REL_RQ
+    ;bool	TC2_AUX2_ISO_REL_RQ
+    ;bool	TC2_DAMAN_ISO_REL_RQ
+    ;bool	TC2_EBRK_ISO_REL_RQ
+    ;bool	TC2_CPR_ISO_REL_RQ
+    ;bool	TC2_FLL_ISO_REL_RQ
+    ;bool	TC3_BOGIE1_ISO_RQ
+    ;bool	TC3_4Q1_ISO_RQ
+    ;bool	TC3_4Q2_ISO_RQ
+    ;bool	TC3_AXLE1_ISO_RQ
+    ;bool	TC3_AXLE2_ISO_RQ
+    ;bool	TC3_AUX1_ISO_RQ
+    ;bool	TC3_BOGIE2_ISO_RQ
+    ;bool	TC3_4Q3_ISO_RQ
+    ;bool	TC3_4Q4_ISO_RQ
+    ;bool	TC3_AXLE3_ISO_RQ
+    ;bool	TC3_AXLE4_ISO_RQ
+    ;bool	TC3_AUX2_ISO_RQ
+    ;bool	TC3_DAMAN_ISO_RQ
+    ;bool	TC3_EBRK_ISO_RQ
+    ;bool	TC3_CPR_ISO_RQ
+    ;bool	TC3_FLL_ISO_RQ
+    ;bool	TC3_BOGIE1_ISO_REL_RQ
+    ;bool	TC3_4Q1_ISO_REL_RQ
+    ;bool	TC3_4Q2_ISO_REL_RQ
+    ;bool	TC3_AXLE1_ISO_REL_RQ
+    ;bool	TC3_AXLE2_ISO_REL_RQ
+    ;bool	TC3_AUX1_ISO_REL_RQ
+    ;bool	TC3_BOGIE2_ISO_REL_RQ
+    ;bool	TC3_4Q3_ISO_REL_RQ
+    ;bool	TC3_4Q4_ISO_REL_RQ
+    ;bool	TC3_AXLE3_ISO_REL_RQ
+    ;bool	TC3_AXLE4_ISO_REL_RQ
+    ;bool	TC3_AUX2_ISO_REL_RQ
+    ;bool	TC3_DAMAN_ISO_REL_RQ
+    ;bool	TC3_EBRK_ISO_REL_RQ
+    ;bool	TC3_CPR_ISO_REL_RQ
+    ;bool	TC3_FLL_ISO_REL_RQ
+    ;bool	TC1_PANTO_ISO_RQ
+    ;bool	TC1_PANTO_ISO_REL_RQ
+    ;bool	SIM_ON
+    ;bool	TC4_FAULT_RESET
+    ;bool	MILEAGE_RESET
+    ;bool	TC2_PANTO_ISO_RQ
+    ;bool	TC2_PANTO_ISO_REL_RQ
+    ;bool	TC1_FAULT_RESET
+    ;bool	TC2_FAULT_RESET
+    ;bool	TC3_FAULT_RESET
+    ;bool	TC3_PANTO_ISO_RQ
+    ;bool	TC3_PANTO_ISO_REL_RQ
+    ;bool	LAMP_TEST
+    ;bool	DAMAN_TEST
+    ;bool	FLL_TEST_START
+    ;bool	FLL_TEST_CANCEL
+    ;bool	CPR_TEST
+    ;bool	ANSC_TEST
+    ;bool	TC4_PANTO_ISO_RQ
+    ;bool	TC4_PANTO_ISO_REL_RQ
+    ;bool	DEPOT_380_ACT
+    ;bool	DEPOT_380_DEACT
+    ;bool	SEQUENCE_TEST
+    ;bool	SAND_CUTDDU
+    ;bool	ELEC_AIR_CUTDDU
+    ;bool	LOAD_SET
+    ;bool	FIR_ALARM_CONFIRM
+    ;bool	P300CHECK0
+    ;bool	P300CHECK1
+    ;bool	WHEEL_DIA_SET
+    ;bool	FLL_SET
+    ;bool	TIME_SET
+    ;bool	ID_SET
+    ;bool	DADMAN_SET
+    ;bool	NSC_DISTANCE1DDU
+    ;bool	NSC_DISTANCE2DDU
+    ;bool	NSC_SET
+    ;bool	NORMAL_MODEDDU
+    ;bool	SUMMER_MODEDDU
+    ;bool	T_CHAR
+    ;bool	DOUBLE_PG_ON
+    ;bool	DOUBLE_PG_OFF
+    ;bool	VT_BM1_ST
+    ;bool	VT_BM2_ST
+    ;bool	VT_MT1_ST
+    ;bool	VT_MT2_ST
+    ;bool	VT_SM1_ST
+    ;bool	VT_SM2_ST
+    ;bool	P301CHECK0
+    ;bool	P301CHECK1
+    ;bool	P302CHECK0
+    ;bool	P302CHECK1;
+
+    ;unsigned short int	SPEED_SET
+    ;unsigned short int	SIM_LINE_VOLT
+    ;unsigned short int	SIM_SPEED
+    ;unsigned short int	LOADDDU
+    ;unsigned short int	LOCO_ID
+    ;unsigned short int	PARTNER_IDDDU
+    ;unsigned short int	YEARDDU
+    ;unsigned short int	WHEEL_DIADDU
+    ;unsigned short int	FLL_DIS;
+
+    ;unsigned char	DDU_LIFE
+    ;unsigned char	MONTHDDU
+    ;unsigned char	DAYDDU
+    ;unsigned char	HOURDDU
+    ;unsigned char	MINUTEDDU
+    ;unsigned char	SECONDDDU
+    ;unsigned char	FLL_TIMEDDU
+    ;unsigned char	DADMAN_TIMESPACEDDU
+    ;unsigned char	DADMAN_TIMEALARM
+    ;unsigned char	DDU_VX
+    ;unsigned char	DDU_VY;
 };
 
 #endif // DATA_CCU_H
