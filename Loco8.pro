@@ -89,6 +89,7 @@ SOURCES += main.cpp\
     data/data_tcn.cpp \
     data/trainbean.cpp \
     simulation.cpp \
+    devicedata_online.cpp\
     data/data_tcu.cpp \
     data/data_riom.cpp \
     data/data_acu.cpp \
@@ -164,6 +165,7 @@ HEADERS  += widget.h \
     data/data_tcn.h \
     data/trainbean.h \
     simulation.h \
+    devicedata_online.h\
     data/data_tcu.h \
     data/data_riom.h \
     data/data_acu.h \
@@ -175,7 +177,8 @@ FORMS    += widget.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
-    simulation.ui
+    simulation.ui \
+    devicedata_online.ui
 
 RESOURCES += \
     Resource.qrc
