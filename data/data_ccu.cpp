@@ -155,9 +155,9 @@ void Data_CCU::updateData()
     TOTAL_DISTANCE = CrrcMvb::getCrrcMvb()->getUnsignedInt32(0x712,26);//总公里数
     CPR_RUN_TIME = CrrcMvb::getCrrcMvb()->getUnsignedInt32(0x713,2);//压缩机运行时间
 
+    UIC_ADDR = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,18) == 0?1:CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,18);;//UIC地址
+    OTHERUIC_ADDR = UIC_ADDR == 1?2:1;//内重联他车UIC ID
 
-
-    UIC_ADDR = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,18);//UIC地址
     AUX1_FREQ = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,26);//辅变流1频率
     AUX2_FREQ = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,27);//辅变流2频率
     MPU_LIFE = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x710,30);//MPU生命信号（0～255递增）
