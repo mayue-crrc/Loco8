@@ -97,7 +97,11 @@ SOURCES += main.cpp\
     data/data_tcu.cpp \
     data/data_riom.cpp \
     data/data_acu.cpp \
-    data/data_bcu.cpp
+    data/data_bcu.cpp \
+    widgets/ctrlcontrolvoltage.cpp \
+    widgets/ctrlnetcurrent.cpp \
+    widgets/ctrlnetvoltage.cpp \
+    widgets/ctrltracbrake.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -177,7 +181,11 @@ HEADERS  += widget.h \
     data/data_tcu.h \
     data/data_riom.h \
     data/data_acu.h \
-    data/data_bcu.h
+    data/data_bcu.h \
+    widgets/ctrlcontrolvoltage.h \
+    widgets/ctrlnetcurrent.h \
+    widgets/ctrlnetvoltage.h \
+    widgets/ctrltracbrake.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -190,7 +198,11 @@ FORMS    += widget.ui \
     datainputdatetimepage.ui \
     datainputother.ui \
     datainputidpage.ui\
-    devicedata_online.ui
+    devicedata_online.ui \
+    widgets/ctrlcontrolvoltage.ui \
+    widgets/ctrlnetcurrent.ui \
+    widgets/ctrlnetvoltage.ui \
+    widgets/ctrltracbrake.ui
 
 RESOURCES += \
     Resource.qrc

@@ -10,6 +10,18 @@ VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
     ui(new Ui::VehicleRunStatePage)
 {
     ui->setupUi(this);
+
+    ctrlNetVoltage = new CtrlNetVoltage(this);
+    ctrlNetVoltage->setGeometry(140,0,this->ctrlNetVoltage->width(),this->ctrlNetVoltage->height());
+
+    ctrlNetCurrent = new CtrlNetCurrent(this);
+    ctrlNetCurrent->setGeometry(240,0,this->ctrlNetCurrent->width(),this->ctrlNetCurrent->height());
+
+    ctrlControlVoltage = new CtrlControlVoltage(this);
+    ctrlControlVoltage->setGeometry(340,0,this->ctrlControlVoltage->width(),this->ctrlControlVoltage->height());
+
+    ctrlTracBrake = new CtrlTracBrake(this);
+    ctrlTracBrake->setGeometry(510,0,this->ctrlTracBrake->width(),this->ctrlTracBrake->height());
 }
 
 VehicleRunStatePage::~VehicleRunStatePage()
@@ -19,7 +31,12 @@ VehicleRunStatePage::~VehicleRunStatePage()
 
 void VehicleRunStatePage::updatePage()
 {
-
+    static int i   = 0;
+    i +=10;
+    ctrlNetVoltage->setCtrlValueRect(i/10);
+    ctrlNetCurrent->setCtrlValueRect(i);
+    ctrlControlVoltage->setCtrlValueRect(i,i);
+    ctrlTracBrake->setCtrlValueRect(i/10,i/10%2,i/10%3);
     //eg
     QList<bool> t_status;
     QList<QString> t_style;
@@ -56,6 +73,25 @@ void VehicleRunStatePage::updatePage()
     t_status<<database->data_TCN->TrainLocal->STATE_PARK_BRK_I<<database->data_TCN->TrainLocal->STATE_PARK_BRK_ON<<true;
     setLBLpic(ui->LBLC15,t_status,t_style);
 
+    //撒沙
+    t_style<<SASHA<<NULLIMAGE;
+    t_status<<database->data_CCU->SANDING<<true;
+    setLBLpic(ui->LBLC16,t_status,t_style);
+
+    //空转
+    t_style<<KONGZHUAN<<HUAXING<<NULLIMAGE;
+    t_status<<database->data_CCU->RACING<<database->data_CCU->SLIP<<true;
+    setLBLpic(ui->LBLC21,t_status,t_style);
+
+    //定速
+    t_style<<DINGSUMOSHI<<NULLIMAGE;
+    t_status<<database->data_CCU->SPEED_CTL<<true;
+    setLBLpic(ui->LBLC22,t_status,t_style);
+
+    //惩罚制动
+    t_style<<CHENGFAZHIDONG<<JINJIZHIDONG<<NULLIMAGE;
+    t_status<<database->data_CCU->PENALTY_BRK<<database->data_TCN->TrainLocal->STATE_EMG_BRK_ON<<true;
+    setLBLpic(ui->LBLC23,t_status,t_style);
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)
 {

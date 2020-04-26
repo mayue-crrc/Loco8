@@ -8,15 +8,16 @@
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
 
-#define YELLOW     "color:rgb(240,240,0);"
-#define GREEN     "color:rgb(0,240,0);"
-#define DARKBLUE     "color:rgb(0,0,240);"
-#define CYAN     "color:rgb(0,240,240);"
-#define GRAY1     "color:rgb(128,128,128);"
-#define RED     "color:rgb(240,0,0);"
-#define WHITE     "color:rgb(248,248,248);"
-#define GRAY2     "color:rgb(192,192,192);"
-#define BLACK     "color:rgb(0,0,0);"
+#define YELLOW     "background-color:rgb(240,240,0);border:1px solid white;"
+#define GREEN     "background-color:rgb(0,240,0);border:1px solid white;"
+#define DARKBLUE     "background-color:rgb(0,0,240);border:1px solid white;"
+#define CYAN     "background-color:rgb(0,240,240);border:1px solid white;"
+#define GRAY1     "background-color:rgb(128,128,128);border:1px solid white;"
+#define RED     "background-color:rgb(240,0,0);border:1px solid white;"
+#define WHITE     "background-color:rgb(248,248,248);border:1px solid white;"
+#define GRAY2     "background-color:rgb(192,192,192);border:1px solid white;"
+#define BLACK     "background-color:rgb(0,0,0);border:1px solid lightgray;"
+
 
 #define	PINGBAO   "image: url(:/images/images/pingbao.png);"
 #define	LIANGDUZIDONG   "image: url(:/images/images/auto.png);"
@@ -70,7 +71,7 @@
 #define	TINGFANGZHIDONGELI	"image: url(:/images/images/tingfanggeli.png);"
 #define	SASHA	"image: url(:/images/images/sasha.png);"
 #define	JINJIZHIDONG	"image: url(:/images/images/jinjizhidong.png);"
-#define	CHEFAZHIDONG	"image: url(:/images/images/chengfazhidong.png);"
+#define	CHENGFAZHIDONG	"image: url(:/images/images/chengfazhidong.png);"
 #define	DINGSUMOSHI	"image: url(:/images/images/dingsumoshi.png);"
 #define	JINGTIZHUANGZHIZHENGCHANG	"image: url(:/images/images/jingtizhengchang.png);"
 #define	JINGTIZHUANGZHIGELI	"image: url(:/images/images/jingtigeli.png);"
