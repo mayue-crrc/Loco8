@@ -67,12 +67,14 @@
 #define	HUAXING	"image: url(:/images/images/huaxing.png);"
 #define	TINGFANGZHIDONGSHIJIA	"image: url(:/images/images/tingfangshijia.png);"
 #define	TINGFANGZHIDONGHUANJIE	"image: url(:/images/images/tingfanghuanjie.png);"
+#define	TINGFANGZHIDONGELI	"image: url(:/images/images/tingfanggeli.png);"
 #define	SASHA	"image: url(:/images/images/sasha.png);"
 #define	JINJIZHIDONG	"image: url(:/images/images/jinjizhidong.png);"
 #define	CHEFAZHIDONG	"image: url(:/images/images/chengfazhidong.png);"
 #define	DINGSUMOSHI	"image: url(:/images/images/dingsumoshi.png);"
 #define	JINGTIZHUANGZHIZHENGCHANG	"image: url(:/images/images/jingtizhengchang.png);"
 #define	JINGTIZHUANGZHIGELI	"image: url(:/images/images/jingtigeli.png);"
+#define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
 
 
 #include <stdlib.h>

@@ -58,7 +58,7 @@ Widget::Widget(QWidget *parent) :
     connect(navigator,SIGNAL(translateLanguage()),this,SLOT(translateLanguage()));
 
     this->vehicleRunStatePage = new VehicleRunStatePage(this);
-    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("牵引模式"));
+    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("主界面"));
     this->vehicleRunStatePage->show();
 
     this->header = new Header(this);
