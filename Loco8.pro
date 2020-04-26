@@ -89,6 +89,10 @@ SOURCES += main.cpp\
     data/data_tcn.cpp \
     data/trainbean.cpp \
     simulation.cpp \
+    datainputwheelpage.cpp \
+    datainputdatetimepage.cpp \
+    datainputother.cpp \
+    datainputidpage.cpp\
     devicedata_online.cpp\
     data/data_tcu.cpp \
     data/data_riom.cpp \
@@ -165,6 +169,10 @@ HEADERS  += widget.h \
     data/data_tcn.h \
     data/trainbean.h \
     simulation.h \
+    datainputwheelpage.h \
+    datainputdatetimepage.h \
+    datainputother.h \
+    datainputidpage.h\
     devicedata_online.h\
     data/data_tcu.h \
     data/data_riom.h \
@@ -178,6 +186,10 @@ FORMS    += widget.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
     simulation.ui \
+    datainputwheelpage.ui \
+    datainputdatetimepage.ui \
+    datainputother.ui \
+    datainputidpage.ui\
     devicedata_online.ui
 
 RESOURCES += \
