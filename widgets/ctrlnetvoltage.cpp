@@ -22,8 +22,8 @@ CtrlNetVoltage::~CtrlNetVoltage()
 }
 void CtrlNetVoltage::setCtrlValueRect(int value)
 {
-    if(value > 32)
-        value = 32;
-    ui->LBLValueRect->setGeometry(36,31,ui->LBLValueRect->width(),320-(float)value*10);
-    ui->LBLValue->setText(QString::number(value));
+    if(value > 32000)
+        value = 32000;
+    ui->LBLValueRect->setGeometry(36,31,ui->LBLValueRect->width(),320-(float)value/1000*10);
+    ui->LBLValue->setText(QString::number((float)value/1000,10,1));
 }

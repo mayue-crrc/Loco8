@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>90</width>
-    <height>380</height>
+    <height>430</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -176,7 +176,7 @@ border:1px solid transparent;
    <property name="geometry">
     <rect>
      <x>15</x>
-     <y>360</y>
+     <y>400</y>
      <width>31</width>
      <height>17</height>
     </rect>
@@ -254,8 +254,8 @@ font:14px;</string>
     <rect>
      <x>35</x>
      <y>30</y>
-     <width>51</width>
-     <height>320</height>
+     <width>41</width>
+     <height>322</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -312,7 +312,7 @@ border:1px solid white;</string>
     <rect>
      <x>40</x>
      <y>10</y>
-     <width>40</width>
+     <width>31</width>
      <height>17</height>
     </rect>
    </property>
@@ -388,7 +388,7 @@ border:1px solid white;</string>
     <rect>
      <x>36</x>
      <y>31</y>
-     <width>49</width>
+     <width>39</width>
      <height>200</height>
     </rect>
    </property>
@@ -559,7 +559,7 @@ font:10px;</string>
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>360</y>
+     <y>400</y>
      <width>31</width>
      <height>17</height>
     </rect>
@@ -579,7 +579,7 @@ font:14px;</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>360</y>
+     <y>400</y>
      <width>16</width>
      <height>17</height>
     </rect>
@@ -591,6 +591,27 @@ background-color:transparent;</string>
    </property>
    <property name="text">
     <string>/</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLStatus">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>355</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(240,0,0);
+border-image: url(:/images/images/qianyin.png);
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -626,6 +647,7 @@ background-color:transparent;</string>
   <zorder>label_16</zorder>
   <zorder>label_17</zorder>
   <zorder>LBLValueRect</zorder>
+  <zorder>LBLStatus</zorder>
  </widget>
  <resources/>
  <connections/>

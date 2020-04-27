@@ -1,6 +1,6 @@
 #include "ctrltracbrake.h"
 #include "ui_ctrltracbrake.h"
-
+#include "global.h"
 CtrlTracBrake::CtrlTracBrake(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CtrlTracBrake)
@@ -18,12 +18,15 @@ void CtrlTracBrake::setCtrlValueRect(int value, bool trac, bool brake)
     if(trac)
     {
         t_style = DARKBLUE;
+        ui->LBLStatus->setStyleSheet(QIANYIN);
     }else if(brake)
     {
         t_style = RED;
+        ui->LBLStatus->setStyleSheet(ZHIDONG);
     }
     else
     {
+        ui->LBLStatus->setStyleSheet("");
         return;
     }
     ui->LBLBackground->setStyleSheet(t_style);

@@ -26,6 +26,10 @@ public:
 private slots:
 
 
+    void on_BTNSpeedplus_clicked();
+
+    void on_BTNSpeedminus_clicked();
+
 private:
     Ui::VehicleRunStatePage *ui;
     CtrlNetVoltage* ctrlNetVoltage;
