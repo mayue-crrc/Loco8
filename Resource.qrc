@@ -64,5 +64,13 @@
         <file>images/weihuzhupinganxia.png</file>
         <file>images/yunxinganxia.png</file>
         <file>images/yunxingzhupinanxia.png</file>
+        <file>images/Cheti.png</file>
+        <file>images/qudongiso.png</file>
+        <file>images/qudongok.png</file>
+        <file>images/shengqi.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>images/qudongiso.png</file>
+        <file>images/qudongok.png</file>
     </qresource>
 </RCC>

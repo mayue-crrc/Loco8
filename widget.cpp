@@ -15,6 +15,7 @@
 
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
+#include "devicedata_trainoutline.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -75,10 +76,15 @@ Widget::Widget(QWidget *parent) :
     this->settng_Bypass->setMyBase(uMiddleControl,QString("隔离"));
     this->settng_Bypass->hide();
 
+    //add driver pages
+    this->mainData_DriverOutline = new DeviceData_TrainOutline(this);
+    this->mainData_DriverOutline->setMyBase(uMiddleControl,QString("驱动概述"));
+    this->mainData_DriverOutline->hide();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
+    this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

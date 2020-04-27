@@ -22,6 +22,7 @@ class Simulation;
 
 class MainData_TrainOutline;
 class Settng_Bypass;
+class DeviceData_TrainOutline;
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -53,6 +54,7 @@ private:
 
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
+    DeviceData_TrainOutline* mainData_DriverOutline;
 };
 
 #endif // WIDGET_H

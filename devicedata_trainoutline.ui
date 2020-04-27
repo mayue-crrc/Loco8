@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceData_TrainOutline</class>
+ <widget class="QWidget" name="DeviceData_TrainOutline">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: rgb(192,192,192);
+}
+
+QPushButton
+{
+	font:16px;
+    color: rgb(192,192,192);
+	background-color: rgb(0, 0, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+
+
+}</string>
+  </property>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>544</x>
+     <y>13</y>
+     <width>187</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>设定速度[Km/h]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL12_2">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>339</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>34</y>
+     <width>219</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>主变压器温度2[℃]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_67">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>318</y>
+     <width>238</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>电机电流[A]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL2_3">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>34</y>
+     <width>51</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL11_4">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>318</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL3_3">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>55</y>
+     <width>51</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_79">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>276</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>轴2:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL12_4">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>339</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL9_4">
+   <property name="geometry">
+    <rect>
+     <x>671</x>
+     <y>246</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL7_2">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>171</y>
+     <width>109</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL9_2">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>246</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL1_3">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>13</y>
+     <width>51</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL10_4">
+   <property name="geometry">
+    <rect>
+     <x>518</x>
+     <y>297</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_22">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>76</y>
+     <width>50</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: rgb(228, 117, 14);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_54">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>225</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>冷却液压力[kPa]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL6_4">
+   <property name="geometry">
+    <rect>
+     <x>671</x>
+     <y>150</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL12_6">
+   <property name="geometry">
+    <rect>
+     <x>692</x>
+     <y>339</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL3_2">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>55</y>
+     <width>50</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL5_3">
+   <property name="geometry">
+    <rect>
+     <x>561</x>
+     <y>129</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL12_5">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>339</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_45">
+   <property name="geometry">
+    <rect>
+     <x>561</x>
+     <y>108</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>四象限3:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL11_2">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>318</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_73">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>276</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>轴3:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL10_6">
+   <property name="geometry">
+    <rect>
+     <x>692</x>
+     <y>297</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>13</y>
+     <width>219</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>主变压器温度1[℃]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL4_1">
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>76</y>
+     <width>89</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>76</y>
+     <width>170</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>设定牵引/制动力[kN]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>544</x>
+     <y>55</y>
+     <width>187</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>辅助变流器2频率[HZ]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL12_3">
+   <property name="geometry">
+    <rect>
+     <x>431</x>
+     <y>339</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_56">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>204</y>
+     <width>219</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>变流器2:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_51">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>204</y>
+     <width>219</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>变流器1:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLCode3">
+   <property name="geometry">
+    <rect>
+     <x>236</x>
+     <y>366</y>
+     <width>93</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+}</string>
+   </property>
+   <property name="text">
+    <string>HXD2 0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL10_5">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>297</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_20">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>55</y>
+     <width>219</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>辅助变流器1频率[HZ]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL1_2">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>13</y>
+     <width>50</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>76</y>
+     <width>51</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLCode2">
+   <property name="geometry">
+    <rect>
+     <x>137</x>
+     <y>366</y>
+     <width>93</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+}</string>
+   </property>
+   <property name="text">
+    <string>HXD21001B</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL5_1">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>129</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLCode1">
+   <property name="geometry">
+    <rect>
+     <x>33</x>
+     <y>366</y>
+     <width>93</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+}</string>
+   </property>
+   <property name="text">
+    <string>HXD21001A</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL8_2">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>225</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_69">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>276</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>列车:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_43">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>171</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>中间直流电压[V]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>34</y>
+     <width>170</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>原边电流[A]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL7_1">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>171</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL5_4">
+   <property name="geometry">
+    <rect>
+     <x>671</x>
+     <y>129</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL3_1">
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>55</y>
+     <width>89</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL11_1">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>318</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_38">
+   <property name="geometry">
+    <rect>
+     <x>345</x>
+     <y>108</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>四象限1:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_89">
+   <property name="geometry">
+    <rect>
+     <x>431</x>
+     <y>276</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>轴1:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>13</y>
+     <width>170</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>原边电压[V]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL10_2">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>297</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL6_2">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>150</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL7_4">
+   <property name="geometry">
+    <rect>
+     <x>671</x>
+     <y>171</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL10_3">
+   <property name="geometry">
+    <rect>
+     <x>431</x>
+     <y>297</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_49">
+   <property name="geometry">
+    <rect>
+     <x>671</x>
+     <y>108</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>四象限4:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_71">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>297</y>
+     <width>238</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>实际牵引力/制动力[kN]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>76</y>
+     <width>219</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_47">
+   <property name="geometry">
+    <rect>
+     <x>454</x>
+     <y>108</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>四象限2:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_68">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>339</y>
+     <width>238</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>电机温度[℃]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL2_2">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>34</y>
+     <width>50</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL8_1">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>225</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_75">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>276</y>
+     <width>238</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL8_4">
+   <property name="geometry">
+    <rect>
+     <x>671</x>
+     <y>225</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL11_5">
+   <property name="geometry">
+    <rect>
+     <x>605</x>
+     <y>318</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_66">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>276</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>车辆:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_92">
+   <property name="geometry">
+    <rect>
+     <x>692</x>
+     <y>276</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>轴4:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL10_1">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>297</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_34">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>主电流[A]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>55</y>
+     <width>170</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>原边功率[kW]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL11_3">
+   <property name="geometry">
+    <rect>
+     <x>431</x>
+     <y>318</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL6_3">
+   <property name="geometry">
+    <rect>
+     <x>561</x>
+     <y>150</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_24">
+   <property name="geometry">
+    <rect>
+     <x>544</x>
+     <y>76</y>
+     <width>187</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_55">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>246</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>冷却液温度[℃]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL11_6">
+   <property name="geometry">
+    <rect>
+     <x>692</x>
+     <y>318</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL1_1">
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>13</y>
+     <width>89</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL2_1">
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>34</y>
+     <width>89</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL7_3">
+   <property name="geometry">
+    <rect>
+     <x>561</x>
+     <y>171</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL5_2">
+   <property name="geometry">
+    <rect>
+     <x>453</x>
+     <y>129</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>544</x>
+     <y>34</y>
+     <width>187</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>实际速度[Km/h]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL8_3">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>225</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL9_3">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>246</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL12_1">
+   <property name="geometry">
+    <rect>
+     <x>257</x>
+     <y>339</y>
+     <width>88</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL9_1">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>246</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>129</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>主电压[V]:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_48">
+   <property name="geometry">
+    <rect>
+     <x>21</x>
+     <y>108</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_63">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>204</y>
+     <width>325</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLCode4">
+   <property name="geometry">
+    <rect>
+     <x>335</x>
+     <y>366</y>
+     <width>93</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+}</string>
+   </property>
+   <property name="text">
+    <string>HXD2 0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL6_1">
+   <property name="geometry">
+    <rect>
+     <x>344</x>
+     <y>150</y>
+     <width>110</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton1">
+   <property name="geometry">
+    <rect>
+     <x>33</x>
+     <y>386</y>
+     <width>93</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogo.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton2">
+   <property name="geometry">
+    <rect>
+     <x>137</x>
+     <y>386</y>
+     <width>93</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogo.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton3">
+   <property name="geometry">
+    <rect>
+     <x>236</x>
+     <y>386</y>
+     <width>93</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogo.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NButton4">
+   <property name="geometry">
+    <rect>
+     <x>335</x>
+     <y>386</y>
+     <width>93</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogo.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>NButton3</zorder>
+  <zorder>NButton1</zorder>
+  <zorder>NButton4</zorder>
+  <zorder>NButton2</zorder>
+  <zorder>label_5</zorder>
+  <zorder>LBL12_2</zorder>
+  <zorder>label_12</zorder>
+  <zorder>label_67</zorder>
+  <zorder>LBL2_3</zorder>
+  <zorder>LBL11_4</zorder>
+  <zorder>LBL3_3</zorder>
+  <zorder>label_79</zorder>
+  <zorder>LBL12_4</zorder>
+  <zorder>LBL9_4</zorder>
+  <zorder>LBL7_2</zorder>
+  <zorder>LBL9_2</zorder>
+  <zorder>LBL1_3</zorder>
+  <zorder>LBL10_4</zorder>
+  <zorder>label_22</zorder>
+  <zorder>label_54</zorder>
+  <zorder>LBL6_4</zorder>
+  <zorder>LBL12_6</zorder>
+  <zorder>LBL3_2</zorder>
+  <zorder>LBL5_3</zorder>
+  <zorder>LBL12_5</zorder>
+  <zorder>label_45</zorder>
+  <zorder>LBL11_2</zorder>
+  <zorder>label_73</zorder>
+  <zorder>LBL10_6</zorder>
+  <zorder>label_3</zorder>
+  <zorder>LBL4_1</zorder>
+  <zorder>label_17</zorder>
+  <zorder>label_15</zorder>
+  <zorder>LBL12_3</zorder>
+  <zorder>label_56</zorder>
+  <zorder>label_51</zorder>
+  <zorder>LBLCode3</zorder>
+  <zorder>LBL10_5</zorder>
+  <zorder>label_20</zorder>
+  <zorder>LBL1_2</zorder>
+  <zorder>label_16</zorder>
+  <zorder>LBLCode2</zorder>
+  <zorder>LBL5_1</zorder>
+  <zorder>LBLCode1</zorder>
+  <zorder>LBL8_2</zorder>
+  <zorder>label_69</zorder>
+  <zorder>label_43</zorder>
+  <zorder>label_8</zorder>
+  <zorder>LBL7_1</zorder>
+  <zorder>LBL5_4</zorder>
+  <zorder>LBL3_1</zorder>
+  <zorder>LBL11_1</zorder>
+  <zorder>label_38</zorder>
+  <zorder>label_89</zorder>
+  <zorder>label</zorder>
+  <zorder>LBL10_2</zorder>
+  <zorder>LBL6_2</zorder>
+  <zorder>LBL7_4</zorder>
+  <zorder>LBL10_3</zorder>
+  <zorder>label_49</zorder>
+  <zorder>label_71</zorder>
+  <zorder>label_13</zorder>
+  <zorder>label_47</zorder>
+  <zorder>label_68</zorder>
+  <zorder>LBL2_2</zorder>
+  <zorder>LBL8_1</zorder>
+  <zorder>label_75</zorder>
+  <zorder>LBL8_4</zorder>
+  <zorder>LBL11_5</zorder>
+  <zorder>label_66</zorder>
+  <zorder>label_92</zorder>
+  <zorder>LBL10_1</zorder>
+  <zorder>label_34</zorder>
+  <zorder>label_14</zorder>
+  <zorder>LBL11_3</zorder>
+  <zorder>LBL6_3</zorder>
+  <zorder>label_24</zorder>
+  <zorder>label_55</zorder>
+  <zorder>LBL11_6</zorder>
+  <zorder>LBL1_1</zorder>
+  <zorder>LBL2_1</zorder>
+  <zorder>LBL7_3</zorder>
+  <zorder>LBL5_2</zorder>
+  <zorder>label_9</zorder>
+  <zorder>LBL8_3</zorder>
+  <zorder>LBL9_3</zorder>
+  <zorder>LBL12_1</zorder>
+  <zorder>LBL9_1</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_48</zorder>
+  <zorder>label_63</zorder>
+  <zorder>LBLCode4</zorder>
+  <zorder>LBL6_1</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -88,7 +88,10 @@ SOURCES += main.cpp\
     settng_bypass.cpp \
     data/data_tcn.cpp \
     data/trainbean.cpp \
-    simulation.cpp
+    simulation.cpp \
+    widgets/ctrltrainoutline.cpp \
+    widgets/ctrltrainoutlinereverse.cpp \
+    devicedata_trainoutline.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -159,7 +162,10 @@ HEADERS  += widget.h \
     settng_bypass.h \
     data/data_tcn.h \
     data/trainbean.h \
-    simulation.h
+    simulation.h \
+    widgets/ctrltrainoutline.h \
+    widgets/ctrltrainoutlinereverse.h \
+    devicedata_trainoutline.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -167,7 +173,10 @@ FORMS    += widget.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
-    simulation.ui
+    simulation.ui \
+    widgets/ctrltrainoutline.ui \
+    widgets/ctrltrainoutlinereverse.ui \
+    devicedata_trainoutline.ui
 
 RESOURCES += \
     Resource.qrc

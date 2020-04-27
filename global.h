@@ -17,6 +17,8 @@
 #define WHITE     "color:rgb(248,248,248);"
 #define GRAY2     "color:rgb(192,192,192);"
 #define BLACK     "color:rgb(0,0,0);"
+#define REDBACKGROUND "background-color:rgb(240,0,0)"
+#define GREENBACKGROUND "background-color:rgb(0,240,0)"
 
 #define	PINGBAO   "image: url(:/images/images/pingbao.png);"
 #define	LIANGDUZIDONG   "image: url(:/images/images/auto.png);"
@@ -31,6 +33,7 @@
 #define	PANTOUP	"image: url(:/images/images/shenggong.png);"
 #define	PANTODOWN	"image: url(:/images/images/jianggong.png);"
 #define	PANTOISOLATE	"image: url(:/images/images/gonggeli.png);"
+#define	PANTOIRISE	"image: url(:/images/images/shengqi.png);"
 #define	WEIHU   "image: url(:/images/images/weihu.png);"
 #define	WEIHUZHUPING   "image: url(:/images/images/weihuzhuping.png);"
 #define	WEIHUANXIA   "image: url(:/images/images/weihuanxia.png);"
@@ -67,13 +70,17 @@
 #define	HUAXING	"image: url(:/images/images/huaxing.png);"
 #define	TINGFANGZHIDONGSHIJIA	"image: url(:/images/images/tingfangshijia.png);"
 #define	TINGFANGZHIDONGHUANJIE	"image: url(:/images/images/tingfanghuanjie.png);"
+#define	TINGFANGZHIDONGGELI	"image: url(:/images/images/tingfanggeli.png);"
 #define	SASHA	"image: url(:/images/images/sasha.png);"
 #define	JINJIZHIDONG	"image: url(:/images/images/jinjizhidong.png);"
 #define	CHEFAZHIDONG	"image: url(:/images/images/chengfazhidong.png);"
 #define	DINGSUMOSHI	"image: url(:/images/images/dingsumoshi.png);"
 #define	JINGTIZHUANGZHIZHENGCHANG	"image: url(:/images/images/jingtizhengchang.png);"
 #define	JINGTIZHUANGZHIGELI	"image: url(:/images/images/jingtigeli.png);"
-
+#define QUDONGOK    "image: url(:/images/images/qudongok.png);"
+#define QUDONGGELI    "image: url(:/images/images/qudongiso.png);"
+#define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
+#define	HIDEIMAGE	"background-color:transparent;border:0px solid lightgray;"
 
 #include <stdlib.h>
 
