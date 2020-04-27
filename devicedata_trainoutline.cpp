@@ -1,6 +1,11 @@
 #include "devicedata_trainoutline.h"
 #include "ui_devicedata_trainoutline.h"
 
+#define NBUTTONDOWN "border-image: url(:/images/images/TrainLogo.png);"
+#define NBUTTONDOWNR "border-image: url(:/images/images/TrainLogo-reverse.png);"
+#define NBUTTONUP   "border-image: url(:/images/images/TrainLogoUp.png);"
+#define NBUTTONUPR   "border-image: url(:/images/images/TrainLogoUp-reverse.png);"
+
 DeviceData_TrainOutline::DeviceData_TrainOutline(QWidget *parent) :
     MyBase(parent),
     ui(new Ui::DeviceData_TrainOutline)
@@ -134,4 +139,31 @@ void DeviceData_TrainOutline::updatePage()
 void DeviceData_TrainOutline::NBpressEvent()
 {
     currentIndex = ((QPushButton*)this->sender())->whatsThis().toInt();
+
+    NBreleaseEvent();
+    switch (currentIndex)
+    {
+        case 0:
+            ui->NButton1->setStyleSheet(NBUTTONDOWN);
+        break;
+        case 1:
+            ui->NButton2->setStyleSheet(NBUTTONDOWNR);
+        break;
+        case 2:
+            ui->NButton3->setStyleSheet(NBUTTONDOWN);
+        break;
+        case 3:
+            ui->NButton4->setStyleSheet(NBUTTONDOWNR);
+        break;
+        default:
+        break;
+    }
+}
+
+void DeviceData_TrainOutline::NBreleaseEvent()
+{
+    ui->NButton1->setStyleSheet(NBUTTONUP);
+    ui->NButton2->setStyleSheet(NBUTTONUPR);
+    ui->NButton3->setStyleSheet(NBUTTONUP);
+    ui->NButton4->setStyleSheet(NBUTTONUPR);
 }

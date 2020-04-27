@@ -1661,7 +1661,7 @@ QPushButton
     <string>1</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/TrainLogo.png);</string>
+    <string notr="true">border-image: url(:/images/images/TrainLogo-reverse.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -1699,7 +1699,7 @@ QPushButton
     <string>3</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/TrainLogo.png);</string>
+    <string notr="true">border-image: url(:/images/images/TrainLogo-reverse.png);</string>
    </property>
    <property name="text">
     <string/>
