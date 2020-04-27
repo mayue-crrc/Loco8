@@ -89,6 +89,19 @@ SOURCES += main.cpp\
     data/data_tcn.cpp \
     data/trainbean.cpp \
     simulation.cpp \
+    datainputwheelpage.cpp \
+    datainputdatetimepage.cpp \
+    datainputother.cpp \
+    datainputidpage.cpp\
+    devicedata_online.cpp\
+    data/data_tcu.cpp \
+    data/data_riom.cpp \
+    data/data_acu.cpp \
+    data/data_bcu.cpp \
+    widgets/ctrlcontrolvoltage.cpp \
+    widgets/ctrlnetcurrent.cpp \
+    widgets/ctrlnetvoltage.cpp \
+    widgets/ctrltracbrake.cpp \
     widgets/ctrltrainoutline.cpp \
     widgets/ctrltrainoutlinereverse.cpp \
     devicedata_trainoutline.cpp
@@ -163,10 +176,22 @@ HEADERS  += widget.h \
     data/data_tcn.h \
     data/trainbean.h \
     simulation.h \
+    datainputwheelpage.h \
+    datainputdatetimepage.h \
+    datainputother.h \
+    datainputidpage.h\
+    devicedata_online.h\
+    data/data_tcu.h \
+    data/data_riom.h \
+    data/data_acu.h \
+    data/data_bcu.h \
+    widgets/ctrlcontrolvoltage.h \
+    widgets/ctrlnetcurrent.h \
+    widgets/ctrlnetvoltage.h \
+    widgets/ctrltracbrake.h \
     widgets/ctrltrainoutline.h \
     widgets/ctrltrainoutlinereverse.h \
     devicedata_trainoutline.h
-
 FORMS    += widget.ui \
     header.ui \
     navigator.ui \
@@ -174,6 +199,15 @@ FORMS    += widget.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
     simulation.ui \
+    datainputwheelpage.ui \
+    datainputdatetimepage.ui \
+    datainputother.ui \
+    datainputidpage.ui\
+    devicedata_online.ui \
+    widgets/ctrlcontrolvoltage.ui \
+    widgets/ctrlnetcurrent.ui \
+    widgets/ctrlnetvoltage.ui \
+    widgets/ctrltracbrake.ui \
     widgets/ctrltrainoutline.ui \
     widgets/ctrltrainoutlinereverse.ui \
     devicedata_trainoutline.ui
