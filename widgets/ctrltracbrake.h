@@ -14,7 +14,7 @@ class CtrlTracBrake : public QWidget
 public:
     explicit CtrlTracBrake(QWidget *parent = 0);
     ~CtrlTracBrake();
-    void setCtrlValueRect(int value,bool trac,bool brake);
+    void setCtrlValueRect(int value);
 
 private:
     Ui::CtrlTracBrake *ui;

@@ -36,7 +36,7 @@ void VehicleRunStatePage::updatePage()
     ctrlNetVoltage->setCtrlValueRect(database->data_CCU->LINE_VOLT);
     ctrlNetCurrent->setCtrlValueRect(database->data_CCU->PRIM_C);
     ctrlControlVoltage->setCtrlValueRect(database->data_CCU->BAT_VOLT);
-    //ctrlTracBrake->setCtrlValueRect(database->data_CCU->TEBE_EFFORT,,i/10%3);
+    ctrlTracBrake->setCtrlValueRect(database->data_CCU->TEBE_EFFORT);
     //eg
     QList<bool> t_status;
     QList<QString> t_style;
@@ -98,9 +98,14 @@ void VehicleRunStatePage::updatePage()
     //实际速度
     ui->LBLActualSpeed->setText(QString::number(database->data_CCU->ACTUAL_SPEED));
     //实际牵引力
-    ui->LBLActualForce->setText(QString::number(database->data_CCU->TEBE_EFFORT));
+    ui->LBLActualForce->setText(QString::number((database->data_CCU->TE_AXLE1_ACTUAL+database->data_CCU->TE_AXLE2_ACTUAL
+                                                +database->data_CCU->TE_AXLE3_ACTUAL+database->data_CCU->TE_AXLE4_ACTUAL)/10-1000));
     //设定牵引力
     ui->LBLSetForce->setText(QString::number(database->data_CCU->TE_AXLE_SET));
+
+    //grade
+    ui->LBLGrade->setText(QString::number((float)(database->data_CCU->MSCT_GRD-200)/10,10,1));
+
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)
 {

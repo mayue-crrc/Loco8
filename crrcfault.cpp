@@ -99,10 +99,12 @@ void CrrcFault::run()
                 //not defined ports ;
             }else
             {
+
                 if (FaultTypeHash[key].FaultValid == CrrcMvb::getCrrcMvb()->getBool(FaultTypeHash[key].PortAddress, FaultTypeHash[key].ByteoffAddress, FaultTypeHash[key].BitoffAddress))
                 {
                    if (this->CurrentFaultHash.contains(key) == false)
                    {
+
                        FaultBean t_faultBean;
                        t_faultBean.HistoryID = t_circlefaultcnt;
                        t_faultBean.StartTime = m_Localdatetime.toString("yyyy-MM-dd hh:mm:ss");
@@ -111,6 +113,21 @@ void CrrcFault::run()
                            t_faultBean.IsConfirm = true;
                        else
                        t_faultBean.IsConfirm = false;
+
+                       t_faultBean.Speed = (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,14)/10;
+                       t_faultBean.Voltage = (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,0);
+                       t_faultBean.Current = (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,4);
+                       QString t_direction;
+                       if(CrrcMvb::getCrrcMvb()->getBool(0x710,23,4))
+                           t_direction = "向前";
+                       else if(CrrcMvb::getCrrcMvb()->getBool(0x710,23,5))
+                           t_direction = "向后";
+                       else if(CrrcMvb::getCrrcMvb()->getBool(0x710,23,6))
+                           t_direction = "零位";
+                       else
+                           t_direction = "";
+                       t_faultBean.Direction = t_direction;
+                       t_faultBean.Grade =  (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,12)/10-100;
                        //create insert faultbean hash
                        this->InsertHistoryFaultHash.insert(t_circlefaultcnt,t_faultBean);
                        t_circlefaultcnt++;
@@ -137,7 +154,6 @@ void CrrcFault::run()
             }
         }
 
-
         if(tmp_NewFaultOccur)
         {
             //when new fault occurs, refresh history and current fault list,then load them from DB and RAM
@@ -148,6 +164,8 @@ void CrrcFault::run()
 
             {
                 QMutexLocker locker(&m_lock);
+
+
                 if(this->crrcFaultMapper->InsertHistoryFault(InsertHistoryFaultHash)&&
                 this->crrcFaultMapper->UpdateHistoryFault(UpdateHistoryFaultHash))
                 {

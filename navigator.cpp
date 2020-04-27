@@ -28,7 +28,7 @@ Navigator::Navigator(QWidget *parent) :
     button2NameList<<""<<""<<""<<""<<""<<""<<""<<"";
     m_oldposition = m_position = uMiddleMainPage;
     m_ButtonIndex = 0;
-
+    m_CurrentMode = false;
     QList<QString> t_style;
     t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
     this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
@@ -47,6 +47,26 @@ void Navigator::updatePage()
 {
     this->ui->LBLDate->setText(QDateTime::currentDateTime().date().toString("yyyy-MM-dd"));
     this->ui->LBLTime->setText(QDateTime::currentDateTime().time().toString("hh:mm:ss"));
+
+    if(!m_CurrentMode)
+    {
+        buttons[5]->setDisabled(true);
+        buttons[6]->setDisabled(true);
+        buttons[7]->setDisabled(true);
+        buttons[5]->setText("");
+        buttons[6]->setText("");
+        buttons[7]->setText("");
+
+    }else
+    {
+        buttons[5]->setDisabled(false);
+        buttons[6]->setDisabled(false);
+        buttons[7]->setDisabled(false);
+        buttons[5]->setText("数据输入");
+        buttons[6]->setText("维护测试");
+        buttons[7]->setText("故障浏览");
+
+    }
 }
 void Navigator::setPageName(QString name)
 {
@@ -107,7 +127,7 @@ void Navigator::NBpressEvent()
     }
 
     QList<QString> t_style;
-    t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
+    t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<((m_CurrentMode) ? YUNXING:  WEIHU);
     if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
         this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
@@ -132,10 +152,27 @@ void Navigator::NBpressEvent()
 }
 void Navigator::N2BpressEvent()
 {
+    int btnindex = ((QPushButton *)this->sender())->whatsThis().toInt();
     if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
 //        changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 
+        switch(btnindex)
+        {
+        case 0:
+            break;
+        case 7:
+            m_CurrentMode = !m_CurrentMode;
+            if(!m_CurrentMode)
+            {
+                ui->N2Button8->setStyleSheet(WEIHU);
+            }else
+            {
+
+                ui->N2Button8->setStyleSheet(YUNXING);
+            }
+            break;
+        }
     }else
     {
         for(int i = 0; i < buttons2.size();i++)

@@ -114,13 +114,43 @@ void Widget::updatePage()
         this->simulation->installMvb(CrrcMvb::getCrrcMvb());
         this->database->updateData();
     }
-
     // start fault scanning thread
-    static int faultdelaycnt = 0;
+    static int faultdelaycnt = 45;
     if ((faultdelaycnt++ > 45) && !crrcFault->isRunning())
     {
         crrcFault->start();
     }
+    // define local time for recording and showing
+//       QDateTime dateTimeLocal;
+//       if(this->database->PUBPORT_CCUOnline_B1 && faultdelaycnt>45)
+//       {
+//           VCUtime2HMI10s();
+
+//           QDate date( this->database->CTAL_SysTimeYear_U8+2000,this->database->CTAL_SysTimeMonth_U8,this->database->CTAL_SysTimeDay_U8  );
+//           QTime time( this->database->CTAL_SysTimeHour_U8, this->database->CTAL_SysTimeMinute_U8, this->database->CTAL_SysTimeSecond_U8);
+
+//           this->database->HMI_DateTime_foruse.setDate(date);
+//           this->database->HMI_DateTime_foruse.setTime(time);
+
+
+//           if(this->database->HMI_DateTime_foruse.isValid())
+//           {
+
+//           }else
+//           {
+//               this->database->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+//               this->database->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+//           }
+//       }else
+//       {
+//           this->database->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+//           this->database->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+//       }
+//       this->crrcFault->getLocalDateTime(this->database->HMI_DateTime_foruse);
+       QDateTime dateTimeLocal;
+
+       this->crrcFault->getLocalDateTime(dateTimeLocal.currentDateTime());
+
     counter >= 100 ? (counter = 1) : (counter ++);
 
 
