@@ -12,27 +12,30 @@ CtrlTracBrake::~CtrlTracBrake()
 {
     delete ui;
 }
-void CtrlTracBrake::setCtrlValueRect(int value, bool trac, bool brake)
+void CtrlTracBrake::setCtrlValueRect(int value)
 {
+    int t_value = value/10-100;
     QString t_style;
-    if(trac)
+    if(t_value>0)
     {
         t_style = DARKBLUE;
         ui->LBLStatus->setStyleSheet(QIANYIN);
-    }else if(brake)
+    }else if(t_value<0)
     {
         t_style = RED;
         ui->LBLStatus->setStyleSheet(ZHIDONG);
     }
     else
     {
+        t_style = BLACK;
         ui->LBLStatus->setStyleSheet("");
-        return;
     }
     ui->LBLBackground->setStyleSheet(t_style);
 
-    if(value > 100)
-        value = 100;
-    ui->LBLValueRect->setGeometry(36,31,ui->LBLValueRect->width(),320-(float)value*320/100);
-    ui->LBLValue->setText(QString::number(value));
+    t_value = (t_value < 0) ?(-t_value):t_value;
+    if(t_value > 100 )
+        t_value = 100;
+
+    ui->LBLValueRect->setGeometry(36,31,ui->LBLValueRect->width(),320-(float)t_value*320/100);
+    ui->LBLValue->setText(QString::number((float)t_value,10,1));
 }

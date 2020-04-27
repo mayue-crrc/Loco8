@@ -399,7 +399,7 @@ color:yellow;
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="LBLSetSpeed_2">
+  <widget class="QLabel" name="LBLGrade">
    <property name="geometry">
     <rect>
      <x>640</x>

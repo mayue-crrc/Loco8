@@ -14,6 +14,12 @@ public:
     int HistoryID;
     bool IsConfirm;
 
+    float Speed;
+    float Voltage;
+    float Current;
+    QString Direction;
+    float Grade;
+
 };
 
 #endif // FAULTBEAN_H
