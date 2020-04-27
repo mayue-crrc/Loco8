@@ -70,5 +70,8 @@
         <file>images/shengqi.png</file>
         <file>images/left.png</file>
         <file>images/right.png</file>
+        <file>images/TrainLogo-reverse.png</file>
+        <file>images/TrainLogoUp.png</file>
+        <file>images/TrainLogoUp-reverse.png</file>
     </qresource>
 </RCC>

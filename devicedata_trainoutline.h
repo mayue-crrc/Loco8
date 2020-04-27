@@ -24,6 +24,7 @@ private:
     QList<QLabel* > labels;
     int currentIndex;
 
+    void NBreleaseEvent();
 private slots:
     void NBpressEvent();
 
