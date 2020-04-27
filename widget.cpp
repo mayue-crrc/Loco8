@@ -9,6 +9,7 @@
 #include "crrcmvb.h"
 #include "crrcfault.h"
 #include "simulation.h"
+#include "devicedata_online.h"
 #ifdef QT_VERSION_5_6
 #include "qdesktopwidget.h"
 #endif
@@ -58,7 +59,7 @@ Widget::Widget(QWidget *parent) :
     connect(navigator,SIGNAL(translateLanguage()),this,SLOT(translateLanguage()));
 
     this->vehicleRunStatePage = new VehicleRunStatePage(this);
-    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("牵引模式"));
+    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("主界面"));
     this->vehicleRunStatePage->show();
 
     this->header = new Header(this);
@@ -80,11 +81,17 @@ Widget::Widget(QWidget *parent) :
     this->mainData_DriverOutline = new DeviceData_TrainOutline(this);
     this->mainData_DriverOutline->setMyBase(uMiddleControl,QString("驱动概述"));
     this->mainData_DriverOutline->hide();
+    //add device_data pages
+    this->deviceData_Online = new DeviceData_Online(this);
+    this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
+    this->deviceData_Online->hide();
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
     this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
+
+    this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

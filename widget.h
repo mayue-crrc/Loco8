@@ -20,6 +20,8 @@ class CrrcMvb;
 class CrrcFault;
 class Simulation;
 
+class DeviceData_Online;
+
 class MainData_TrainOutline;
 class Settng_Bypass;
 class DeviceData_TrainOutline;
@@ -51,6 +53,8 @@ private:
     CrrcMvb* crrcMvb;
     CrrcFault* crrcFault;
     Simulation* simulation;
+
+    DeviceData_Online* deviceData_Online;
 
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;

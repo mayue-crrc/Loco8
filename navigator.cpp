@@ -60,12 +60,12 @@ void Navigator::NBpressEvent()
     switch (m_position)
     {
         case uMiddleMainPage:
-        buttonIndexList<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;
-        buttonNameList<<""<<""<<""<<""<<""<<""<<""<<"";
+        buttonIndexList<<uVehicleRunStatePage<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;
+        buttonNameList<<"主界面"<<""<<""<<""<<""<<""<<""<<"";
         break;
         case uMiddleTrainData:
         buttonIndexList<<uMainData_TrainOutline<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;
-        buttonNameList<<"机车概况"<<""<<""<<""<<""<<""<<""<<"";
+        buttonNameList<<QString("机车概况")<<""<<""<<""<<""<<""<<""<<"";
         break;
         case uMiddleControl:
         buttonIndexList<<uSettng_Bypass<<uSettng_Panto<<uSettng_Test<<uSettng_Distance<<uNULL<<uNULL<<uNULL<<uNULL;
@@ -110,7 +110,6 @@ void Navigator::NBpressEvent()
 
     }else
     {
-        changePage(buttonIndexList.at(0));
         for(int i = 0;i<buttons2.size();i++)
         {
             buttons2[i]->setText(buttonNameList.at(i));
@@ -119,12 +118,14 @@ void Navigator::NBpressEvent()
         ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
         buttons2[0]->setStyleSheet(NButtonDOWN);
     }
+    changePage(buttonIndexList.at(0));
 
 }
 void Navigator::N2BpressEvent()
 {
     if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
+//        changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 
     }else
     {

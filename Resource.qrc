@@ -68,9 +68,7 @@
         <file>images/qudongiso.png</file>
         <file>images/qudongok.png</file>
         <file>images/shengqi.png</file>
-    </qresource>
-    <qresource prefix="/">
-        <file>images/qudongiso.png</file>
-        <file>images/qudongok.png</file>
+        <file>images/left.png</file>
+        <file>images/right.png</file>
     </qresource>
 </RCC>

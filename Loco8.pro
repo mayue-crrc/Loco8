@@ -192,6 +192,7 @@ HEADERS  += widget.h \
     widgets/ctrltrainoutline.h \
     widgets/ctrltrainoutlinereverse.h \
     devicedata_trainoutline.h
+
 FORMS    += widget.ui \
     header.ui \
     navigator.ui \
