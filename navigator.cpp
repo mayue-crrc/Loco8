@@ -28,6 +28,15 @@ Navigator::Navigator(QWidget *parent) :
     button2NameList<<""<<""<<""<<""<<""<<""<<""<<"";
     m_oldposition = m_position = uMiddleMainPage;
     m_ButtonIndex = 0;
+
+    QList<QString> t_style;
+    t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
+    this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
+    for(int i = 0;i<buttons2.size();i++)
+    {
+        buttons2[i]->setText("");
+        buttons2[i]->setStyleSheet(t_style.at(i));
+    }
 }
 
 Navigator::~Navigator()

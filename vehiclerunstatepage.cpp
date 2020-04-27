@@ -15,13 +15,13 @@ VehicleRunStatePage::VehicleRunStatePage(QWidget *parent) :
     ctrlNetVoltage->setGeometry(140,0,this->ctrlNetVoltage->width(),this->ctrlNetVoltage->height());
 
     ctrlNetCurrent = new CtrlNetCurrent(this);
-    ctrlNetCurrent->setGeometry(240,0,this->ctrlNetCurrent->width(),this->ctrlNetCurrent->height());
+    ctrlNetCurrent->setGeometry(230,0,this->ctrlNetCurrent->width(),this->ctrlNetCurrent->height());
 
     ctrlControlVoltage = new CtrlControlVoltage(this);
-    ctrlControlVoltage->setGeometry(340,0,this->ctrlControlVoltage->width(),this->ctrlControlVoltage->height());
+    ctrlControlVoltage->setGeometry(320,0,this->ctrlControlVoltage->width(),this->ctrlControlVoltage->height());
 
     ctrlTracBrake = new CtrlTracBrake(this);
-    ctrlTracBrake->setGeometry(510,0,this->ctrlTracBrake->width(),this->ctrlTracBrake->height());
+    ctrlTracBrake->setGeometry(410,0,this->ctrlTracBrake->width(),this->ctrlTracBrake->height());
 }
 
 VehicleRunStatePage::~VehicleRunStatePage()
@@ -33,10 +33,10 @@ void VehicleRunStatePage::updatePage()
 {
     static int i   = 0;
     i +=10;
-    ctrlNetVoltage->setCtrlValueRect(i/10);
-    ctrlNetCurrent->setCtrlValueRect(i);
-    ctrlControlVoltage->setCtrlValueRect(i,i);
-    ctrlTracBrake->setCtrlValueRect(i/10,i/10%2,i/10%3);
+    ctrlNetVoltage->setCtrlValueRect(database->data_CCU->LINE_VOLT);
+    ctrlNetCurrent->setCtrlValueRect(database->data_CCU->PRIM_C);
+    ctrlControlVoltage->setCtrlValueRect(database->data_CCU->BAT_VOLT);
+    //ctrlTracBrake->setCtrlValueRect(database->data_CCU->TEBE_EFFORT,,i/10%3);
     //eg
     QList<bool> t_status;
     QList<QString> t_style;
@@ -92,6 +92,15 @@ void VehicleRunStatePage::updatePage()
     t_style<<CHENGFAZHIDONG<<JINJIZHIDONG<<NULLIMAGE;
     t_status<<database->data_CCU->PENALTY_BRK<<database->data_TCN->TrainLocal->STATE_EMG_BRK_ON<<true;
     setLBLpic(ui->LBLC23,t_status,t_style);
+
+    //设定速度
+    ui->LBLSetSpeed->setText(QString::number(database->data_CCU->SPEED_SET));
+    //实际速度
+    ui->LBLActualSpeed->setText(QString::number(database->data_CCU->ACTUAL_SPEED));
+    //实际牵引力
+    ui->LBLActualForce->setText(QString::number(database->data_CCU->TEBE_EFFORT));
+    //设定牵引力
+    ui->LBLSetForce->setText(QString::number(database->data_CCU->TE_AXLE_SET));
 }
 void VehicleRunStatePage::showEvent(QShowEvent *)
 {
@@ -99,3 +108,15 @@ void VehicleRunStatePage::showEvent(QShowEvent *)
 }
 
 
+
+void VehicleRunStatePage::on_BTNSpeedplus_clicked()
+{
+    database->data_CCU->SPEED_SET++;
+}
+
+void VehicleRunStatePage::on_BTNSpeedminus_clicked()
+{
+    if(database->data_CCU->SPEED_SET>0)
+        database->data_CCU->SPEED_SET--;
+
+}
