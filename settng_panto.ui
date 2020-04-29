@@ -105,7 +105,7 @@ color:rgb(255,255,255);</string>
     <string>0</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
+    <string notr="true">border:1px solid black;
 image: url(:/images/images/Cheti_L.png);</string>
    </property>
    <property name="text">
@@ -192,7 +192,7 @@ image: url(:/images/images/Cheti_L.png);</string>
     <string>2</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
+    <string notr="true">border:1px solid black;
 image: url(:/images/images/Cheti_L.png);</string>
    </property>
    <property name="text">
@@ -263,7 +263,7 @@ image: url(:/images/images/Cheti_L.png);</string>
     <string>1</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
+    <string notr="true">border:1px solid black;
 image: url(:/images/images/Cheti-reverse.png);</string>
    </property>
    <property name="text">
@@ -328,7 +328,7 @@ color:rgb(255,255,255);</string>
     <string>3</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid white;
+    <string notr="true">border:1px solid black;
 image: url(:/images/images/Cheti-reverse.png);</string>
    </property>
    <property name="text">
