@@ -24,6 +24,7 @@ private:
     QList<pageIndex >buttonIndexList,button2IndexList;
     QList<QString >buttonNameList,button2NameList;
     int m_ButtonIndex;
+    bool m_CurrentMode;//0:normal  1:maintanence
     enum pagePosition m_position,m_oldposition;
 private slots:
     void NBpressEvent();

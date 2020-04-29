@@ -20,7 +20,61 @@
 }
 </string>
   </property>
+  <widget class="CtrlTrainOutLine" name="Train1" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>213</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CtrlTrainOutLineReverse" name="Train2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>0</y>
+     <width>400</width>
+     <height>213</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CtrlTrainOutLine" name="Train3" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>220</y>
+     <width>400</width>
+     <height>213</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="CtrlTrainOutLineReverse" name="Train4" native="true">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>220</y>
+     <width>400</width>
+     <height>213</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CtrlTrainOutLine</class>
+   <extends>QWidget</extends>
+   <header>widgets/ctrltrainoutline.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CtrlTrainOutLineReverse</class>
+   <extends>QWidget</extends>
+   <header location="global">widgets/ctrltrainoutlinereverse.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

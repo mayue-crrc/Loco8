@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CtrlTrainOutLineReverse</class>
+ <widget class="QWidget" name="CtrlTrainOutLineReverse">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>213</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+	border:0px solid white;
+}
+
+QPushButton
+{
+	font:16px;
+    color: rgb(192,192,192);
+	background-color: rgb(0, 0, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+
+
+}</string>
+  </property>
+  <widget class="QLabel" name="LBLTraction1">
+   <property name="geometry">
+    <rect>
+     <x>73</x>
+     <y>131</y>
+     <width>30</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/qudongok.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTraction2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>131</y>
+     <width>30</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/qudongok.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLKn">
+   <property name="geometry">
+    <rect>
+     <x>292</x>
+     <y>128</y>
+     <width>50</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>800.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLHengLiJu">
+   <property name="geometry">
+    <rect>
+     <x>168</x>
+     <y>175</y>
+     <width>70</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid rgb(13, 206, 58);
+	font:16px;
+   color: black;
+   background-color : red;
+}</string>
+   </property>
+   <property name="text">
+    <string>恒力矩</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLBraking1">
+   <property name="geometry">
+    <rect>
+     <x>81</x>
+     <y>90</y>
+     <width>41</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/zhidonghuanjie.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTraction3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>131</y>
+     <width>30</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/qudongok.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLPanto">
+   <property name="geometry">
+    <rect>
+     <x>169</x>
+     <y>35</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/shenggong.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLBraking2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>90</y>
+     <width>41</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/zhidonghuanjie.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>337</x>
+     <y>128</y>
+     <width>29</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+	font:16px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>KN</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLCheti">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>35</y>
+     <width>281</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Cheti-reverse.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLGaoya">
+   <property name="geometry">
+    <rect>
+     <x>86</x>
+     <y>62</y>
+     <width>41</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/linevbreakerfault.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLZhunHengSu">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>175</y>
+     <width>70</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid rgb(13, 206, 58);
+	font:16px;
+   color: black;
+   background-color : green;
+}</string>
+   </property>
+   <property name="text">
+    <string>准恒速</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLCode">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>30</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+	font:16px;
+    color: rgb(192,192,192);
+}</string>
+   </property>
+   <property name="text">
+    <string>HXD2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLTraction4">
+   <property name="geometry">
+    <rect>
+     <x>206</x>
+     <y>131</y>
+     <width>30</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/qudongok.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLDirection">
+   <property name="geometry">
+    <rect>
+     <x>297</x>
+     <y>54</y>
+     <width>50</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/xianghou.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLParking">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>105</y>
+     <width>41</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/tingfanghuanjie.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLZhuduan">
+   <property name="geometry">
+    <rect>
+     <x>26</x>
+     <y>60</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/zhuduanduankai.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBLActivation">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>78</y>
+     <width>21</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>LBLCheti</zorder>
+  <zorder>LBLTraction1</zorder>
+  <zorder>LBLTraction2</zorder>
+  <zorder>LBLHengLiJu</zorder>
+  <zorder>LBLBraking1</zorder>
+  <zorder>LBLTraction3</zorder>
+  <zorder>LBLPanto</zorder>
+  <zorder>LBLBraking2</zorder>
+  <zorder>label_4</zorder>
+  <zorder>LBLGaoya</zorder>
+  <zorder>LBLZhunHengSu</zorder>
+  <zorder>LBLCode</zorder>
+  <zorder>LBLTraction4</zorder>
+  <zorder>LBLDirection</zorder>
+  <zorder>LBLKn</zorder>
+  <zorder>LBLParking</zorder>
+  <zorder>LBLZhuduan</zorder>
+  <zorder>LBLActivation</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

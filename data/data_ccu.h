@@ -152,6 +152,7 @@ public:
     ;unsigned int	TRIP_COUNTER
     ;unsigned int	TOTAL_DISTANCE
     ;unsigned int	CPR_RUN_TIME;
+    unsigned char OTHERUIC_ADDR;
     ;unsigned char	UIC_ADDR
     ;unsigned char	AUX1_FREQ
     ;unsigned char	AUX2_FREQ

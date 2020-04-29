@@ -89,6 +89,10 @@ SOURCES += main.cpp\
     data/data_tcn.cpp \
     data/trainbean.cpp \
     simulation.cpp \
+    datainputwheelpage.cpp \
+    datainputdatetimepage.cpp \
+    datainputother.cpp \
+    datainputidpage.cpp\
     devicedata_online.cpp\
     data/data_tcu.cpp \
     data/data_riom.cpp \
@@ -101,7 +105,18 @@ SOURCES += main.cpp\
     devicedata_io.cpp \
     settng_test.cpp \
     settng_panto.cpp \
-    settng_distance.cpp
+    settng_distance.cpp\
+    datainputcalibratepage.cpp \
+    datainputlubricatepage.cpp \
+    datainputsplitlinepage.cpp \
+    buttonrectutil.cpp\
+    widgets/ctrlcontrolvoltage.cpp \
+    widgets/ctrlnetcurrent.cpp \
+    widgets/ctrlnetvoltage.cpp \
+    widgets/ctrltracbrake.cpp \
+    widgets/ctrltrainoutline.cpp \
+    widgets/ctrltrainoutlinereverse.cpp \
+    devicedata_trainoutline.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -173,6 +188,10 @@ HEADERS  += widget.h \
     data/data_tcn.h \
     data/trainbean.h \
     simulation.h \
+    datainputwheelpage.h \
+    datainputdatetimepage.h \
+    datainputother.h \
+    datainputidpage.h\
     devicedata_online.h\
     data/data_tcu.h \
     data/data_riom.h \
@@ -185,7 +204,18 @@ HEADERS  += widget.h \
     devicedata_io.h \
     settng_test.h \
     settng_panto.h \
-    settng_distance.h
+    settng_distance.h\
+    datainputcalibratepage.h \
+    datainputlubricatepage.h \
+    datainputsplitlinepage.h \
+    buttonrectutil.h\
+    widgets/ctrlcontrolvoltage.h \
+    widgets/ctrlnetcurrent.h \
+    widgets/ctrlnetvoltage.h \
+    widgets/ctrltracbrake.h \
+    widgets/ctrltrainoutline.h \
+    widgets/ctrltrainoutlinereverse.h \
+    devicedata_trainoutline.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -202,7 +232,23 @@ FORMS    += widget.ui \
     devicedata_io.ui \
     settng_test.ui \
     settng_panto.ui \
-    settng_distance.ui
+    settng_distance.ui\
+    datainputwheelpage.ui \
+    datainputdatetimepage.ui \
+    datainputother.ui \
+    datainputidpage.ui\
+    devicedata_online.ui \
+    datainputcalibratepage.ui \
+    datainputlubricatepage.ui \
+    datainputsplitlinepage.ui \
+    buttonrectutil.ui\
+    widgets/ctrlcontrolvoltage.ui \
+    widgets/ctrlnetcurrent.ui \
+    widgets/ctrlnetvoltage.ui \
+    widgets/ctrltracbrake.ui \
+    widgets/ctrltrainoutline.ui \
+    widgets/ctrltrainoutlinereverse.ui \
+    devicedata_trainoutline.ui
 
 RESOURCES += \
     Resource.qrc

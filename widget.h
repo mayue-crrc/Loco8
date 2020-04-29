@@ -32,6 +32,14 @@ class Settng_Bypass;
 class Settng_Test;
 class Settng_Panto;
 class Settng_Distance;
+class DataInputWheelPage;
+class DataInputDateTimePage;
+class DataInputOther;
+class DataInputCalibratePage;
+class DataInputLubricatePage;
+class DataInputSplitLinePage;
+
+class DeviceData_TrainOutline;
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -72,6 +80,14 @@ private:
     Settng_Test* settng_Test;
     Settng_Panto* settng_Panto;
     Settng_Distance* settng_Distance;
+
+    DataInputWheelPage* dataInputWheelPage;
+    DataInputDateTimePage* dataInputDateTimePage;
+    DataInputOther* dataInputOther;
+    DataInputLubricatePage* dataInputLubricatePage;
+    DataInputCalibratePage* dataInputCalibratePage;
+    DataInputSplitLinePage* dataInputSplitLinePage;
+    DeviceData_TrainOutline* mainData_DriverOutline;
 };
 
 #endif // WIDGET_H

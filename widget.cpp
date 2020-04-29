@@ -25,6 +25,14 @@
 #include "settng_test.h"
 #include "settng_panto.h"
 #include "settng_distance.h"
+#include "datainputwheelpage.h"
+#include "datainputdatetimepage.h"
+#include "datainputother.h"
+#include "datainputcalibratepage.h"
+#include "datainputlubricatepage.h"
+#include "datainputsplitlinepage.h"
+#include "devicedata_trainoutline.h"
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -67,8 +75,32 @@ Widget::Widget(QWidget *parent) :
     connect(navigator,SIGNAL(translateLanguage()),this,SLOT(translateLanguage()));
 
     this->vehicleRunStatePage = new VehicleRunStatePage(this);
-    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("牵引模式"));
+    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("主界面"));
     this->vehicleRunStatePage->show();
+
+    this->dataInputLubricatePage = new DataInputLubricatePage(this);
+    this->dataInputLubricatePage->setMyBase(uMiddleMainPage, QString("润滑设定"));
+    this->dataInputLubricatePage->hide();
+
+    this->dataInputWheelPage = new DataInputWheelPage(this);
+    this->dataInputWheelPage->setMyBase(uMiddleMainPage, QString("轮径相关"));
+    this->dataInputWheelPage->hide();
+
+    this->dataInputDateTimePage = new DataInputDateTimePage(this);
+    this->dataInputDateTimePage->setMyBase(uMiddleMainPage, QString("日期/时间"));
+    this->dataInputDateTimePage->hide();
+
+    this->dataInputOther = new DataInputOther(this);
+    this->dataInputOther->setMyBase(uMiddleMainPage, QString("其他设置"));
+    this->dataInputOther->hide();
+
+    this->dataInputCalibratePage = new DataInputCalibratePage(this);
+    this->dataInputCalibratePage->setMyBase(uMiddleMainPage, QString("屏幕校准"));
+    this->dataInputCalibratePage->hide();
+
+    this->dataInputSplitLinePage = new DataInputSplitLinePage(this);
+    this->dataInputSplitLinePage->setMyBase(uMiddleMainPage, QString("分相线路"));
+    this->dataInputSplitLinePage->hide();
 
     this->header = new Header(this);
     this->header->setMyBase(uBottom,QString("提示"));
@@ -96,6 +128,12 @@ Widget::Widget(QWidget *parent) :
     this->settng_Distance = new Settng_Distance(this);
     this->settng_Distance->setMyBase(uMiddleControl,QString("距离计数"));
     this->settng_Distance->hide();
+
+
+    //add driver pages
+    this->mainData_DriverOutline = new DeviceData_TrainOutline(this);
+    this->mainData_DriverOutline->setMyBase(uMiddleControl,QString("驱动概述"));
+    this->mainData_DriverOutline->hide();
 
     //add device_data pages
     this->deviceData_Breaker = new DeviceData_Breaker(this);
@@ -125,15 +163,29 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
+
     this->widgets.insert(uSettng_Test,this->settng_Test);
     this->widgets.insert(uSettng_Panto,this->settng_Panto);
     this->widgets.insert(uSettng_Distance,this->settng_Distance);
     this->widgets.insert(uDeviceData_Breaker,this->deviceData_Breaker);
     this->widgets.insert(uDeviceData_ACU,this->deviceData_ACU);
     this->widgets.insert(uDeviceData_Version,this->deviceData_Version);
+
+    this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
+
+
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
     this->widgets.insert(uDeviceData_MainConv,this->deviceData_MainConv);
     this->widgets.insert(uDeviceData_IO,this->deviceData_IO);
+
+    //数据输入
+
+    this->widgets.insert(uDataInputWheelPage, this->dataInputWheelPage);
+    this->widgets.insert(uDataInputDateTimePage, this->dataInputDateTimePage);
+    this->widgets.insert(uDataInputOther, this->dataInputOther);
+    this->widgets.insert(uDataInputCalibratePage, this->dataInputCalibratePage);
+    this->widgets.insert(uDataInputLubricatePage, this->dataInputLubricatePage);
+    this->widgets.insert(uDataInputSplitLinePage, this->dataInputSplitLinePage);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
@@ -156,13 +208,43 @@ void Widget::updatePage()
         this->simulation->installMvb(CrrcMvb::getCrrcMvb());
         this->database->updateData();
     }
-
     // start fault scanning thread
-    static int faultdelaycnt = 0;
+    static int faultdelaycnt = 45;
     if ((faultdelaycnt++ > 45) && !crrcFault->isRunning())
     {
         crrcFault->start();
     }
+    // define local time for recording and showing
+//       QDateTime dateTimeLocal;
+//       if(this->database->PUBPORT_CCUOnline_B1 && faultdelaycnt>45)
+//       {
+//           VCUtime2HMI10s();
+
+//           QDate date( this->database->CTAL_SysTimeYear_U8+2000,this->database->CTAL_SysTimeMonth_U8,this->database->CTAL_SysTimeDay_U8  );
+//           QTime time( this->database->CTAL_SysTimeHour_U8, this->database->CTAL_SysTimeMinute_U8, this->database->CTAL_SysTimeSecond_U8);
+
+//           this->database->HMI_DateTime_foruse.setDate(date);
+//           this->database->HMI_DateTime_foruse.setTime(time);
+
+
+//           if(this->database->HMI_DateTime_foruse.isValid())
+//           {
+
+//           }else
+//           {
+//               this->database->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+//               this->database->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+//           }
+//       }else
+//       {
+//           this->database->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+//           this->database->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+//       }
+//       this->crrcFault->getLocalDateTime(this->database->HMI_DateTime_foruse);
+       QDateTime dateTimeLocal;
+
+       this->crrcFault->getLocalDateTime(dateTimeLocal.currentDateTime());
+
     counter >= 100 ? (counter = 1) : (counter ++);
 
 

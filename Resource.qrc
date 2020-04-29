@@ -79,5 +79,14 @@
         <file>images/pantoSetDOWN.png</file>
         <file>images/pantoSetISO.png</file>
         <file>images/pantoSetUP.png</file>
+        <file>images/Cheti.png</file>
+        <file>images/qudongiso.png</file>
+        <file>images/qudongok.png</file>
+        <file>images/shengqi.png</file>
+        <file>images/left.png</file>
+        <file>images/right.png</file>
+        <file>images/TrainLogo-reverse.png</file>
+        <file>images/TrainLogoUp.png</file>
+        <file>images/TrainLogoUp-reverse.png</file>
     </qresource>
 </RCC>
