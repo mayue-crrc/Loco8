@@ -19,6 +19,7 @@
 #define BLACK     "background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define REDBACKGROUND "background-color:rgb(240,0,0)"
 #define GREENBACKGROUND "background-color:rgb(0,240,0)"
+#define YELLOWBACKGROUND "background-color:rgb(240,240,0)"
 
 #define	PINGBAO   "image: url(:/images/images/pingbao.png);"
 #define	LIANGDUZIDONG   "image: url(:/images/images/auto.png);"
