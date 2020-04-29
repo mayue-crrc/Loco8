@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settng_Panto</class>
+ <widget class="QWidget" name="Settng_Panto">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+color:white;
+}
+QPushButton
+{
+background-color:black;
+border:1px solid white;
+border-left:2px solid white;
+border-top:2px solid white;
+color:white;
+}</string>
+  </property>
+  <widget class="QLabel" name="LBL_4Train3">
+   <property name="geometry">
+    <rect>
+     <x>397</x>
+     <y>13</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Cheti_L.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4PANTO1">
+   <property name="geometry">
+    <rect>
+     <x>72</x>
+     <y>3</y>
+     <width>35</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/images/pantoSetDOWN.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train1Num">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011A</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train1">
+   <property name="geometry">
+    <rect>
+     <x>64</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;
+image: url(:/images/images/Cheti_L.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4HS1">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>43</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2HS2">
+   <property name="geometry">
+    <rect>
+     <x>476</x>
+     <y>176</y>
+     <width>41</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4HS4">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>43</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4Active1">
+   <property name="geometry">
+    <rect>
+     <x>46</x>
+     <y>50</y>
+     <width>14</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Active.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train3">
+   <property name="geometry">
+    <rect>
+     <x>232</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;
+image: url(:/images/images/Cheti_L.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4HS2">
+   <property name="geometry">
+    <rect>
+     <x>246</x>
+     <y>43</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4Train2">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>13</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Cheti-reverse.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4PANTO4">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>4</y>
+     <width>35</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/images/pantoSetDOWN.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train2">
+   <property name="geometry">
+    <rect>
+     <x>148</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;
+image: url(:/images/images/Cheti-reverse.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train4Num">
+   <property name="geometry">
+    <rect>
+     <x>323</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011D</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_PANTO_Cutout">
+   <property name="geometry">
+    <rect>
+     <x>254</x>
+     <y>308</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>受电弓隔离</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train4">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;
+image: url(:/images/images/Cheti-reverse.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2Train2">
+   <property name="geometry">
+    <rect>
+     <x>396</x>
+     <y>136</y>
+     <width>291</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Cheti-reverse.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2HS1">
+   <property name="geometry">
+    <rect>
+     <x>266</x>
+     <y>176</y>
+     <width>41</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2Active1">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>196</y>
+     <width>18</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Active.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2Active2">
+   <property name="geometry">
+    <rect>
+     <x>624</x>
+     <y>196</y>
+     <width>18</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Active.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4Train1">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>13</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Cheti_L.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4Active4">
+   <property name="geometry">
+    <rect>
+     <x>734</x>
+     <y>50</y>
+     <width>14</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Active.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train2Num">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011B</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4Active3">
+   <property name="geometry">
+    <rect>
+     <x>426</x>
+     <y>50</y>
+     <width>14</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Active.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4Train4">
+   <property name="geometry">
+    <rect>
+     <x>586</x>
+     <y>13</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Cheti-reverse.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2PANTO2">
+   <property name="geometry">
+    <rect>
+     <x>558</x>
+     <y>130</y>
+     <width>45</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/images/pantoSetDOWN.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4PANTO2">
+   <property name="geometry">
+    <rect>
+     <x>302</x>
+     <y>3</y>
+     <width>35</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/images/pantoSetDOWN.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_PANTO_CancelCutout">
+   <property name="geometry">
+    <rect>
+     <x>406</x>
+     <y>308</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>受电弓隔离取消</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2Train1">
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>136</y>
+     <width>291</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Cheti_L.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4HS3">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>43</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train3Num">
+   <property name="geometry">
+    <rect>
+     <x>238</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011C</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_2PANTO1">
+   <property name="geometry">
+    <rect>
+     <x>189</x>
+     <y>130</y>
+     <width>45</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/images/pantoSetDOWN.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4PANTO3">
+   <property name="geometry">
+    <rect>
+     <x>452</x>
+     <y>3</y>
+     <width>35</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/images/pantoSetDOWN.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_4Active2">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>50</y>
+     <width>14</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/Active.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>LBL_4Train3</zorder>
+  <zorder>LBL_Train1Num</zorder>
+  <zorder>BTN_Train1</zorder>
+  <zorder>LBL_4HS1</zorder>
+  <zorder>LBL_2HS2</zorder>
+  <zorder>LBL_4HS4</zorder>
+  <zorder>LBL_4Active1</zorder>
+  <zorder>BTN_Train3</zorder>
+  <zorder>LBL_4HS2</zorder>
+  <zorder>LBL_4Train2</zorder>
+  <zorder>BTN_Train2</zorder>
+  <zorder>LBL_Train4Num</zorder>
+  <zorder>BTN_PANTO_Cutout</zorder>
+  <zorder>BTN_Train4</zorder>
+  <zorder>LBL_2Train2</zorder>
+  <zorder>LBL_2HS1</zorder>
+  <zorder>LBL_2Active1</zorder>
+  <zorder>LBL_2Active2</zorder>
+  <zorder>LBL_4Train1</zorder>
+  <zorder>LBL_4Active4</zorder>
+  <zorder>LBL_Train2Num</zorder>
+  <zorder>LBL_4Active3</zorder>
+  <zorder>LBL_4Train4</zorder>
+  <zorder>LBL_2PANTO2</zorder>
+  <zorder>LBL_4PANTO2</zorder>
+  <zorder>BTN_PANTO_CancelCutout</zorder>
+  <zorder>LBL_2Train1</zorder>
+  <zorder>LBL_4HS3</zorder>
+  <zorder>LBL_Train3Num</zorder>
+  <zorder>LBL_2PANTO1</zorder>
+  <zorder>LBL_4PANTO3</zorder>
+  <zorder>LBL_4Active2</zorder>
+  <zorder>LBL_4PANTO1</zorder>
+  <zorder>LBL_4PANTO4</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

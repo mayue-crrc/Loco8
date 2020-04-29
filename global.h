@@ -116,7 +116,7 @@ enum pageIndex
     //过程数据
     uDeviceData_TrainOutline,
     uDeviceData_TracBrake,
-    uDeviceData_breaker,
+    uDeviceData_Breaker,
     uDeviceData_ACU,
     uDeviceData_MainConv,
     uDeviceData_Online,

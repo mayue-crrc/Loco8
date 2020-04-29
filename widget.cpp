@@ -9,13 +9,22 @@
 #include "crrcmvb.h"
 #include "crrcfault.h"
 #include "simulation.h"
+#include "devicedata_breaker.h"
+#include "devicedata_acu.h"
+#include "devicedata_version.h"
 #include "devicedata_online.h"
+#include "devicedata_mainconv.h"
+#include "devicedata_io.h"
+
 #ifdef QT_VERSION_5_6
 #include "qdesktopwidget.h"
 #endif
 
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
+#include "settng_test.h"
+#include "settng_panto.h"
+#include "settng_distance.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -76,16 +85,55 @@ Widget::Widget(QWidget *parent) :
     this->settng_Bypass->setMyBase(uMiddleControl,QString("隔离"));
     this->settng_Bypass->hide();
 
+    this->settng_Test = new Settng_Test(this);
+    this->settng_Test->setMyBase(uMiddleControl,QString("运行测试"));
+    this->settng_Test->hide();
+
+    this->settng_Panto = new Settng_Panto(this);
+    this->settng_Panto->setMyBase(uMiddleControl,QString("受电弓"));
+    this->settng_Panto->hide();
+
+    this->settng_Distance = new Settng_Distance(this);
+    this->settng_Distance->setMyBase(uMiddleControl,QString("距离计数"));
+    this->settng_Distance->hide();
+
     //add device_data pages
+    this->deviceData_Breaker = new DeviceData_Breaker(this);
+    this->deviceData_Breaker->setMyBase(uMiddleDeviceData,QString("断路器"));
+    this->deviceData_Breaker->hide();
+
+    this->deviceData_ACU = new DeviceData_ACU(this);
+    this->deviceData_ACU->setMyBase(uMiddleDeviceData,QString("辅助"));
+    this->deviceData_ACU->hide();
+
+    this->deviceData_Version = new DeviceData_Version(this);
+    this->deviceData_Version->setMyBase(uMiddleDeviceData,QString("软件版本"));
+    this->deviceData_Version->hide();
+
     this->deviceData_Online = new DeviceData_Online(this);
     this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
     this->deviceData_Online->hide();
 
+    this->deviceData_MainConv = new DeviceData_MainConv(this);
+    this->deviceData_MainConv->setMyBase(uMiddleDeviceData,QString("主变流"));
+    this->deviceData_MainConv->hide();
+
+    this->deviceData_IO = new DeviceData_IO(this);
+    this->deviceData_IO->setMyBase(uMiddleDeviceData,QString("信号状态"));
+    this->deviceData_IO->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
-
+    this->widgets.insert(uSettng_Test,this->settng_Test);
+    this->widgets.insert(uSettng_Panto,this->settng_Panto);
+    this->widgets.insert(uSettng_Distance,this->settng_Distance);
+    this->widgets.insert(uDeviceData_Breaker,this->deviceData_Breaker);
+    this->widgets.insert(uDeviceData_ACU,this->deviceData_ACU);
+    this->widgets.insert(uDeviceData_Version,this->deviceData_Version);
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
+    this->widgets.insert(uDeviceData_MainConv,this->deviceData_MainConv);
+    this->widgets.insert(uDeviceData_IO,this->deviceData_IO);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

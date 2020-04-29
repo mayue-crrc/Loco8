@@ -93,7 +93,15 @@ SOURCES += main.cpp\
     data/data_tcu.cpp \
     data/data_riom.cpp \
     data/data_acu.cpp \
-    data/data_bcu.cpp
+    data/data_bcu.cpp \
+    devicedata_acu.cpp \
+    devicedata_mainconv.cpp \
+    devicedata_breaker.cpp \
+    devicedata_version.cpp \
+    devicedata_io.cpp \
+    settng_test.cpp \
+    settng_panto.cpp \
+    settng_distance.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -169,7 +177,15 @@ HEADERS  += widget.h \
     data/data_tcu.h \
     data/data_riom.h \
     data/data_acu.h \
-    data/data_bcu.h
+    data/data_bcu.h \
+    devicedata_acu.h \
+    devicedata_mainconv.h \
+    devicedata_breaker.h \
+    devicedata_version.h \
+    devicedata_io.h \
+    settng_test.h \
+    settng_panto.h \
+    settng_distance.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -178,7 +194,15 @@ FORMS    += widget.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
     simulation.ui \
-    devicedata_online.ui
+    devicedata_online.ui \
+    devicedata_acu.ui \
+    devicedata_mainconv.ui \
+    devicedata_breaker.ui \
+    devicedata_version.ui \
+    devicedata_io.ui \
+    settng_test.ui \
+    settng_panto.ui \
+    settng_distance.ui
 
 RESOURCES += \
     Resource.qrc

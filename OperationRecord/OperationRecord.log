@@ -36,3 +36,5 @@ ERROR - test!
 [2019-03-25 15:34:16] ERROR () Widget (:)] - MVB板卡设置操作模式失败
 [2019-03-26 08:30:34] ERROR () Widget (:)] - MVB板卡设置操作模式失败
 [2020-04-24 15:49:40] ERROR () Widget (:)] - MVB板卡初始化失败
+[2020-04-26 11:26:41] ERROR () Widget (:)] - configure.ini文件错误
+[2020-04-26 11:28:33] ERROR () Widget (:)] - configure.ini文件错误

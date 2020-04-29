@@ -64,5 +64,20 @@
         <file>images/weihuzhupinganxia.png</file>
         <file>images/yunxinganxia.png</file>
         <file>images/yunxingzhupinanxia.png</file>
+        <file>images/PHclose.png</file>
+        <file>images/PHopen.png</file>
+        <file>images/SWclose.png</file>
+        <file>images/SWopen.png</file>
+        <file>images/Circle.png</file>
+        <file>images/PCQUAI.png</file>
+        <file>images/SWcloseV.png</file>
+        <file>images/SWopenV.png</file>
+        <file>images/Coil.png</file>
+        <file>images/Coil_GND.png</file>
+        <file>images/Cheti_L.png</file>
+        <file>images/Active.png</file>
+        <file>images/pantoSetDOWN.png</file>
+        <file>images/pantoSetISO.png</file>
+        <file>images/pantoSetUP.png</file>
     </qresource>
 </RCC>

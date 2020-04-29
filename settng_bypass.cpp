@@ -6,6 +6,7 @@ Settng_Bypass::Settng_Bypass(QWidget *parent) :
     ui(new Ui::Settng_Bypass)
 {
     ui->setupUi(this);
+    this->ui->setBox->hide();
 }
 
 Settng_Bypass::~Settng_Bypass()
