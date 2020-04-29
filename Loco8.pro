@@ -98,6 +98,10 @@ SOURCES += main.cpp\
     data/data_riom.cpp \
     data/data_acu.cpp \
     data/data_bcu.cpp \
+    datainputcalibratepage.cpp \
+    datainputlubricatepage.cpp \
+    datainputsplitlinepage.cpp \
+    buttonrectutil.cpp\
     widgets/ctrlcontrolvoltage.cpp \
     widgets/ctrlnetcurrent.cpp \
     widgets/ctrlnetvoltage.cpp \
@@ -185,6 +189,10 @@ HEADERS  += widget.h \
     data/data_riom.h \
     data/data_acu.h \
     data/data_bcu.h \
+    datainputcalibratepage.h \
+    datainputlubricatepage.h \
+    datainputsplitlinepage.h \
+    buttonrectutil.h\
     widgets/ctrlcontrolvoltage.h \
     widgets/ctrlnetcurrent.h \
     widgets/ctrlnetvoltage.h \
@@ -205,6 +213,10 @@ FORMS    += widget.ui \
     datainputother.ui \
     datainputidpage.ui\
     devicedata_online.ui \
+    datainputcalibratepage.ui \
+    datainputlubricatepage.ui \
+    datainputsplitlinepage.ui \
+    buttonrectutil.ui\
     widgets/ctrlcontrolvoltage.ui \
     widgets/ctrlnetcurrent.ui \
     widgets/ctrlnetvoltage.ui \

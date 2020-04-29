@@ -1,13 +1,13 @@
 #ifndef DATAINPUTWHEELPAGE_H
 #define DATAINPUTWHEELPAGE_H
 
-#include <QWidget>
+#include "mybase.h"
 
 namespace Ui {
 class DataInputWheelPage;
 }
 
-class DataInputWheelPage : public QWidget
+class DataInputWheelPage : public MyBase
 {
     Q_OBJECT
     

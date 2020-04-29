@@ -24,6 +24,14 @@ class DeviceData_Online;
 
 class MainData_TrainOutline;
 class Settng_Bypass;
+
+class DataInputWheelPage;
+class DataInputDateTimePage;
+class DataInputOther;
+class DataInputCalibratePage;
+class DataInputLubricatePage;
+class DataInputSplitLinePage;
+
 class DeviceData_TrainOutline;
 class Widget : public QWidget
 {
@@ -58,6 +66,13 @@ private:
 
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
+
+    DataInputWheelPage* dataInputWheelPage;
+    DataInputDateTimePage* dataInputDateTimePage;
+    DataInputOther* dataInputOther;
+    DataInputLubricatePage* dataInputLubricatePage;
+    DataInputCalibratePage* dataInputCalibratePage;
+    DataInputSplitLinePage* dataInputSplitLinePage;
     DeviceData_TrainOutline* mainData_DriverOutline;
 };
 

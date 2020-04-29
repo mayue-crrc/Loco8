@@ -2,7 +2,7 @@
 #include "ui_datainputwheelpage.h"
 
 DataInputWheelPage::DataInputWheelPage(QWidget *parent) :
-    QWidget(parent),
+    MyBase(parent),
     ui(new Ui::DataInputWheelPage)
 {
     ui->setupUi(this);

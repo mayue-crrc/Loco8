@@ -130,13 +130,13 @@ enum pageIndex
     uDeviceData_Online,
     uDeviceData_Version,
     uDeviceData_IO,
-    //机车设置
-    uSettng_Wheel,
-    uSettng_Datetime,
-    uSettng_Others,
-    uSettng_Calibrate,
-    uSettng_Lubrication,
-    uSettng_Separation,
+    //数据输入
+    uDataInputWheelPage,
+    uDataInputDateTimePage,
+    uDataInputOther,
+    uDataInputCalibratePage,
+    uDataInputLubricatePage,
+    uDataInputSplitLinePage,
     //维护测试
     uMain_Simulate,
     uMain_Lubrication,
@@ -148,6 +148,7 @@ enum pageIndex
     uFault_Current,
     uFault_History,
     uFault_Download,
+
 };
 enum keyboardIndex{
     key_NULL = 0,
