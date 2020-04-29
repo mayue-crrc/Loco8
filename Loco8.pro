@@ -101,7 +101,14 @@ SOURCES += main.cpp\
     datainputcalibratepage.cpp \
     datainputlubricatepage.cpp \
     datainputsplitlinepage.cpp \
-    buttonrectutil.cpp
+    buttonrectutil.cpp\
+    widgets/ctrlcontrolvoltage.cpp \
+    widgets/ctrlnetcurrent.cpp \
+    widgets/ctrlnetvoltage.cpp \
+    widgets/ctrltracbrake.cpp \
+    widgets/ctrltrainoutline.cpp \
+    widgets/ctrltrainoutlinereverse.cpp \
+    devicedata_trainoutline.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -185,7 +192,14 @@ HEADERS  += widget.h \
     datainputcalibratepage.h \
     datainputlubricatepage.h \
     datainputsplitlinepage.h \
-    buttonrectutil.h
+    buttonrectutil.h\
+    widgets/ctrlcontrolvoltage.h \
+    widgets/ctrlnetcurrent.h \
+    widgets/ctrlnetvoltage.h \
+    widgets/ctrltracbrake.h \
+    widgets/ctrltrainoutline.h \
+    widgets/ctrltrainoutlinereverse.h \
+    devicedata_trainoutline.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -202,7 +216,14 @@ FORMS    += widget.ui \
     datainputcalibratepage.ui \
     datainputlubricatepage.ui \
     datainputsplitlinepage.ui \
-    buttonrectutil.ui
+    buttonrectutil.ui\
+    widgets/ctrlcontrolvoltage.ui \
+    widgets/ctrlnetcurrent.ui \
+    widgets/ctrlnetvoltage.ui \
+    widgets/ctrltracbrake.ui \
+    widgets/ctrltrainoutline.ui \
+    widgets/ctrltrainoutlinereverse.ui \
+    devicedata_trainoutline.ui
 
 RESOURCES += \
     Resource.qrc

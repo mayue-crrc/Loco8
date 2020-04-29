@@ -39,7 +39,7 @@ DataInputLubricatePage::~DataInputLubricatePage()
 void DataInputLubricatePage::showEvent(QShowEvent *)
 {
     ui->labelSetTime->setText(QString::number(this->database->data_CCU->FLL_TIME));
-    ui->labelSetDIstance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
+    //ui->labelSetDIstance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
 }
 
 void DataInputLubricatePage::onButtonsClicked(int buttonId)
@@ -85,5 +85,5 @@ void DataInputLubricatePage::on_btnStore_clicked()
         //set distance value and sign
     }
     ui->labelSetTime->setText(QString::number(this->database->data_CCU->FLL_TIME));
-    ui->labelSetDIstance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
+    //ui->labelSetDIstance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
 }

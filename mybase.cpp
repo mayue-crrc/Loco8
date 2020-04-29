@@ -57,3 +57,48 @@ void MyBase::processKeyboardEvent(keyboardIndex k)
 {
 
 }
+void MyBase::setLBLtext(QLabel *lbl, int value, float dem,unsigned char scale)
+{
+    lbl->setText(QString::number((float)value/dem,10,scale));
+}
+void MyBase::setVLBLtext(QLabel *lbl,  bool valid,int value,float dem,unsigned char scale)
+{
+    if(valid)
+    {
+        lbl->setText(QString::number((float)value/dem,10,scale));
+    }else
+    {
+        lbl->setText("--");
+    }
+}
+void MyBase::setLBLpic(QLabel *lbl, QList<bool> &status, QList<QString> &stylestr)
+{
+    if(status.size() != stylestr.size())
+    {
+        qDebug()<<"status's size doesnt equal stylestr's size"<<status.size()<<stylestr.size();
+        status.clear();
+        stylestr.clear();
+        return;
+
+    }
+    for(int i = 0;i<status.size();i++)
+    {
+        if(status.at(i))
+        {
+            lbl->setStyleSheet(stylestr.at(i));
+            status.clear();
+            stylestr.clear();
+            return;
+        }
+    }
+}
+void MyBase::setLBLpic(QLabel *lbl, bool status,QString stylestr)
+{
+    if(status)
+    {
+        lbl->setStyleSheet(stylestr);
+    }else
+    {
+        lbl->setStyleSheet(BLACK);
+    }
+}

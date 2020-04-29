@@ -16,13 +16,13 @@
 
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
-
 #include "datainputwheelpage.h"
 #include "datainputdatetimepage.h"
 #include "datainputother.h"
 #include "datainputcalibratepage.h"
 #include "datainputlubricatepage.h"
 #include "datainputsplitlinepage.h"
+#include "devicedata_trainoutline.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -65,7 +65,7 @@ Widget::Widget(QWidget *parent) :
     connect(navigator,SIGNAL(translateLanguage()),this,SLOT(translateLanguage()));
 
     this->vehicleRunStatePage = new VehicleRunStatePage(this);
-    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("牵引模式"));
+    this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("主界面"));
     this->vehicleRunStatePage->show();
 
     this->dataInputLubricatePage = new DataInputLubricatePage(this);
@@ -107,6 +107,10 @@ Widget::Widget(QWidget *parent) :
     this->settng_Bypass->setMyBase(uMiddleControl,QString("隔离"));
     this->settng_Bypass->hide();
 
+    //add driver pages
+    this->mainData_DriverOutline = new DeviceData_TrainOutline(this);
+    this->mainData_DriverOutline->setMyBase(uMiddleControl,QString("驱动概述"));
+    this->mainData_DriverOutline->hide();
     //add device_data pages
     this->deviceData_Online = new DeviceData_Online(this);
     this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
@@ -115,6 +119,7 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
+    this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
 
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
 
@@ -148,13 +153,43 @@ void Widget::updatePage()
         this->simulation->installMvb(CrrcMvb::getCrrcMvb());
         this->database->updateData();
     }
-
     // start fault scanning thread
-    static int faultdelaycnt = 0;
+    static int faultdelaycnt = 45;
     if ((faultdelaycnt++ > 45) && !crrcFault->isRunning())
     {
         crrcFault->start();
     }
+    // define local time for recording and showing
+//       QDateTime dateTimeLocal;
+//       if(this->database->PUBPORT_CCUOnline_B1 && faultdelaycnt>45)
+//       {
+//           VCUtime2HMI10s();
+
+//           QDate date( this->database->CTAL_SysTimeYear_U8+2000,this->database->CTAL_SysTimeMonth_U8,this->database->CTAL_SysTimeDay_U8  );
+//           QTime time( this->database->CTAL_SysTimeHour_U8, this->database->CTAL_SysTimeMinute_U8, this->database->CTAL_SysTimeSecond_U8);
+
+//           this->database->HMI_DateTime_foruse.setDate(date);
+//           this->database->HMI_DateTime_foruse.setTime(time);
+
+
+//           if(this->database->HMI_DateTime_foruse.isValid())
+//           {
+
+//           }else
+//           {
+//               this->database->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+//               this->database->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+//           }
+//       }else
+//       {
+//           this->database->HMI_DateTime_foruse.setDate(dateTimeLocal.currentDateTime().date());
+//           this->database->HMI_DateTime_foruse.setTime(dateTimeLocal.currentDateTime().time());
+//       }
+//       this->crrcFault->getLocalDateTime(this->database->HMI_DateTime_foruse);
+       QDateTime dateTimeLocal;
+
+       this->crrcFault->getLocalDateTime(dateTimeLocal.currentDateTime());
+
     counter >= 100 ? (counter = 1) : (counter ++);
 
 
