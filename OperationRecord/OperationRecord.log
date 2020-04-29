@@ -36,3 +36,23 @@ ERROR - test!
 [2019-03-25 15:34:16] ERROR () Widget (:)] - MVB板卡设置操作模式失败
 [2019-03-26 08:30:34] ERROR () Widget (:)] - MVB板卡设置操作模式失败
 [2020-04-24 15:49:40] ERROR () Widget (:)] - MVB板卡初始化失败
+[2020-04-27 15:30:18] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:18] ERROR () Widget (:)] - MVB板卡初始化失败
+[2020-04-27 15:30:39] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:40] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:40] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:46] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:46] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:46] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:59] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:30:59] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:31:00] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:31:10] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:31:11] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:31:11] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:33:03] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:33:03] ERROR () Widget (:)] - MVB板卡初始化失败
+[2020-04-27 15:33:10] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:33:10] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:33:12] ERROR () DataInputLubricatePage (:)] - the select id is invalid;
+[2020-04-27 15:33:13] ERROR () DataInputLubricatePage (:)] - the select id is invalid;

@@ -16,6 +16,13 @@
 
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
+
+#include "datainputwheelpage.h"
+#include "datainputdatetimepage.h"
+#include "datainputother.h"
+#include "datainputcalibratepage.h"
+#include "datainputlubricatepage.h"
+#include "datainputsplitlinepage.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -61,6 +68,30 @@ Widget::Widget(QWidget *parent) :
     this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("牵引模式"));
     this->vehicleRunStatePage->show();
 
+    this->dataInputLubricatePage = new DataInputLubricatePage(this);
+    this->dataInputLubricatePage->setMyBase(uMiddleMainPage, QString("润滑设定"));
+    this->dataInputLubricatePage->hide();
+
+    this->dataInputWheelPage = new DataInputWheelPage(this);
+    this->dataInputWheelPage->setMyBase(uMiddleMainPage, QString("轮径相关"));
+    this->dataInputWheelPage->hide();
+
+    this->dataInputDateTimePage = new DataInputDateTimePage(this);
+    this->dataInputDateTimePage->setMyBase(uMiddleMainPage, QString("日期/时间"));
+    this->dataInputDateTimePage->hide();
+
+    this->dataInputOther = new DataInputOther(this);
+    this->dataInputOther->setMyBase(uMiddleMainPage, QString("其他设置"));
+    this->dataInputOther->hide();
+
+    this->dataInputCalibratePage = new DataInputCalibratePage(this);
+    this->dataInputCalibratePage->setMyBase(uMiddleMainPage, QString("屏幕校准"));
+    this->dataInputCalibratePage->hide();
+
+    this->dataInputSplitLinePage = new DataInputSplitLinePage(this);
+    this->dataInputSplitLinePage->setMyBase(uMiddleMainPage, QString("分相线路"));
+    this->dataInputSplitLinePage->hide();
+
     this->header = new Header(this);
     this->header->setMyBase(uBottom,QString("提示"));
     this->header->show();
@@ -86,6 +117,15 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
 
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
+
+    //数据输入
+
+    this->widgets.insert(uDataInputWheelPage, this->dataInputWheelPage);
+    this->widgets.insert(uDataInputDateTimePage, this->dataInputDateTimePage);
+    this->widgets.insert(uDataInputOther, this->dataInputOther);
+    this->widgets.insert(uDataInputCalibratePage, this->dataInputCalibratePage);
+    this->widgets.insert(uDataInputLubricatePage, this->dataInputLubricatePage);
+    this->widgets.insert(uDataInputSplitLinePage, this->dataInputSplitLinePage);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
