@@ -20,11 +20,18 @@ class CrrcMvb;
 class CrrcFault;
 class Simulation;
 
+class DeviceData_Version;
+class DeviceData_Breaker;
+class DeviceData_ACU;
 class DeviceData_Online;
+class DeviceData_MainConv;
+class DeviceData_IO;
 
 class MainData_TrainOutline;
 class Settng_Bypass;
-
+class Settng_Test;
+class Settng_Panto;
+class Settng_Distance;
 class DataInputWheelPage;
 class DataInputDateTimePage;
 class DataInputOther;
@@ -62,10 +69,17 @@ private:
     CrrcFault* crrcFault;
     Simulation* simulation;
 
+    DeviceData_Breaker* deviceData_Breaker;
+    DeviceData_ACU* deviceData_ACU;
+    DeviceData_Version* deviceData_Version;
     DeviceData_Online* deviceData_Online;
-
+    DeviceData_MainConv* deviceData_MainConv;
+    DeviceData_IO* deviceData_IO;
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
+    Settng_Test* settng_Test;
+    Settng_Panto* settng_Panto;
+    Settng_Distance* settng_Distance;
 
     DataInputWheelPage* dataInputWheelPage;
     DataInputDateTimePage* dataInputDateTimePage;

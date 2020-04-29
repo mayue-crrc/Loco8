@@ -105,8 +105,8 @@ void Navigator::NBpressEvent()
         buttonNameList<<"空气制动"<<""<<""<<""<<""<<""<<""<<"";
         break;
         case uMiddleDeviceData:
-        buttonIndexList<<uDeviceData_TrainOutline<<uDeviceData_TracBrake<<uDeviceData_breaker<<uDeviceData_ACU
-                      <<uDeviceData_MainConv<<uDeviceData_Online<<uDeviceData_Version<<uDeviceData_IO;
+        buttonIndexList<<uDeviceData_TrainOutline<<uDeviceData_TracBrake<<uDeviceData_Breaker<<uDeviceData_ACU
+                      <<uDeviceData_Version<<uDeviceData_Online<<uDeviceData_MainConv<<uDeviceData_IO;
         buttonNameList<<"驱动概述"<<"牵引/制动"<<"断路器"<<"辅助"<<"软件版本"<<"在线状态"<<"主变流"<<"信号状态";
         break;
         case uMiddleSetting:
