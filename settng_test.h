@@ -14,9 +14,14 @@ class Settng_Test : public MyBase
 public:
     explicit Settng_Test(QWidget *parent = 0);
     ~Settng_Test();
+    void timerEvent(QTimerEvent*);
+
+private slots:
+    void on_BTN_LightTest_pressed();
 
 private:
     Ui::Settng_Test *ui;
+    int testTimer;
 };
 
 #endif // SETTNG_TEST_H
