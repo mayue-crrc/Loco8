@@ -14,9 +14,15 @@ class Settng_Distance : public MyBase
 public:
     explicit Settng_Distance(QWidget *parent = 0);
     ~Settng_Distance();
+    void updatePage();
+    void timerEvent(QTimerEvent*);
+
+private slots:
+    void on_BTN_Reset_pressed();
 
 private:
     Ui::Settng_Distance *ui;
+    int resetTimer;
 };
 
 #endif // SETTNG_DISTANCE_H
