@@ -12,3 +12,18 @@ Settng_Test::~Settng_Test()
 {
     delete ui;
 }
+
+void Settng_Test::on_BTN_LightTest_pressed()
+{
+    this->ui->BTN_LightTest->setStyleSheet(NButtonDOWN);
+    testTimer = startTimer(3000);
+    this->database->data_CCU->LAMP_TEST = true;
+}
+
+void Settng_Test::timerEvent(QTimerEvent *)
+{
+    killTimer(testTimer);
+    this->ui->BTN_LightTest->setStyleSheet(NButtonUP);
+    this->database->data_CCU->LAMP_TEST = false;
+}
+
