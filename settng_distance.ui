@@ -22,7 +22,7 @@ QLabel
 {
 color:white;
 color:rgb(255,255,0);
-font:20px;
+font:18px;
 font: bold;
 }
 QPushButton
@@ -53,7 +53,7 @@ color:white;
     <string>重设</string>
    </property>
   </widget>
-  <widget class="QLabel" name="LBL_ShuttleDis">
+  <widget class="QLabel" name="LBL_ResetDis">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -65,7 +65,7 @@ color:white;
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(255,255,255);
 color:rgb(255,255,0);
-font:24px;
+font:20px;
 font: bold;</string>
    </property>
    <property name="text">
@@ -87,7 +87,7 @@ font: bold;</string>
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(255,255,255);
 color:rgb(255,255,0);
-font:24px;
+font:20px;
 font: bold;</string>
    </property>
    <property name="text">
@@ -159,7 +159,7 @@ font:14px;
    <property name="styleSheet">
     <string notr="true">border:2px solid rgb(255,255,255);
 color:rgb(255,255,0);
-font:24px;
+font:20px;
 font: bold;</string>
    </property>
    <property name="text">
