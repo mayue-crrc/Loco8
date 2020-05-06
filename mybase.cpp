@@ -20,11 +20,11 @@ void MyBase::setMyBase(pagePosition position, QString name)
     }
     else if (position == uMiddle)
     {
-        this->setGeometry(0, 125, this->width(), this->height());
+        this->setGeometry(0, 115, this->width(), this->height());
     }
     else if (position == uBottom)
     {
-        this->setGeometry(0, 550, this->width(), this->height());
+        this->setGeometry(0, 560, this->width(), this->height());
     }
     else if (position == uHuge)
     {
