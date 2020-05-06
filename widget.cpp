@@ -17,6 +17,13 @@
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
 #include "devicedata_trainoutline.h"
+#include "main_simulate.h"
+#include "main_lubrication.h"
+#include "main_assistantdevice.h"
+#include "main_380.h"
+#include "main_separation.h"
+#include "main_doublepanto.h"
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -86,12 +93,39 @@ Widget::Widget(QWidget *parent) :
     this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
     this->deviceData_Online->hide();
 
+    //maintaince
+    this->main_Simulate=new Main_Simulate(this);
+    this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
+    this->main_Simulate->hide();
+    this->main_Lubrication=new Main_Lubrication(this);
+    this->main_Lubrication->setMyBase(uMiddleMain,QString("轮缘"));
+    this->main_Lubrication->hide();
+    this->main_AssistantDevice=new Main_AssistantDevice(this);
+    this->main_AssistantDevice->setMyBase(uMiddleMain,QString("辅助测试"));
+    this->main_AssistantDevice->hide();
+    this->main_380=new Main_380(this);
+    this->main_380->setMyBase(uMiddleMain,QString("库内380"));
+    this->main_380->hide();
+    this->main_Separation=new Main_Separation(this);
+    this->main_Separation->setMyBase(uMiddleMain,QString("过分相测试"));
+    this->main_Separation->hide();
+    this->main_DoublePanto=new Main_DoublePanto(this);
+    this->main_DoublePanto->setMyBase(uMiddleMain,QString("双弓测试"));
+    this->main_DoublePanto->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
     this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
 
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
+
+    this->widgets.insert(uMain_Simulate,this->main_Simulate);
+    this->widgets.insert(uMain_Lubrication,this->main_Lubrication);
+    this->widgets.insert(uMain_AssistantDevice,this->main_AssistantDevice);
+    this->widgets.insert(uMain_380,this->main_380);
+    this->widgets.insert(uMain_Separation,this->main_Separation);
+    this->widgets.insert(uMain_DoublePanto,this->main_DoublePanto);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

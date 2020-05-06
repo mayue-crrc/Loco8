@@ -104,7 +104,13 @@ SOURCES += main.cpp\
     widgets/ctrltracbrake.cpp \
     widgets/ctrltrainoutline.cpp \
     widgets/ctrltrainoutlinereverse.cpp \
-    devicedata_trainoutline.cpp
+    devicedata_trainoutline.cpp \
+    main_simulate.cpp \
+    main_lubrication.cpp \
+    main_assistantdevice.cpp \
+    main_380.cpp \
+    main_separation.cpp \
+    main_doublepanto.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -191,7 +197,13 @@ HEADERS  += widget.h \
     widgets/ctrltracbrake.h \
     widgets/ctrltrainoutline.h \
     widgets/ctrltrainoutlinereverse.h \
-    devicedata_trainoutline.h
+    devicedata_trainoutline.h \
+    main_simulate.h \
+    main_lubrication.h \
+    main_assistantdevice.h \
+    main_380.h \
+    main_separation.h \
+    main_doublepanto.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -211,7 +223,13 @@ FORMS    += widget.ui \
     widgets/ctrltracbrake.ui \
     widgets/ctrltrainoutline.ui \
     widgets/ctrltrainoutlinereverse.ui \
-    devicedata_trainoutline.ui
+    devicedata_trainoutline.ui \
+    main_simulate.ui \
+    main_lubrication.ui \
+    main_assistantdevice.ui \
+    main_380.ui \
+    main_separation.ui \
+    main_doublepanto.ui
 
 RESOURCES += \
     Resource.qrc
