@@ -40,6 +40,15 @@ class DataInputLubricatePage;
 class DataInputSplitLinePage;
 
 class DeviceData_TrainOutline;
+
+class Main_Simulate;
+class Main_Lubrication;
+class Main_AssistantDevice;
+class Main_380;
+class Main_Separation;
+class Main_DoublePanto;
+
+
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -88,6 +97,13 @@ private:
     DataInputCalibratePage* dataInputCalibratePage;
     DataInputSplitLinePage* dataInputSplitLinePage;
     DeviceData_TrainOutline* mainData_DriverOutline;
+
+    Main_Simulate* main_Simulate;
+    Main_Lubrication* main_Lubrication;
+    Main_AssistantDevice* main_AssistantDevice;
+    Main_380* main_380;
+    Main_Separation* main_Separation;
+    Main_DoublePanto* main_DoublePanto;
 };
 
 #endif // WIDGET_H
