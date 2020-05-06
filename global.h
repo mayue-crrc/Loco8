@@ -19,6 +19,7 @@
 #define BLACK     "background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define REDBACKGROUND "background-color:rgb(240,0,0)"
 #define GREENBACKGROUND "background-color:rgb(0,240,0)"
+#define YELLOWBACKGROUND "background-color:rgb(240,240,0)"
 
 #define	PINGBAO   "image: url(:/images/images/pingbao.png);"
 #define	LIANGDUZIDONG   "image: url(:/images/images/auto.png);"
@@ -124,19 +125,19 @@ enum pageIndex
     //过程数据
     uDeviceData_TrainOutline,
     uDeviceData_TracBrake,
-    uDeviceData_breaker,
+    uDeviceData_Breaker,
     uDeviceData_ACU,
     uDeviceData_MainConv,
     uDeviceData_Online,
     uDeviceData_Version,
     uDeviceData_IO,
-    //机车设置
-    uSettng_Wheel,
-    uSettng_Datetime,
-    uSettng_Others,
-    uSettng_Calibrate,
-    uSettng_Lubrication,
-    uSettng_Separation,
+    //数据输入
+    uDataInputWheelPage,
+    uDataInputDateTimePage,
+    uDataInputOther,
+    uDataInputCalibratePage,
+    uDataInputLubricatePage,
+    uDataInputSplitLinePage,
     //维护测试
     uMain_Simulate,
     uMain_Lubrication,
@@ -148,6 +149,7 @@ enum pageIndex
     uFault_Current,
     uFault_History,
     uFault_Download,
+
 };
 enum keyboardIndex{
     key_NULL = 0,

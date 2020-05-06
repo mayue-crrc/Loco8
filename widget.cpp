@@ -9,20 +9,38 @@
 #include "crrcmvb.h"
 #include "crrcfault.h"
 #include "simulation.h"
+#include "devicedata_breaker.h"
+#include "devicedata_acu.h"
+#include "devicedata_version.h"
 #include "devicedata_online.h"
+#include "devicedata_mainconv.h"
+#include "devicedata_io.h"
+
 #ifdef QT_VERSION_5_6
 #include "qdesktopwidget.h"
 #endif
 
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
+#include "settng_test.h"
+#include "settng_panto.h"
+#include "settng_distance.h"
+#include "datainputwheelpage.h"
+#include "datainputdatetimepage.h"
+#include "datainputother.h"
+#include "datainputcalibratepage.h"
+#include "datainputlubricatepage.h"
+#include "datainputsplitlinepage.h"
 #include "devicedata_trainoutline.h"
+<<<<<<< HEAD
 #include "main_simulate.h"
 #include "main_lubrication.h"
 #include "main_assistantdevice.h"
 #include "main_380.h"
 #include "main_separation.h"
 #include "main_doublepanto.h"
+=======
+>>>>>>> ad050fd892a7e0523c44366f2a06d1979d99e145
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -69,6 +87,30 @@ Widget::Widget(QWidget *parent) :
     this->vehicleRunStatePage->setMyBase(uMiddleMainPage,QString("主界面"));
     this->vehicleRunStatePage->show();
 
+    this->dataInputLubricatePage = new DataInputLubricatePage(this);
+    this->dataInputLubricatePage->setMyBase(uMiddleMainPage, QString("润滑设定"));
+    this->dataInputLubricatePage->hide();
+
+    this->dataInputWheelPage = new DataInputWheelPage(this);
+    this->dataInputWheelPage->setMyBase(uMiddleMainPage, QString("轮径相关"));
+    this->dataInputWheelPage->hide();
+
+    this->dataInputDateTimePage = new DataInputDateTimePage(this);
+    this->dataInputDateTimePage->setMyBase(uMiddleMainPage, QString("日期/时间"));
+    this->dataInputDateTimePage->hide();
+
+    this->dataInputOther = new DataInputOther(this);
+    this->dataInputOther->setMyBase(uMiddleMainPage, QString("其他设置"));
+    this->dataInputOther->hide();
+
+    this->dataInputCalibratePage = new DataInputCalibratePage(this);
+    this->dataInputCalibratePage->setMyBase(uMiddleMainPage, QString("屏幕校准"));
+    this->dataInputCalibratePage->hide();
+
+    this->dataInputSplitLinePage = new DataInputSplitLinePage(this);
+    this->dataInputSplitLinePage->setMyBase(uMiddleMainPage, QString("分相线路"));
+    this->dataInputSplitLinePage->hide();
+
     this->header = new Header(this);
     this->header->setMyBase(uBottom,QString("提示"));
     this->header->show();
@@ -84,15 +126,42 @@ Widget::Widget(QWidget *parent) :
     this->settng_Bypass->setMyBase(uMiddleControl,QString("隔离"));
     this->settng_Bypass->hide();
 
+    this->settng_Test = new Settng_Test(this);
+    this->settng_Test->setMyBase(uMiddleControl,QString("运行测试"));
+    this->settng_Test->hide();
+
+    this->settng_Panto = new Settng_Panto(this);
+    this->settng_Panto->setMyBase(uMiddleControl,QString("受电弓"));
+    this->settng_Panto->hide();
+
+    this->settng_Distance = new Settng_Distance(this);
+    this->settng_Distance->setMyBase(uMiddleControl,QString("距离计数"));
+    this->settng_Distance->hide();
+
+
     //add driver pages
     this->mainData_DriverOutline = new DeviceData_TrainOutline(this);
     this->mainData_DriverOutline->setMyBase(uMiddleControl,QString("驱动概述"));
     this->mainData_DriverOutline->hide();
+
     //add device_data pages
+    this->deviceData_Breaker = new DeviceData_Breaker(this);
+    this->deviceData_Breaker->setMyBase(uMiddleDeviceData,QString("断路器"));
+    this->deviceData_Breaker->hide();
+
+    this->deviceData_ACU = new DeviceData_ACU(this);
+    this->deviceData_ACU->setMyBase(uMiddleDeviceData,QString("辅助"));
+    this->deviceData_ACU->hide();
+
+    this->deviceData_Version = new DeviceData_Version(this);
+    this->deviceData_Version->setMyBase(uMiddleDeviceData,QString("软件版本"));
+    this->deviceData_Version->hide();
+
     this->deviceData_Online = new DeviceData_Online(this);
     this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
     this->deviceData_Online->hide();
 
+<<<<<<< HEAD
     //maintaince
     this->main_Simulate=new Main_Simulate(this);
     this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
@@ -112,13 +181,42 @@ Widget::Widget(QWidget *parent) :
     this->main_DoublePanto=new Main_DoublePanto(this);
     this->main_DoublePanto->setMyBase(uMiddleMain,QString("双弓测试"));
     this->main_DoublePanto->hide();
+=======
+    this->deviceData_MainConv = new DeviceData_MainConv(this);
+    this->deviceData_MainConv->setMyBase(uMiddleDeviceData,QString("主变流"));
+    this->deviceData_MainConv->hide();
+
+    this->deviceData_IO = new DeviceData_IO(this);
+    this->deviceData_IO->setMyBase(uMiddleDeviceData,QString("信号状态"));
+    this->deviceData_IO->hide();
+>>>>>>> ad050fd892a7e0523c44366f2a06d1979d99e145
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
+
+    this->widgets.insert(uSettng_Test,this->settng_Test);
+    this->widgets.insert(uSettng_Panto,this->settng_Panto);
+    this->widgets.insert(uSettng_Distance,this->settng_Distance);
+    this->widgets.insert(uDeviceData_Breaker,this->deviceData_Breaker);
+    this->widgets.insert(uDeviceData_ACU,this->deviceData_ACU);
+    this->widgets.insert(uDeviceData_Version,this->deviceData_Version);
+
     this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
 
+
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
+    this->widgets.insert(uDeviceData_MainConv,this->deviceData_MainConv);
+    this->widgets.insert(uDeviceData_IO,this->deviceData_IO);
+
+    //数据输入
+
+    this->widgets.insert(uDataInputWheelPage, this->dataInputWheelPage);
+    this->widgets.insert(uDataInputDateTimePage, this->dataInputDateTimePage);
+    this->widgets.insert(uDataInputOther, this->dataInputOther);
+    this->widgets.insert(uDataInputCalibratePage, this->dataInputCalibratePage);
+    this->widgets.insert(uDataInputLubricatePage, this->dataInputLubricatePage);
+    this->widgets.insert(uDataInputSplitLinePage, this->dataInputSplitLinePage);
 
     this->widgets.insert(uMain_Simulate,this->main_Simulate);
     this->widgets.insert(uMain_Lubrication,this->main_Lubrication);

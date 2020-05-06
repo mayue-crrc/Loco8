@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataInputLubricatePage</class>
+ <widget class="QWidget" name="DataInputLubricatePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+	border:1px solid lightgray;
+    color:white;
+font:16px
+}
+
+QPushButton
+{
+font: 16px;
+color: rgb(192,192,192);
+background-color: rgb(0, 0, 0);
+border-top: 2px solid white;
+border-left: 2px solid white;
+}</string>
+  </property>
+  <widget class="QPushButton" name="btnStore">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>310</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>存储</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label2">
+   <property name="geometry">
+    <rect>
+     <x>115</x>
+     <y>150</y>
+     <width>181</width>
+     <height>220</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelCurrentValue">
+   <property name="geometry">
+    <rect>
+     <x>135</x>
+     <y>80</y>
+     <width>451</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>160</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;</string>
+   </property>
+   <property name="text">
+    <string>请输入一个新值</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelInput">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>200</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(180, 180, 180);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label1">
+   <property name="geometry">
+    <rect>
+     <x>115</x>
+     <y>20</y>
+     <width>491</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:25px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSetTime">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>40</y>
+     <width>140</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string> 润滑时间设定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSetDistance">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>100</y>
+     <width>140</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>润滑距地设定</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSetTime">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>40</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid white;
+color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSetDistance">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>100</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid white;
+color:yellow;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <zorder>label2</zorder>
+  <zorder>btnStore</zorder>
+  <zorder>labelCurrentValue</zorder>
+  <zorder>label</zorder>
+  <zorder>labelInput</zorder>
+  <zorder>label1</zorder>
+  <zorder>btnSetTime</zorder>
+  <zorder>btnSetDistance</zorder>
+  <zorder>labelSetTime</zorder>
+  <zorder>labelSetDistance</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

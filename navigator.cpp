@@ -22,7 +22,7 @@ Navigator::Navigator(QWidget *parent) :
     }
 
     buttonIndexList<<uVehicleRunStatePage<<uMainData_TrainOutline<<uSettng_Bypass<<
-                 uBrake_Info<<uDeviceData_TrainOutline<<uSettng_Wheel<<uMain_Simulate<<uFault_Current;
+                 uBrake_Info<<uDeviceData_TrainOutline<<uDataInputWheelPage<<uMain_Simulate<<uFault_Current;
 
 
     button2NameList<<""<<""<<""<<""<<""<<""<<""<<"";
@@ -105,12 +105,12 @@ void Navigator::NBpressEvent()
         buttonNameList<<"空气制动"<<""<<""<<""<<""<<""<<""<<"";
         break;
         case uMiddleDeviceData:
-        buttonIndexList<<uDeviceData_TrainOutline<<uDeviceData_TracBrake<<uDeviceData_breaker<<uDeviceData_ACU
-                      <<uDeviceData_MainConv<<uDeviceData_Online<<uDeviceData_Version<<uDeviceData_IO;
+        buttonIndexList<<uDeviceData_TrainOutline<<uDeviceData_TracBrake<<uDeviceData_Breaker<<uDeviceData_ACU
+                      <<uDeviceData_Version<<uDeviceData_Online<<uDeviceData_MainConv<<uDeviceData_IO;
         buttonNameList<<"驱动概述"<<"牵引/制动"<<"断路器"<<"辅助"<<"软件版本"<<"在线状态"<<"主变流"<<"信号状态";
         break;
         case uMiddleSetting:
-        buttonIndexList<<uSettng_Wheel<<uSettng_Datetime<<uSettng_Others<<uNULL<<uSettng_Lubrication<<uSettng_Separation<<uNULL<<uNULL;
+        buttonIndexList<<uDataInputWheelPage<<uDataInputDateTimePage<<uDataInputOther<<uDataInputCalibratePage<<uDataInputLubricatePage<<uDataInputSplitLinePage<<uNULL<<uNULL;
         buttonNameList<<"轮径相关"<<"日期/时间"<<"其他设置"<<"屏幕校准"<<"润滑设定"<<"分相线路"<<""<<"";
         break;
         case uMiddleMain:
@@ -182,8 +182,6 @@ void Navigator::N2BpressEvent()
         ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
         changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
     }
-
-
 }
 
 void Navigator::updateLanguage()

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceData_Breaker</class>
+ <widget class="QWidget" name="DeviceData_Breaker">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+color:white;
+background-color:rgb(255,0,0);
+border:1px solid white;
+}</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>40</y>
+     <width>191</width>
+     <height>348</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="LBL_SIV">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(102, 153, 255);</string>
+      </property>
+      <property name="text">
+       <string>辅助(460V/230V)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_C1_CPR">
+      <property name="text">
+       <string>C1-CPR</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_C2_CPR">
+      <property name="text">
+       <string>C2-CPR</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_C3_CPR">
+      <property name="text">
+       <string>C3-CPR</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_CPR">
+      <property name="text">
+       <string>DJ-CPR</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_Q_REC">
+      <property name="text">
+       <string>Q-REC</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_CVT_BM1">
+      <property name="text">
+       <string>CVT-BM1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_CVT_BM2">
+      <property name="text">
+       <string>CVT-BM2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_CVT_MT1">
+      <property name="text">
+       <string>CVT-MT1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_CVT_MT2">
+      <property name="text">
+       <string>CVT-MT2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_CVT_SM1">
+      <property name="text">
+       <string>CVT-SM1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_CVT_SM2">
+      <property name="text">
+       <string>CVT-SM2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_PE1">
+      <property name="text">
+       <string>DJ-PE1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_PE2">
+      <property name="text">
+       <string>DJ-PE2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>455</x>
+     <y>90</y>
+     <width>191</width>
+     <height>246</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_PE3">
+      <property name="text">
+       <string>DJ-PE3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_PE4">
+      <property name="text">
+       <string>DJ-PE4</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_PH1">
+      <property name="text">
+       <string>DJ-PH1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_PH2">
+      <property name="text">
+       <string>DJ-PH2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_VT_SM1">
+      <property name="text">
+       <string>DJ-VT-SM1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_DJ_VT_SM2">
+      <property name="text">
+       <string>DJ-VT-SM2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_Q_TH_VT_BM1">
+      <property name="text">
+       <string>Q-TH-VT-BM1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_Q_TH_VT_BM2">
+      <property name="text">
+       <string>Q-TH-VT-BM2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_Q_TH_VT_MT1">
+      <property name="text">
+       <string>Q-TH-VT-MT1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="LBL_Q_TH_VT_MT2">
+      <property name="text">
+       <string>Q-TH-VT-MT2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
