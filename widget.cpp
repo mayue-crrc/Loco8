@@ -32,15 +32,14 @@
 #include "datainputlubricatepage.h"
 #include "datainputsplitlinepage.h"
 #include "devicedata_trainoutline.h"
-<<<<<<< HEAD
+
 #include "main_simulate.h"
 #include "main_lubrication.h"
 #include "main_assistantdevice.h"
 #include "main_380.h"
 #include "main_separation.h"
 #include "main_doublepanto.h"
-=======
->>>>>>> ad050fd892a7e0523c44366f2a06d1979d99e145
+
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -161,7 +160,6 @@ Widget::Widget(QWidget *parent) :
     this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
     this->deviceData_Online->hide();
 
-<<<<<<< HEAD
     //maintaince
     this->main_Simulate=new Main_Simulate(this);
     this->main_Simulate->setMyBase(uMiddleMain,QString("仿真测试"));
@@ -181,7 +179,6 @@ Widget::Widget(QWidget *parent) :
     this->main_DoublePanto=new Main_DoublePanto(this);
     this->main_DoublePanto->setMyBase(uMiddleMain,QString("双弓测试"));
     this->main_DoublePanto->hide();
-=======
     this->deviceData_MainConv = new DeviceData_MainConv(this);
     this->deviceData_MainConv->setMyBase(uMiddleDeviceData,QString("主变流"));
     this->deviceData_MainConv->hide();
@@ -189,7 +186,6 @@ Widget::Widget(QWidget *parent) :
     this->deviceData_IO = new DeviceData_IO(this);
     this->deviceData_IO->setMyBase(uMiddleDeviceData,QString("信号状态"));
     this->deviceData_IO->hide();
->>>>>>> ad050fd892a7e0523c44366f2a06d1979d99e145
 
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
