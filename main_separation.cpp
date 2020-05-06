@@ -2,6 +2,8 @@
 #include "ui_main_separation.h"
 #include "qdebug.h"
 
+QString Main_Separation::input="";
+
 Main_Separation::Main_Separation(QWidget *parent) :
     MyBase(parent),
     ui(new Ui::Main_Separation)
@@ -15,7 +17,12 @@ Main_Separation::Main_Separation(QWidget *parent) :
         connect(button,SIGNAL(pressed()),this,SLOT(numberButtonPressEvent()));
     }
 
-    this->textInput=0;
+    funCButtons<<ui->PB_T_1<<ui->PB_T_2<<ui->PB_Send;
+    foreach (QPushButton* button, funCButtons) {
+        connect(button,SIGNAL(pressed()),this,SLOT(functionButtonPressEvent()));
+    }
+
+
 
 }
 
@@ -27,8 +34,35 @@ Main_Separation::~Main_Separation()
 
 void Main_Separation::numberButtonPressEvent()
 {
-    qDebug()<<"1111"; 
-    int text = ((QPushButton *)this->sender())->whatsThis().toInt();
-    ui->lbl_number->text().append(text);
+
+    int number = ((QPushButton *)this->sender())->whatsThis().toInt();
+    if(number!=10){
+        Main_Separation::input.append(QString::number(number));
+        ui->lbl_number->setText(Main_Separation::input);
+    }
+    else
+    {
+        ui->lbl_number->setText("");
+        Main_Separation::input="";
+    }
+
+}
+
+void Main_Separation::functionButtonPressEvent()
+{
+    int funcEum=((QPushButton *)this->sender())->whatsThis().toInt();
+
+    switch (funcEum)
+    {
+        case 11:
+
+            break;
+        case 12:
+
+            break;
+        case 13:
+
+            break;
+    }
 
 }

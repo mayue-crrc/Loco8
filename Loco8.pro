@@ -98,6 +98,18 @@ SOURCES += main.cpp\
     data/data_riom.cpp \
     data/data_acu.cpp \
     data/data_bcu.cpp \
+    devicedata_acu.cpp \
+    devicedata_mainconv.cpp \
+    devicedata_breaker.cpp \
+    devicedata_version.cpp \
+    devicedata_io.cpp \
+    settng_test.cpp \
+    settng_panto.cpp \
+    settng_distance.cpp\
+    datainputcalibratepage.cpp \
+    datainputlubricatepage.cpp \
+    datainputsplitlinepage.cpp \
+    buttonrectutil.cpp\
     widgets/ctrlcontrolvoltage.cpp \
     widgets/ctrlnetcurrent.cpp \
     widgets/ctrlnetvoltage.cpp \
@@ -191,6 +203,18 @@ HEADERS  += widget.h \
     data/data_riom.h \
     data/data_acu.h \
     data/data_bcu.h \
+    devicedata_acu.h \
+    devicedata_mainconv.h \
+    devicedata_breaker.h \
+    devicedata_version.h \
+    devicedata_io.h \
+    settng_test.h \
+    settng_panto.h \
+    settng_distance.h\
+    datainputcalibratepage.h \
+    datainputlubricatepage.h \
+    datainputsplitlinepage.h \
+    buttonrectutil.h\
     widgets/ctrlcontrolvoltage.h \
     widgets/ctrlnetcurrent.h \
     widgets/ctrlnetvoltage.h \
@@ -206,17 +230,30 @@ HEADERS  += widget.h \
     main_doublepanto.h
 
 FORMS    += widget.ui \
-    header.ui \
+header.ui \
     navigator.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
     simulation.ui \
+    devicedata_online.ui \
+    devicedata_acu.ui \
+    devicedata_mainconv.ui \
+    devicedata_breaker.ui \
+    devicedata_version.ui \
+    devicedata_io.ui \
+    settng_test.ui \
+    settng_panto.ui \
+    settng_distance.ui\
     datainputwheelpage.ui \
     datainputdatetimepage.ui \
     datainputother.ui \
     datainputidpage.ui\
     devicedata_online.ui \
+    datainputcalibratepage.ui \
+    datainputlubricatepage.ui \
+    datainputsplitlinepage.ui \
+    buttonrectutil.ui\
     widgets/ctrlcontrolvoltage.ui \
     widgets/ctrlnetcurrent.ui \
     widgets/ctrlnetvoltage.ui \
