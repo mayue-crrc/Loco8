@@ -17,11 +17,15 @@ public:
     explicit Main_Separation(QWidget *parent = 0);
     ~Main_Separation();
      QList<QPushButton *> buttons;
-     void numberButtonPressEvent();
-     static int  textInput ;
+     QList<QPushButton *> funCButtons;
+    static QString input;
+
 
 private:
     Ui::Main_Separation *ui;
+private slots:
+    void numberButtonPressEvent();
+    void functionButtonPressEvent();
 
 };
 

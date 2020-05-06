@@ -36,7 +36,7 @@ QPushButton
    border-bottom: 1px solid white;
 }</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="lbl_information1">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -52,7 +52,7 @@ QPushButton
     <string>返回0秒</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="lbl_information2">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -68,7 +68,7 @@ QPushButton
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="lbl_information3">
    <property name="geometry">
     <rect>
      <x>420</x>
@@ -84,7 +84,7 @@ QPushButton
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="BP_Running">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -97,7 +97,7 @@ QPushButton
     <string>运行测试</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="BP_Cancel">
    <property name="geometry">
     <rect>
      <x>330</x>
