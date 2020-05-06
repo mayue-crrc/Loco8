@@ -18,6 +18,7 @@ public:
     ~Main_Separation();
      QList<QPushButton *> buttons;
      void numberButtonPressEvent();
+     static int  textInput ;
 
 private:
     Ui::Main_Separation *ui;

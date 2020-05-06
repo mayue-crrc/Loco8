@@ -15,6 +15,8 @@ Main_Separation::Main_Separation(QWidget *parent) :
         connect(button,SIGNAL(pressed()),this,SLOT(numberButtonPressEvent()));
     }
 
+    this->textInput=0;
+
 }
 
 Main_Separation::~Main_Separation()
@@ -25,5 +27,8 @@ Main_Separation::~Main_Separation()
 
 void Main_Separation::numberButtonPressEvent()
 {
-    qDebug()<<"1111";
+    qDebug()<<"1111"; 
+    int text = ((QPushButton *)this->sender())->whatsThis().toInt();
+    ui->lbl_number->text().append(text);
+
 }
