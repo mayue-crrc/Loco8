@@ -117,6 +117,8 @@ SOURCES += main.cpp\
     widgets/ctrltrainoutline.cpp \
     widgets/ctrltrainoutlinereverse.cpp \
     devicedata_trainoutline.cpp \
+    fault_history.cpp \
+    main_allportdata.cpp\
     main_simulate.cpp \
     main_lubrication.cpp \
     main_assistantdevice.cpp \
@@ -222,12 +224,15 @@ HEADERS  += widget.h \
     widgets/ctrltrainoutline.h \
     widgets/ctrltrainoutlinereverse.h \
     devicedata_trainoutline.h \
+    fault_history.h \
+    main_allportdata.h\
     main_simulate.h \
     main_lubrication.h \
     main_assistantdevice.h \
     main_380.h \
     main_separation.h \
     main_doublepanto.h
+
 
 FORMS    += widget.ui \
 header.ui \
@@ -261,6 +266,8 @@ header.ui \
     widgets/ctrltrainoutline.ui \
     widgets/ctrltrainoutlinereverse.ui \
     devicedata_trainoutline.ui \
+    fault_history.ui \
+    main_allportdata.ui\
     main_simulate.ui \
     main_lubrication.ui \
     main_assistantdevice.ui \
