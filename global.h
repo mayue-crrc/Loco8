@@ -190,6 +190,9 @@ enum keyboardIndex{
     key_Spear1,
     key_Spear2,
 };
+
+
+
 #define _LOG qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") << __FILE__ << __LINE__
 
 #endif // GLOBAL_H
