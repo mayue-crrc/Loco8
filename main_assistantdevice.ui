@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main_AssistantDevice</class>
+ <widget class="QWidget" name="Main_AssistantDevice">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+	border:1px solid lightgray;
+    color:white;
+font:16px
+}
+
+QPushButton
+{
+	font:16px;
+    color: rgb(240,240,240);
+	background-color: rgb(0, 0, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+   border-right: 1px solid white;
+   border-bottom: 1px solid white;
+}</string>
+  </property>
+  <widget class="QPushButton" name="PB_F_1">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>60</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="text">
+    <string>主压机测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_F_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>130</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="text">
+    <string>冷却塔风机1测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_F_3">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>200</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="text">
+    <string>冷却塔风机2测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_F_4">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>60</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="text">
+    <string>牵引风机1测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_F_6">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>200</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="text">
+    <string>机械间风机1测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_F_5">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>130</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="text">
+    <string>牵引风机2测试</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_F_7">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>270</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="text">
+    <string>机械间风机2测试</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

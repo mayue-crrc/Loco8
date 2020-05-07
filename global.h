@@ -84,6 +84,9 @@
 #define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define	HIDEIMAGE	"background-color:transparent;border:0px solid lightgray;"
 
+#define BUTTONRELEASE "font:16px;color: rgb(240,240,240);background-color: rgb(0, 0, 0);border-top: 2px solid white;	border-left: 2px solid white;border-right: 1px solid white;border-bottom: 1px solid white;"
+#define BUTTONPRESSED "font:16px;color: rgb(0,0,0);background-color: rgb(240,240,0);border-top: 1px solid white;	border-left: 1px solid white;border-right: 2px solid white;border-bottom: 2px solid white;"
+
 #include <stdlib.h>
 
 #ifndef WINDOWS_MODE

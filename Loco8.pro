@@ -118,7 +118,13 @@ SOURCES += main.cpp\
     widgets/ctrltrainoutlinereverse.cpp \
     devicedata_trainoutline.cpp \
     fault_history.cpp \
-    main_allportdata.cpp
+    main_allportdata.cpp\
+    main_simulate.cpp \
+    main_lubrication.cpp \
+    main_assistantdevice.cpp \
+    main_380.cpp \
+    main_separation.cpp \
+    main_doublepanto.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -219,10 +225,17 @@ HEADERS  += widget.h \
     widgets/ctrltrainoutlinereverse.h \
     devicedata_trainoutline.h \
     fault_history.h \
-    main_allportdata.h
+    main_allportdata.h\
+    main_simulate.h \
+    main_lubrication.h \
+    main_assistantdevice.h \
+    main_380.h \
+    main_separation.h \
+    main_doublepanto.h
+
 
 FORMS    += widget.ui \
-    header.ui \
+header.ui \
     navigator.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
@@ -254,7 +267,13 @@ FORMS    += widget.ui \
     widgets/ctrltrainoutlinereverse.ui \
     devicedata_trainoutline.ui \
     fault_history.ui \
-    main_allportdata.ui
+    main_allportdata.ui\
+    main_simulate.ui \
+    main_lubrication.ui \
+    main_assistantdevice.ui \
+    main_380.ui \
+    main_separation.ui \
+    main_doublepanto.ui
 
 RESOURCES += \
     Resource.qrc
