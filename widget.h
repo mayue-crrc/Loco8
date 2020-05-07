@@ -38,8 +38,9 @@ class DataInputOther;
 class DataInputCalibratePage;
 class DataInputLubricatePage;
 class DataInputSplitLinePage;
-
+class Fault_HIstory;
 class DeviceData_TrainOutline;
+class Main_Allportdata;
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -88,6 +89,9 @@ private:
     DataInputCalibratePage* dataInputCalibratePage;
     DataInputSplitLinePage* dataInputSplitLinePage;
     DeviceData_TrainOutline* mainData_DriverOutline;
+
+    Fault_HIstory* fault_History;
+    Main_Allportdata* main_Allportdata;
 };
 
 #endif // WIDGET_H

@@ -38,7 +38,7 @@ void MyBase::setMyBase(pagePosition position, QString name)
               position == uMiddleMain ||
               position == uMiddleFault)
     {
-        this->setGeometry(0, 125, this->width(), this->height());
+        this->setGeometry(0, 115, this->width(), this->height());
     }
     this->name = name;
     this->Position = position;

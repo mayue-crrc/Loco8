@@ -32,7 +32,8 @@
 #include "datainputlubricatepage.h"
 #include "datainputsplitlinepage.h"
 #include "devicedata_trainoutline.h"
-
+#include "fault_history.h"
+#include "main_allportdata.h"
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -160,6 +161,15 @@ Widget::Widget(QWidget *parent) :
     this->deviceData_IO->setMyBase(uMiddleDeviceData,QString("信号状态"));
     this->deviceData_IO->hide();
 
+
+    this->fault_History = new Fault_HIstory(this);
+    this->fault_History->setMyBase(uMiddleFault,QString("历史故障"));
+    this->fault_History->hide();
+
+    this->main_Allportdata = new Main_Allportdata(this);
+    this->main_Allportdata->setMyBase(uMiddleFault,QString("数据监控"));
+    this->main_Allportdata->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
@@ -186,6 +196,8 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uDataInputCalibratePage, this->dataInputCalibratePage);
     this->widgets.insert(uDataInputLubricatePage, this->dataInputLubricatePage);
     this->widgets.insert(uDataInputSplitLinePage, this->dataInputSplitLinePage);
+    this->widgets.insert(uFault_History, this->fault_History);
+    this->widgets.insert(uMain_Allportdata, this->main_Allportdata);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();

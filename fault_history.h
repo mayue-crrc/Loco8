@@ -15,6 +15,11 @@ public:
     explicit Fault_HIstory(QWidget *parent = 0);
     ~Fault_HIstory();
 
+private slots:
+    void on_BTNPre_clicked();
+
+    void on_BTNNext_clicked();
+
 private:
     Ui::Fault_HIstory *ui;
 };

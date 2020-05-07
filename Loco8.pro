@@ -117,7 +117,8 @@ SOURCES += main.cpp\
     widgets/ctrltrainoutline.cpp \
     widgets/ctrltrainoutlinereverse.cpp \
     devicedata_trainoutline.cpp \
-    fault_history.cpp
+    fault_history.cpp \
+    main_allportdata.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -217,7 +218,8 @@ HEADERS  += widget.h \
     widgets/ctrltrainoutline.h \
     widgets/ctrltrainoutlinereverse.h \
     devicedata_trainoutline.h \
-    fault_history.h
+    fault_history.h \
+    main_allportdata.h
 
 FORMS    += widget.ui \
     header.ui \
@@ -251,7 +253,8 @@ FORMS    += widget.ui \
     widgets/ctrltrainoutline.ui \
     widgets/ctrltrainoutlinereverse.ui \
     devicedata_trainoutline.ui \
-    fault_history.ui
+    fault_history.ui \
+    main_allportdata.ui
 
 RESOURCES += \
     Resource.qrc

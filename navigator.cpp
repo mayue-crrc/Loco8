@@ -114,8 +114,8 @@ void Navigator::NBpressEvent()
         buttonNameList<<"轮径相关"<<"日期/时间"<<"其他设置"<<"屏幕校准"<<"润滑设定"<<"分相线路"<<""<<"";
         break;
         case uMiddleMain:
-        buttonIndexList<<uMain_Simulate<<uMain_Lubrication<<uMain_AssistantDevice<<uMain_380<<uMain_Separation<<uMain_DoublePanto<<uNULL<<uNULL;
-        buttonNameList<<"仿真测试"<<"轮缘"<<"辅助测试"<<"库内380"<<"过分相\n测试"<<"双弓测试"<<""<<"";
+        buttonIndexList<<uMain_Simulate<<uMain_Lubrication<<uMain_AssistantDevice<<uMain_380<<uMain_Separation<<uMain_DoublePanto<<uMain_Allportdata<<uNULL;
+        buttonNameList<<"仿真测试"<<"轮缘"<<"辅助测试"<<"库内380"<<"过分相\n测试"<<"双弓测试"<<"数据监控"<<"";
         break;
         case uMiddleFault:
         buttonIndexList<<uFault_History<<uFault_Download<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;

@@ -145,6 +145,7 @@ enum pageIndex
     uMain_380,
     uMain_Separation,
     uMain_DoublePanto,
+    uMain_Allportdata,
     //故障查询
     uFault_Current,
     uFault_History,

@@ -12,3 +12,13 @@ Fault_HIstory::~Fault_HIstory()
 {
     delete ui;
 }
+
+void Fault_HIstory::on_BTNPre_clicked()
+{
+
+}
+
+void Fault_HIstory::on_BTNNext_clicked()
+{
+
+}
