@@ -124,7 +124,8 @@ SOURCES += main.cpp\
     main_assistantdevice.cpp \
     main_380.cpp \
     main_separation.cpp \
-    main_doublepanto.cpp
+    main_doublepanto.cpp \
+    widgets/ctrldialog.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -231,7 +232,8 @@ HEADERS  += widget.h \
     main_assistantdevice.h \
     main_380.h \
     main_separation.h \
-    main_doublepanto.h
+    main_doublepanto.h \
+    widgets/ctrldialog.h
 
 
 FORMS    += widget.ui \
@@ -273,7 +275,8 @@ header.ui \
     main_assistantdevice.ui \
     main_380.ui \
     main_separation.ui \
-    main_doublepanto.ui
+    main_doublepanto.ui \
+    widgets/ctrldialog.ui
 
 RESOURCES += \
     Resource.qrc
