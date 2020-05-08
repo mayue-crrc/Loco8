@@ -236,6 +236,13 @@ Widget::Widget(QWidget *parent) :
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
+
+
+    ctrlDialog = new CtrlDialog(this);
+    ctrlDialog->setGeometry(125,150,ctrlDialog->width(),ctrlDialog->height());
+    ctrlDialog->hide();
+    connect(ctrlDialog,SIGNAL(passwordResponse()),navigator,SLOT(getpasswordResponse()));
+    connect(navigator,SIGNAL(passwordRequest()),ctrlDialog,SLOT(getpasswordRequest()));
 }
 
 Widget::~Widget()

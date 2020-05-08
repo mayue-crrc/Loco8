@@ -6,7 +6,7 @@
 #include <QMap>
 #include "log4qt/logger.h"
 #include "global.h"
-
+#include "widgets/ctrldialog.h"
 namespace Ui {
     class Widget;
 }
@@ -106,6 +106,8 @@ private:
     Main_380* main_380;
     Main_Separation* main_Separation;
     Main_DoublePanto* main_DoublePanto;
+
+    CtrlDialog* ctrlDialog;
 };
 
 #endif // WIDGET_H

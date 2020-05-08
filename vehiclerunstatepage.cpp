@@ -43,7 +43,7 @@ void VehicleRunStatePage::updatePage()
 
     //方向
     t_style<<FANGXIANGZHONGLI<<FANGXIANGXIANGHOU<<FANGXIANGXIANGQIAN<<NULLIMAGE;
-    t_status<<database->data_TCN->TrainLocal->CMD_DIR_N<<database->data_TCN->TrainLocal->CMD_DIR_B<<database->data_TCN->TrainLocal->CMD_DIR_f<<true;
+    t_status<<database->data_CCU->STATE_NEUTRAL<<database->data_CCU->STATE_BACK<<database->data_CCU->STATE_FORWARD<<true;
     setLBLpic(ui->LBLC11,t_status,t_style);
 
 

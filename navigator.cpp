@@ -28,7 +28,7 @@ Navigator::Navigator(QWidget *parent) :
     button2NameList<<""<<""<<""<<""<<""<<""<<""<<"";
     m_oldposition = m_position = uMiddleMainPage;
     m_ButtonIndex = 0;
-    m_CurrentMode = false;
+    m_CurrentMainMode = false;
     QList<QString> t_style;
     t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
     this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
@@ -48,7 +48,7 @@ void Navigator::updatePage()
     this->ui->LBLDate->setText(QDateTime::currentDateTime().date().toString("yyyy-MM-dd"));
     this->ui->LBLTime->setText(QDateTime::currentDateTime().time().toString("hh:mm:ss"));
 
-    if(!m_CurrentMode)
+    if(!m_CurrentMainMode)
     {
         buttons[5]->setDisabled(true);
         buttons[6]->setDisabled(true);
@@ -127,7 +127,7 @@ void Navigator::NBpressEvent()
     }
 
     QList<QString> t_style;
-    t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<((m_CurrentMode) ? YUNXING:  WEIHU);
+    t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<((m_CurrentMainMode) ? YUNXING:  WEIHU);
     if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
         this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
@@ -162,14 +162,13 @@ void Navigator::N2BpressEvent()
         case 0:
             break;
         case 7:
-            m_CurrentMode = !m_CurrentMode;
-            if(!m_CurrentMode)
+            if(m_CurrentMainMode)
             {
+                m_CurrentMainMode = false;
                 ui->N2Button8->setStyleSheet(WEIHU);
             }else
             {
-
-                ui->N2Button8->setStyleSheet(YUNXING);
+                passwordRequest();
             }
             break;
         }
@@ -187,4 +186,10 @@ void Navigator::N2BpressEvent()
 void Navigator::updateLanguage()
 {
     this->ui->retranslateUi(this);
+}
+void Navigator::getpasswordResponse()
+{
+    m_CurrentMainMode = true;
+    ui->N2Button8->setStyleSheet(YUNXING);
+
 }
