@@ -40,6 +40,7 @@ class DataInputLubricatePage;
 class DataInputSplitLinePage;
 class Fault_HIstory;
 class DeviceData_TrainOutline;
+class DeviceData_TracBrakeOutline;
 class Main_Allportdata;
 
 class Main_Simulate;
@@ -86,6 +87,8 @@ private:
     DeviceData_IO* deviceData_IO;
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
+    DeviceData_TrainOutline* deviceData_TrainOutline;
+    DeviceData_TracBrakeOutline* deviceData_TracBrakeOutline;
     Settng_Test* settng_Test;
     Settng_Panto* settng_Panto;
     Settng_Distance* settng_Distance;
