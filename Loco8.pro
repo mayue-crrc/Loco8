@@ -98,6 +98,18 @@ SOURCES += main.cpp\
     data/data_riom.cpp \
     data/data_acu.cpp \
     data/data_bcu.cpp \
+    devicedata_acu.cpp \
+    devicedata_mainconv.cpp \
+    devicedata_breaker.cpp \
+    devicedata_version.cpp \
+    devicedata_io.cpp \
+    settng_test.cpp \
+    settng_panto.cpp \
+    settng_distance.cpp\
+    datainputcalibratepage.cpp \
+    datainputlubricatepage.cpp \
+    datainputsplitlinepage.cpp \
+    buttonrectutil.cpp\
     widgets/ctrlcontrolvoltage.cpp \
     widgets/ctrlnetcurrent.cpp \
     widgets/ctrlnetvoltage.cpp \
@@ -105,6 +117,15 @@ SOURCES += main.cpp\
     widgets/ctrltrainoutline.cpp \
     widgets/ctrltrainoutlinereverse.cpp \
     devicedata_trainoutline.cpp \
+    fault_history.cpp \
+    main_allportdata.cpp\
+    main_simulate.cpp \
+    main_lubrication.cpp \
+    main_assistantdevice.cpp \
+    main_380.cpp \
+    main_separation.cpp \
+    main_doublepanto.cpp \
+    widgets/ctrldialog.cpp \
     devicedata_tracbrakeoutline.cpp
 
 HEADERS  += widget.h \
@@ -186,6 +207,18 @@ HEADERS  += widget.h \
     data/data_riom.h \
     data/data_acu.h \
     data/data_bcu.h \
+    devicedata_acu.h \
+    devicedata_mainconv.h \
+    devicedata_breaker.h \
+    devicedata_version.h \
+    devicedata_io.h \
+    settng_test.h \
+    settng_panto.h \
+    settng_distance.h\
+    datainputcalibratepage.h \
+    datainputlubricatepage.h \
+    datainputsplitlinepage.h \
+    buttonrectutil.h\
     widgets/ctrlcontrolvoltage.h \
     widgets/ctrlnetcurrent.h \
     widgets/ctrlnetvoltage.h \
@@ -193,20 +226,42 @@ HEADERS  += widget.h \
     widgets/ctrltrainoutline.h \
     widgets/ctrltrainoutlinereverse.h \
     devicedata_trainoutline.h \
+    fault_history.h \
+    main_allportdata.h\
+    main_simulate.h \
+    main_lubrication.h \
+    main_assistantdevice.h \
+    main_380.h \
+    main_separation.h \
+    main_doublepanto.h \
+    widgets/ctrldialog.h \
     devicedata_tracbrakeoutline.h
 
 FORMS    += widget.ui \
-    header.ui \
+header.ui \
     navigator.ui \
     vehiclerunstatepage.ui \
     maindata_trainoutline.ui \
     settng_bypass.ui \
     simulation.ui \
+    devicedata_online.ui \
+    devicedata_acu.ui \
+    devicedata_mainconv.ui \
+    devicedata_breaker.ui \
+    devicedata_version.ui \
+    devicedata_io.ui \
+    settng_test.ui \
+    settng_panto.ui \
+    settng_distance.ui\
     datainputwheelpage.ui \
     datainputdatetimepage.ui \
     datainputother.ui \
     datainputidpage.ui\
     devicedata_online.ui \
+    datainputcalibratepage.ui \
+    datainputlubricatepage.ui \
+    datainputsplitlinepage.ui \
+    buttonrectutil.ui\
     widgets/ctrlcontrolvoltage.ui \
     widgets/ctrlnetcurrent.ui \
     widgets/ctrlnetvoltage.ui \
@@ -214,6 +269,15 @@ FORMS    += widget.ui \
     widgets/ctrltrainoutline.ui \
     widgets/ctrltrainoutlinereverse.ui \
     devicedata_trainoutline.ui \
+    fault_history.ui \
+    main_allportdata.ui\
+    main_simulate.ui \
+    main_lubrication.ui \
+    main_assistantdevice.ui \
+    main_380.ui \
+    main_separation.ui \
+    main_doublepanto.ui \
+    widgets/ctrldialog.ui \
     devicedata_tracbrakeoutline.ui
 
 RESOURCES += \

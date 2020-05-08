@@ -6,7 +6,7 @@
 #include <QMap>
 #include "log4qt/logger.h"
 #include "global.h"
-
+#include "widgets/ctrldialog.h"
 namespace Ui {
     class Widget;
 }
@@ -20,12 +20,35 @@ class CrrcMvb;
 class CrrcFault;
 class Simulation;
 
+class DeviceData_Version;
+class DeviceData_Breaker;
+class DeviceData_ACU;
 class DeviceData_Online;
+class DeviceData_MainConv;
+class DeviceData_IO;
 
 class MainData_TrainOutline;
 class Settng_Bypass;
+class Settng_Test;
+class Settng_Panto;
+class Settng_Distance;
+class DataInputWheelPage;
+class DataInputDateTimePage;
+class DataInputOther;
+class DataInputCalibratePage;
+class DataInputLubricatePage;
+class DataInputSplitLinePage;
+class Fault_HIstory;
 class DeviceData_TrainOutline;
 class DeviceData_TracBrakeOutline;
+class Main_Allportdata;
+
+class Main_Simulate;
+class Main_Lubrication;
+class Main_AssistantDevice;
+class Main_380;
+class Main_Separation;
+class Main_DoublePanto;
 
 class Widget : public QWidget
 {
@@ -56,12 +79,38 @@ private:
     CrrcFault* crrcFault;
     Simulation* simulation;
 
+    DeviceData_Breaker* deviceData_Breaker;
+    DeviceData_ACU* deviceData_ACU;
+    DeviceData_Version* deviceData_Version;
     DeviceData_Online* deviceData_Online;
-
+    DeviceData_MainConv* deviceData_MainConv;
+    DeviceData_IO* deviceData_IO;
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
     DeviceData_TrainOutline* deviceData_TrainOutline;
     DeviceData_TracBrakeOutline* deviceData_TracBrakeOutline;
+    Settng_Test* settng_Test;
+    Settng_Panto* settng_Panto;
+    Settng_Distance* settng_Distance;
+
+    DataInputWheelPage* dataInputWheelPage;
+    DataInputDateTimePage* dataInputDateTimePage;
+    DataInputOther* dataInputOther;
+    DataInputLubricatePage* dataInputLubricatePage;
+    DataInputCalibratePage* dataInputCalibratePage;
+    DataInputSplitLinePage* dataInputSplitLinePage;
+    DeviceData_TrainOutline* mainData_DriverOutline;
+
+    Fault_HIstory* fault_History;
+    Main_Allportdata* main_Allportdata;
+    Main_Simulate* main_Simulate;
+    Main_Lubrication* main_Lubrication;
+    Main_AssistantDevice* main_AssistantDevice;
+    Main_380* main_380;
+    Main_Separation* main_Separation;
+    Main_DoublePanto* main_DoublePanto;
+
+    CtrlDialog* ctrlDialog;
 };
 
 #endif // WIDGET_H

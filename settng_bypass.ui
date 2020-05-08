@@ -18,8 +18,1224 @@
 {
 	background-color: black;
 }
+QPushButton
+{
+	font:16px;
+    color: rgb(0,0,0);
+	background-color: rgb(0, 255, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+}
+QLabel
+{
+color:rgb(255,255,255);
+}
+QGroupBox
+{
+background-color:rgb(140,140,140);
+color:white;
+font:16px;
+}
 </string>
   </property>
+  <widget class="QLabel" name="Line15">
+   <property name="geometry">
+    <rect>
+     <x>545</x>
+     <y>76</y>
+     <width>2</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line6">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>141</y>
+     <width>2</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_AlertControl">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>23</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>警惕控制</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_4QR2">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>105</y>
+     <width>111</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="text">
+    <string>四象限整流器2</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line7">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>166</y>
+     <width>100</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_ClearFault">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>323</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:14px;
+color: rgb(255,255,255);
+background-color: rgb(0, 0, 0);
+border:2px solid rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>清除故障</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_AUX2">
+   <property name="geometry">
+    <rect>
+     <x>435</x>
+     <y>200</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>11</string>
+   </property>
+   <property name="text">
+    <string>辅助逆变器2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_TCU2">
+   <property name="geometry">
+    <rect>
+     <x>438</x>
+     <y>20</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>6</string>
+   </property>
+   <property name="text">
+    <string>牵引变流器2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_AutoSandCutout">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>223</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>自动撒沙切除</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Cylinder1State">
+   <property name="geometry">
+    <rect>
+     <x>341</x>
+     <y>288</y>
+     <width>141</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;
+    color: rgb(0,0,0);
+	background-color: rgb(0, 255, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>制动缸1隔离塞门</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line17">
+   <property name="geometry">
+    <rect>
+     <x>547</x>
+     <y>140</y>
+     <width>2</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line21">
+   <property name="geometry">
+    <rect>
+     <x>469</x>
+     <y>168</y>
+     <width>2</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line3">
+   <property name="geometry">
+    <rect>
+     <x>106</x>
+     <y>76</y>
+     <width>2</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train4Num">
+   <property name="geometry">
+    <rect>
+     <x>321</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011D</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_MotorInv1">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>200</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="text">
+    <string>电机逆变器1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train4">
+   <property name="geometry">
+    <rect>
+     <x>314</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid black;
+image: url(:/images/images/Cheti-reverse.png);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Cylinder2State">
+   <property name="geometry">
+    <rect>
+     <x>484</x>
+     <y>288</y>
+     <width>141</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;
+    color: rgb(0,0,0);
+	background-color: rgb(0, 255, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>制动缸2隔离塞门</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line11">
+   <property name="geometry">
+    <rect>
+     <x>284</x>
+     <y>168</y>
+     <width>2</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="setBox">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>130</y>
+     <width>321</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+   <widget class="QLabel" name="LBL_SetTitle">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>20</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(140, 140, 140);
+font:16px;</string>
+    </property>
+    <property name="text">
+     <string>四象限整流器4</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_HandISO">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(140, 140, 140);
+border:1px solid white;
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>手动隔离</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_ISOCancel">
+    <property name="geometry">
+     <rect>
+      <x>123</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(140, 140, 140);
+border:1px solid white;
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>取消隔离</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BTN_Close">
+    <property name="geometry">
+     <rect>
+      <x>231</x>
+      <y>110</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(140, 140, 140);
+border:1px solid white;
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>关闭</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="Line4">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>76</y>
+     <width>2</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line18">
+   <property name="geometry">
+    <rect>
+     <x>347</x>
+     <y>166</y>
+     <width>140</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line16">
+   <property name="geometry">
+    <rect>
+     <x>427</x>
+     <y>141</y>
+     <width>2</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_4QR3">
+   <property name="geometry">
+    <rect>
+     <x>357</x>
+     <y>105</y>
+     <width>111</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>7</string>
+   </property>
+   <property name="text">
+    <string>四象限整流器3</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train1Num">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011A</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line13">
+   <property name="geometry">
+    <rect>
+     <x>415</x>
+     <y>75</y>
+     <width>150</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line8">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>166</y>
+     <width>140</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line20">
+   <property name="geometry">
+    <rect>
+     <x>369</x>
+     <y>168</y>
+     <width>2</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_AUX1">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>200</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>5</string>
+   </property>
+   <property name="text">
+    <string>辅助逆变器1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_4QR4">
+   <property name="geometry">
+    <rect>
+     <x>497</x>
+     <y>105</y>
+     <width>111</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>8</string>
+   </property>
+   <property name="text">
+    <string>四象限整流器4</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_PBState">
+   <property name="geometry">
+    <rect>
+     <x>198</x>
+     <y>288</y>
+     <width>141</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;
+    color: rgb(0,0,0);
+	background-color: rgb(0, 255, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>停放制动隔离塞门</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_4QR1">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>105</y>
+     <width>111</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="text">
+    <string>四象限整流器1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_EBreak">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>73</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>动力制动</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line10">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>168</y>
+     <width>2</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line12">
+   <property name="geometry">
+    <rect>
+     <x>488</x>
+     <y>55</y>
+     <width>2</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line19">
+   <property name="geometry">
+    <rect>
+     <x>505</x>
+     <y>165</y>
+     <width>100</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_MotorInv4">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>200</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>10</string>
+   </property>
+   <property name="text">
+    <string>电机逆变器4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Compressor">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>123</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>空压机</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_MotorInv3">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>200</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>9</string>
+   </property>
+   <property name="text">
+    <string>电机逆变器3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Lubrication">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>173</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>轮缘润滑</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line5">
+   <property name="geometry">
+    <rect>
+     <x>106</x>
+     <y>141</y>
+     <width>2</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line2">
+   <property name="geometry">
+    <rect>
+     <x>95</x>
+     <y>75</y>
+     <width>150</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train3Num">
+   <property name="geometry">
+    <rect>
+     <x>239</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011C</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_EMBState">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>288</y>
+     <width>151</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:16px;
+    color: rgb(0,0,0);
+	background-color: rgb(0, 255, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;</string>
+   </property>
+   <property name="text">
+    <string>紧急制动阀</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line14">
+   <property name="geometry">
+    <rect>
+     <x>426</x>
+     <y>76</y>
+     <width>2</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Border">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>280</y>
+     <width>601</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line22">
+   <property name="geometry">
+    <rect>
+     <x>588</x>
+     <y>167</y>
+     <width>2</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line1">
+   <property name="geometry">
+    <rect>
+     <x>168</x>
+     <y>55</y>
+     <width>2</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid black;
+image: url(:/images/images/Cheti_L.png);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Line9">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>168</y>
+     <width>2</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train1">
+   <property name="geometry">
+    <rect>
+     <x>62</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid black;
+image: url(:/images/images/Cheti_L.png);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train2Num">
+   <property name="geometry">
+    <rect>
+     <x>153</x>
+     <y>348</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:12px;
+color:rgb(255,255,255);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011B</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Tips">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>260</y>
+     <width>331</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>隔离阀状态(无法通过DDU操作，请检查隔离阀门)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_CombCutout">
+   <property name="geometry">
+    <rect>
+     <x>675</x>
+     <y>273</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>空电联合切除</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_TCU1">
+   <property name="geometry">
+    <rect>
+     <x>118</x>
+     <y>20</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
+   </property>
+   <property name="text">
+    <string>☝牵引变流器1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train2">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>370</y>
+     <width>85</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid black;
+image: url(:/images/images/Cheti-reverse.png);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_MotorInv2">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>200</y>
+     <width>101</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>4</string>
+   </property>
+   <property name="text">
+    <string>电机逆变器2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train4_2">
+   <property name="geometry">
+    <rect>
+     <x>665</x>
+     <y>215</y>
+     <width>121</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid white;
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>BTN_Train4_2</zorder>
+  <zorder>Border</zorder>
+  <zorder>Line15</zorder>
+  <zorder>Line6</zorder>
+  <zorder>BTN_AlertControl</zorder>
+  <zorder>BTN_4QR2</zorder>
+  <zorder>Line7</zorder>
+  <zorder>BTN_ClearFault</zorder>
+  <zorder>BTN_AUX2</zorder>
+  <zorder>BTN_TCU2</zorder>
+  <zorder>BTN_AutoSandCutout</zorder>
+  <zorder>LBL_Cylinder1State</zorder>
+  <zorder>Line17</zorder>
+  <zorder>Line21</zorder>
+  <zorder>Line3</zorder>
+  <zorder>LBL_Train4Num</zorder>
+  <zorder>BTN_MotorInv1</zorder>
+  <zorder>BTN_Train4</zorder>
+  <zorder>LBL_Cylinder2State</zorder>
+  <zorder>Line11</zorder>
+  <zorder>Line4</zorder>
+  <zorder>Line18</zorder>
+  <zorder>Line16</zorder>
+  <zorder>BTN_4QR3</zorder>
+  <zorder>LBL_Train1Num</zorder>
+  <zorder>Line13</zorder>
+  <zorder>Line8</zorder>
+  <zorder>Line20</zorder>
+  <zorder>BTN_AUX1</zorder>
+  <zorder>BTN_4QR4</zorder>
+  <zorder>LBL_PBState</zorder>
+  <zorder>BTN_4QR1</zorder>
+  <zorder>BTN_EBreak</zorder>
+  <zorder>Line10</zorder>
+  <zorder>Line12</zorder>
+  <zorder>Line19</zorder>
+  <zorder>BTN_MotorInv4</zorder>
+  <zorder>BTN_Compressor</zorder>
+  <zorder>BTN_MotorInv3</zorder>
+  <zorder>BTN_Lubrication</zorder>
+  <zorder>Line5</zorder>
+  <zorder>Line2</zorder>
+  <zorder>LBL_Train3Num</zorder>
+  <zorder>LBL_EMBState</zorder>
+  <zorder>Line14</zorder>
+  <zorder>Line22</zorder>
+  <zorder>Line1</zorder>
+  <zorder>BTN_Train3</zorder>
+  <zorder>Line9</zorder>
+  <zorder>BTN_Train1</zorder>
+  <zorder>LBL_Train2Num</zorder>
+  <zorder>LBL_Tips</zorder>
+  <zorder>BTN_CombCutout</zorder>
+  <zorder>BTN_TCU1</zorder>
+  <zorder>BTN_Train2</zorder>
+  <zorder>BTN_MotorInv2</zorder>
+  <zorder>setBox</zorder>
  </widget>
  <resources/>
  <connections/>

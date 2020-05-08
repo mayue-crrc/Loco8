@@ -4,7 +4,7 @@
 #include "QTime"
 #include "global.h"
 //#define FAULT_WINDOWS_MODE
-
+#include "qtextcodec.h"
 CrrcFaultMapper::CrrcFaultMapper(QString databaseFaultTypeName, QString databaseHistoryFaultName)
     :databaseFaultTypeName(databaseFaultTypeName),databaseHistoryFaultName(databaseHistoryFaultName)
 {
@@ -15,20 +15,23 @@ bool CrrcFaultMapper::InsertHistoryFault(QHash<quint32,FaultBean>& inserthash)
 {
 #ifndef FAULT_WINDOWS_MODE
 
-  QTime timeStart(QTime::currentTime());
-
+    QTime timeStart(QTime::currentTime());
     char *zErrMsg = 0;
     int rc = sqlite3_exec(databaseHistoryFault,"begin",0,0,&zErrMsg);
-
     foreach(unsigned short int key,inserthash.keys() )
     {
+
         QString ssm;
-        ssm="insert into fault_history (History_ID,ID,start_time,end_time,confirm)" "values ("+QString::number(key)+","
+        ssm="insert into fault_history (History_ID,ID,start_time,end_time,confirm,Speed,Voltage,Current,Direction,Grade)" "values ("+QString::number(key)+","
                                                                                                +QString::number(inserthash[key].ID)+",'"
                                                                                                +inserthash[key].StartTime+"','"
-                                                                                               +inserthash[key].EndTime+"',"
-                                                                                               +QString::number(inserthash[key].IsConfirm)+")";
-
+                                                                                               +inserthash[key].EndTime+"','"
+                                                                                               +QString::number(inserthash[key].IsConfirm)+"','"
+                                                                                                +QString::number(inserthash[key].Speed,10,1)+"','"
+                                                                                                +QString::number(inserthash[key].Voltage,10,1)+"','"
+                                                                                                +QString::number(inserthash[key].Current,10,1)+"','"
+                                                                                                +inserthash[key].Direction+"','"
+                                                                                                +QString::number(inserthash[key].Grade,10,1)+"')";
 #ifdef QT_VERSION_5_6
         sqlite3_exec(databaseHistoryFault,ssm.toLatin1().data(),0,0,&zErrMsg);
 #else
@@ -122,15 +125,16 @@ void CrrcFaultMapper::GetFaultTypeHash(QHash<quint32,FaultTypeBean>& hash )
             FaultTypeBean faultTypeBean;
 #ifdef QT_VERSION_5_6
             faultTypeBean.ID = sqlite3_column_int(stmt,0);
-            faultTypeBean.FaultName = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
+            //faultTypeBean.FaultName = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
+            faultTypeBean.FaultName = (reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
             faultTypeBean.FaultPosition = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
             faultTypeBean.FaultDevice = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
             faultTypeBean.FaultCode = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 4)));
             faultTypeBean.PortAddress = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 5))).toInt(NULL,16);
             faultTypeBean.ByteoffAddress = sqlite3_column_int(stmt,6);
             faultTypeBean.BitoffAddress = sqlite3_column_int(stmt,7);
-            faultTypeBean.FaultDescription = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 8)));
-            faultTypeBean.FaultTips = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 9)));
+            faultTypeBean.FaultDescription = (reinterpret_cast<const char*>(sqlite3_column_text(stmt, 8)));
+            faultTypeBean.FaultTips = (reinterpret_cast<const char*>(sqlite3_column_text(stmt, 9)));
             faultTypeBean.FaultValid = QString::fromLatin1(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 10))) == "1" ? true : false;
             faultTypeBean.FaultLevel = sqlite3_column_int(stmt,11);
 #else
@@ -184,6 +188,11 @@ bool CrrcFaultMapper::GetHistoryFault(QList<FaultBean>& historylist)
             faultBean.StartTime = QString(QLatin1String((char*)sqlite3_column_text(stmt,2)));
             faultBean.EndTime = QString(QLatin1String((char*)sqlite3_column_text(stmt,3)));
             faultBean.IsConfirm = QString(QLatin1String((char*)sqlite3_column_text(stmt,4))) == "1" ? true : false;
+            faultBean.Speed = QString(QLatin1String((char*)sqlite3_column_text(stmt,5))).toFloat();
+            faultBean.Voltage = QString(QLatin1String((char*)sqlite3_column_text(stmt,6))).toFloat();
+            faultBean.Current = QString(QLatin1String((char*)sqlite3_column_text(stmt,7))).toFloat();
+            faultBean.Direction = getdirections((char*)sqlite3_column_text(stmt,8));
+            faultBean.Grade = QString(QLatin1String((char*)sqlite3_column_text(stmt,9))).toFloat();
 
             historylist.push_back(faultBean);
 
@@ -202,6 +211,7 @@ bool CrrcFaultMapper::GetHistoryFault(QList<FaultBean>& historylist)
 
 #endif
 }
+
 
 bool CrrcFaultMapper::GetCurrentFault(QList<FaultBean> &currentlist,QHash<quint32,FaultBean>& currenthash)
 {
@@ -225,6 +235,12 @@ bool CrrcFaultMapper::GetCurrentFault(QList<FaultBean> &currentlist,QHash<quint3
                 faultBean.StartTime = QString(QLatin1String((char*)sqlite3_column_text(stmt,2)));
                 faultBean.EndTime = QString(QLatin1String((char*)sqlite3_column_text(stmt,3)));
                 faultBean.IsConfirm = QString(QLatin1String((char*)sqlite3_column_text(stmt,4))) == "1" ? true : false;
+                faultBean.Speed = QString(QLatin1String((char*)sqlite3_column_text(stmt,5))).toFloat();
+                faultBean.Voltage = QString(QLatin1String((char*)sqlite3_column_text(stmt,6))).toFloat();
+                faultBean.Current = QString(QLatin1String((char*)sqlite3_column_text(stmt,7))).toFloat();
+                faultBean.Direction = getdirections((char*)sqlite3_column_text(stmt,8));
+
+                faultBean.Grade = QString(QLatin1String((char*)sqlite3_column_text(stmt,9))).toFloat();
 
                 currentlist.push_front(faultBean);
                 currenthash.insert(faultBean.ID,faultBean);
@@ -265,6 +281,11 @@ void CrrcFaultMapper::GetUnconfirmFault(QList<FaultBean> &unconfirmlist)
             faultBean.StartTime = QString(QLatin1String((char*)sqlite3_column_text(stmt,2)));
             faultBean.EndTime = QString(QLatin1String((char*)sqlite3_column_text(stmt,3)));
             faultBean.IsConfirm = QString(QLatin1String((char*)sqlite3_column_text(stmt,4))) == "1" ? true : false;
+            faultBean.Speed = QString(QLatin1String((char*)sqlite3_column_text(stmt,5))).toFloat();
+            faultBean.Voltage = QString(QLatin1String((char*)sqlite3_column_text(stmt,6))).toFloat();
+            faultBean.Current = QString(QLatin1String((char*)sqlite3_column_text(stmt,7))).toFloat();
+            faultBean.Direction = getdirections((char*)sqlite3_column_text(stmt,8));
+            faultBean.Grade = QString(QLatin1String((char*)sqlite3_column_text(stmt,9))).toFloat();
 
             unconfirmlist.push_front(faultBean);
         }
@@ -369,4 +390,23 @@ QString CrrcFaultMapper::GetTypeDBInfo()
     return Version;
 
 }
-
+Directions CrrcFaultMapper::getdirections(char* c)
+{
+    Directions t_dir;
+    switch (*c)
+    {
+    case 1:
+        t_dir = forward;
+        break;
+    case 2:
+        t_dir = backword;
+        break;
+    case 3:
+        t_dir = zero;
+        break;
+    case 4:
+        t_dir = nullp;
+        break;
+    }
+    return t_dir;
+}

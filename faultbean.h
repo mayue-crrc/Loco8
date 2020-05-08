@@ -2,7 +2,12 @@
 #define FAULTBEAN_H
 
 #include "QString"
-
+enum Directions{
+    forward = 1,
+    backword,
+    zero,
+    nullp
+};
 class FaultBean
 {
 public:
@@ -13,6 +18,12 @@ public:
     QString EndTime;
     int HistoryID;
     bool IsConfirm;
+
+    float Speed;
+    float Voltage;
+    float Current;
+    unsigned char Direction;
+    float Grade;
 
 };
 

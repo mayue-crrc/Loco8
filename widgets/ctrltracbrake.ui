@@ -310,9 +310,9 @@ border:1px solid white;</string>
   <widget class="QLabel" name="LBLValue">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>10</y>
-     <width>31</width>
+     <width>51</width>
      <height>17</height>
     </rect>
    </property>

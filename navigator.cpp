@@ -22,13 +22,13 @@ Navigator::Navigator(QWidget *parent) :
     }
 
     buttonIndexList<<uVehicleRunStatePage<<uMainData_TrainOutline<<uSettng_Bypass<<
-                 uBrake_Info<<uDeviceData_TrainOutline<<uSettng_Wheel<<uMain_Simulate<<uFault_Current;
+                 uBrake_Info<<uDeviceData_TrainOutline<<uDataInputWheelPage<<uMain_Simulate<<uFault_Current;
 
 
     button2NameList<<""<<""<<""<<""<<""<<""<<""<<"";
     m_oldposition = m_position = uMiddleMainPage;
     m_ButtonIndex = 0;
-
+    m_CurrentMainMode = false;
     QList<QString> t_style;
     t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
     this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
@@ -47,6 +47,26 @@ void Navigator::updatePage()
 {
     this->ui->LBLDate->setText(QDateTime::currentDateTime().date().toString("yyyy-MM-dd"));
     this->ui->LBLTime->setText(QDateTime::currentDateTime().time().toString("hh:mm:ss"));
+
+    if(!m_CurrentMainMode)
+    {
+        buttons[5]->setDisabled(true);
+        buttons[6]->setDisabled(true);
+        buttons[7]->setDisabled(true);
+        buttons[5]->setText("");
+        buttons[6]->setText("");
+        buttons[7]->setText("");
+
+    }else
+    {
+        buttons[5]->setDisabled(false);
+        buttons[6]->setDisabled(false);
+        buttons[7]->setDisabled(false);
+        buttons[5]->setText("数据输入");
+        buttons[6]->setText("维护测试");
+        buttons[7]->setText("故障浏览");
+
+    }
 }
 void Navigator::setPageName(QString name)
 {
@@ -85,17 +105,17 @@ void Navigator::NBpressEvent()
         buttonNameList<<"空气制动"<<""<<""<<""<<""<<""<<""<<"";
         break;
         case uMiddleDeviceData:
-        buttonIndexList<<uDeviceData_TrainOutline<<uDeviceData_TracBrake<<uDeviceData_breaker<<uDeviceData_ACU
-                      <<uDeviceData_MainConv<<uDeviceData_Online<<uDeviceData_Version<<uDeviceData_IO;
+        buttonIndexList<<uDeviceData_TrainOutline<<uDeviceData_TracBrake<<uDeviceData_Breaker<<uDeviceData_ACU
+                      <<uDeviceData_Version<<uDeviceData_Online<<uDeviceData_MainConv<<uDeviceData_IO;
         buttonNameList<<"驱动概述"<<"牵引/制动"<<"断路器"<<"辅助"<<"软件版本"<<"在线状态"<<"主变流"<<"信号状态";
         break;
         case uMiddleSetting:
-        buttonIndexList<<uSettng_Wheel<<uSettng_Datetime<<uSettng_Others<<uNULL<<uSettng_Lubrication<<uSettng_Separation<<uNULL<<uNULL;
+        buttonIndexList<<uDataInputWheelPage<<uDataInputDateTimePage<<uDataInputOther<<uDataInputCalibratePage<<uDataInputLubricatePage<<uDataInputSplitLinePage<<uNULL<<uNULL;
         buttonNameList<<"轮径相关"<<"日期/时间"<<"其他设置"<<"屏幕校准"<<"润滑设定"<<"分相线路"<<""<<"";
         break;
         case uMiddleMain:
-        buttonIndexList<<uMain_Simulate<<uMain_Lubrication<<uMain_AssistantDevice<<uMain_380<<uMain_Separation<<uMain_DoublePanto<<uNULL<<uNULL;
-        buttonNameList<<"仿真测试"<<"轮缘"<<"辅助测试"<<"库内380"<<"过分相\n测试"<<"双弓测试"<<""<<"";
+        buttonIndexList<<uMain_Simulate<<uMain_Lubrication<<uMain_AssistantDevice<<uMain_380<<uMain_Separation<<uMain_DoublePanto<<uMain_Allportdata<<uNULL;
+        buttonNameList<<"仿真测试"<<"轮缘"<<"辅助测试"<<"库内380"<<"过分相\n测试"<<"双弓测试"<<"数据监控"<<"";
         break;
         case uMiddleFault:
         buttonIndexList<<uFault_History<<uFault_Download<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL<<uNULL;
@@ -107,7 +127,7 @@ void Navigator::NBpressEvent()
     }
 
     QList<QString> t_style;
-    t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
+    t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<((m_CurrentMainMode) ? YUNXING:  WEIHU);
     if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
         this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
@@ -132,10 +152,26 @@ void Navigator::NBpressEvent()
 }
 void Navigator::N2BpressEvent()
 {
+    int btnindex = ((QPushButton *)this->sender())->whatsThis().toInt();
     if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
 //        changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
 
+        switch(btnindex)
+        {
+        case 0:
+            break;
+        case 7:
+            if(m_CurrentMainMode)
+            {
+                m_CurrentMainMode = false;
+                ui->N2Button8->setStyleSheet(WEIHU);
+            }else
+            {
+                passwordRequest();
+            }
+            break;
+        }
     }else
     {
         for(int i = 0; i < buttons2.size();i++)
@@ -145,11 +181,15 @@ void Navigator::N2BpressEvent()
         ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
         changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
     }
-
-
 }
 
 void Navigator::updateLanguage()
 {
     this->ui->retranslateUi(this);
+}
+void Navigator::getpasswordResponse()
+{
+    m_CurrentMainMode = true;
+    ui->N2Button8->setStyleSheet(YUNXING);
+
 }

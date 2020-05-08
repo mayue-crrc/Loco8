@@ -2,10 +2,10 @@
 #include "ui_datainputdatetimepage.h"
 
 DataInputDateTimePage::DataInputDateTimePage(QWidget *parent) :
-    QWidget(parent),
+    MyBase(parent),
     ui(new Ui::DataInputDateTimePage)
 {
-    ui->setupUi(this);
+    ui->setupUi(this); 
 }
 
 DataInputDateTimePage::~DataInputDateTimePage()

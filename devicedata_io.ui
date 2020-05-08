@@ -1,0 +1,3789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceData_IO</class>
+ <widget class="QWidget" name="DeviceData_IO">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+color:white;
+}</string>
+  </property>
+  <widget class="QTabWidget" name="IO">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>1</y>
+     <width>781</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>781</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>781</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabBar::tab{width:259;}</string>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <property name="usesScrollButtons">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="RIOM1">
+    <attribute name="title">
+     <string>RIOM1</string>
+    </attribute>
+    <widget class="QLabel" name="LBL_RIOM1_Mode">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>15</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>模块</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM1_Mode_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+01</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM1_Mode_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>109</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+02</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM1_Mode_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>179</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+03</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM1_Mode_DO_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>249</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DO-02
+01</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM1_Mode_AIOM_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>319</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-AIOM-01</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10D">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10J">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10J</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10M">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10M</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10K">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10K</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_159">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>159</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10E">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10E</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10N">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10N</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10F">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10F</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_210">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>210</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_158">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>158</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_201E">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>201E</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_32R">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>32R</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_201D">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>201D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_160">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>160</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_2028D">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>2028D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_10Q">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10Q</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_201D">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>201D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_158">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>158</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_10F">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10F</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_160">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>160</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_32R">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>32R</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_2028D">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>2028D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_201E">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>201E</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_10Q">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10Q</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_10E">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>10E</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_210">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>210</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_1970A">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_1916">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1916</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_1970C">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970C</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_1970AA">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970AA</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_1970B">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970B</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_716TT">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>716TT</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_180C">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>180C</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_1970F">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970F</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_26B">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>26B</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_26A">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>26A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_256">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>256</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_1970E">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970E</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_01_47">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>47</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_01_200AJ">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200AJ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_01_227">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>227</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_01_253">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>253</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_01_256A">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>256A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_01_299M">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>299M</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_01_267">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>267</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_Tip">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>329</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>司控器级位原始数据</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_Level_Value">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>324</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>123</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="RIOM2_1">
+    <attribute name="title">
+     <string>RIOM2-1</string>
+    </attribute>
+    <widget class="QLabel" name="LBL_DI_02_02_200BH">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200BH</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_4300B_1">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>4300B-1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_636">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>636</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_623">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>623</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_4300A_1">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>4300A-1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_31J">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>31J</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_195">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>195</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_200H">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200H</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_709">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>709</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_1_Mode_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>249</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+04</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_655">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>655</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_1_Mode_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>109</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+02</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_32H_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>32H-2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_164K">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>164K</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_781">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>781</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_200BH">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200BH</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_201AK">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>201AK</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_30X">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>30X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_154">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>154</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_201AK">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>201AK</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_2033F">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>2033F</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_638">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>638</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_200J">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200J</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_653">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>653</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_30X">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>30X</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_612_2">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>612-2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_200BE">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200BE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_781">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>781</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_4300A_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>4300A-2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_164L">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>164L</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_201">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>201</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_200BE">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200BE</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_32H_1">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>32H-1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_651">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>651</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_164N">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>164N</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_611">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>611</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_1_Mode_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>179</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+03</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_1_Mode">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>15</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>模块</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_02_195">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>195</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_2028F">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>2028F</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_4300B_2">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>4300B-2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_652">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>652</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_31H">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>31H</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_417">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>417</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_200L">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200L</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_1_Mode_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+01</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_2029">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>2029</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_200BJ">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200BJ</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_J141">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>J141</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_01_612_1">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>612-1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_200G">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200G</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_634">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>634</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_637">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>637</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_03_635">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>635</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_686">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>686</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_04_687">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>687</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="RIOM2_2">
+    <attribute name="title">
+     <string>RIOM2-2</string>
+    </attribute>
+    <widget class="QLabel" name="LBL_DI_02_06_200P">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200P</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_188B">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>188B</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_719_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>719-2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_1901">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1901</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_188">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>188</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_192A">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_151D">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>151D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_2_Mode_DO_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>249</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DO-02
+02</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_216A">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>216A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_2_Mode_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>109</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+06</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_192A">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_1970G">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970G</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_299D">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>299D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_192P">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192P</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_299D">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>299D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_192D">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_192C">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>70</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192C</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_1J_1">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>209</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1J-1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_24A">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>24A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_720">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>720</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_200AA">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200AA</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_200M">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200M</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_217A">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>217A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_151F">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>151F</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_718">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>718</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_192M">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192M</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_24D">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>24D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_188A">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>188A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_718">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>718</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_2_Mode_DO_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>179</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DO-02
+01</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_2_Mode">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>15</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>模块</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_200N">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>109</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200N</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_150">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>150</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_1970G">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1970G</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_2_Mode_DO_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>319</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DO-02
+03</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_01_32M">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>179</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>32M</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_720">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>720</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_RIOM2_2_Mode_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-left:1px solid white;
+border-top:1px solid white;
+background-color: rgb(132, 132, 132);
+color:rgb(255,255,0);</string>
+     </property>
+     <property name="text">
+      <string>CC-DI-02
+05</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_200AA">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>200AA</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_152">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>152</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_05_719_1">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>719-1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_680M">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>680M</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_298D">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>298D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_192C">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192C</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DI_02_06_192D">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>139</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>192D</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_780">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>249</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>780</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_151E">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>151E</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_630">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>630</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_1902">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>1902</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_631">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>631</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_172A">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>172A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_02_32M">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>279</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>32M</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_681">
+     <property name="geometry">
+      <rect>
+       <x>692</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>681</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_210A">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>210A</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_J195">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>349</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>J195</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_185">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>185</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_210B">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>210B</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_J193">
+     <property name="geometry">
+      <rect>
+       <x>364</x>
+       <y>349</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>J193</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_J191">
+     <property name="geometry">
+      <rect>
+       <x>528</x>
+       <y>349</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>J191</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_150">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>150</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_178">
+     <property name="geometry">
+      <rect>
+       <x>282</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>178</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_J194">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>349</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>J194</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_152">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>152</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_644">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>349</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>644</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_J192">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>349</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>J192</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LBL_DO_02_03_961">
+     <property name="geometry">
+      <rect>
+       <x>446</x>
+       <y>319</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:2px solid rgb(132,132,132) ;
+background-color: black;
+color:white;</string>
+     </property>
+     <property name="text">
+      <string>961</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

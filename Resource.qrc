@@ -40,7 +40,6 @@
         <file>images/tingfanggeli.png</file>
         <file>images/tingfanghuanjie.png</file>
         <file>images/tingfangshijia.png</file>
-        <file>images/TrainLogo.png</file>
         <file>images/up.png</file>
         <file>images/wangya.png</file>
         <file>images/weihu.png</file>
@@ -64,12 +63,28 @@
         <file>images/weihuzhupinganxia.png</file>
         <file>images/yunxinganxia.png</file>
         <file>images/yunxingzhupinanxia.png</file>
+        <file>images/PHclose.png</file>
+        <file>images/PHopen.png</file>
+        <file>images/SWclose.png</file>
+        <file>images/SWopen.png</file>
+        <file>images/Circle.png</file>
+        <file>images/PCQUAI.png</file>
+        <file>images/SWcloseV.png</file>
+        <file>images/SWopenV.png</file>
+        <file>images/Coil.png</file>
+        <file>images/Coil_GND.png</file>
+        <file>images/Cheti_L.png</file>
+        <file>images/Active.png</file>
+        <file>images/pantoSetDOWN.png</file>
+        <file>images/pantoSetISO.png</file>
+        <file>images/pantoSetUP.png</file>
         <file>images/Cheti.png</file>
         <file>images/qudongiso.png</file>
         <file>images/qudongok.png</file>
         <file>images/shengqi.png</file>
         <file>images/left.png</file>
         <file>images/right.png</file>
+        <file>images/TrainLogo.png</file>
         <file>images/TrainLogo-reverse.png</file>
         <file>images/TrainLogoUp.png</file>
         <file>images/TrainLogoUp-reverse.png</file>

@@ -5,6 +5,15 @@
 #define NButtonUP    "font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;"
 #define NButtonDOWN  "font: 16px;color: rgb(0, 0, 0);background-color: rgb(240, 240, 0);border-bottom: 2px solid white;border-right: 2px solid white;"
 
+#define TRAINDOWNL "image: url(:/images/images/TrainLogo.png);"
+#define TRAINDOWNR "image: url(:/images/images/TrainLogo-reverse.png);"
+#define TRAINUPL   "image: url(:/images/images/TrainLogoUp.png);"
+#define TRAINUPR   "image: url(:/images/images/TrainLogoUp-reverse.png);"
+#define PANTOSETDOWN "image: url(:/images/images/pantoSetDOWN.png);"
+#define PANTOSETUP "image: url(:/images/images/pantoSetUP.png);"
+#define PANTOSETISO "image: url(:/images/images/pantoSetISO.png);"
+
+
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
 
@@ -19,6 +28,7 @@
 #define BLACK     "background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define REDBACKGROUND "background-color:rgb(240,0,0)"
 #define GREENBACKGROUND "background-color:rgb(0,240,0)"
+#define YELLOWBACKGROUND "background-color:rgb(240,240,0)"
 
 #define	PINGBAO   "image: url(:/images/images/pingbao.png);"
 #define	LIANGDUZIDONG   "image: url(:/images/images/auto.png);"
@@ -83,6 +93,10 @@
 #define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define	HIDEIMAGE	"background-color:transparent;border:0px solid lightgray;"
 
+#define BUTTONRELEASE "font:16px;color: rgb(240,240,240);background-color: rgb(0, 0, 0);border-top: 2px solid white;	border-left: 2px solid white;border-right: 1px solid white;border-bottom: 1px solid white;"
+#define BUTTONPRESSED "font:16px;color: rgb(0,0,0);background-color: rgb(240,240,0);border-top: 1px solid white;	border-left: 1px solid white;border-right: 2px solid white;border-bottom: 2px solid white;"
+
+
 #include <stdlib.h>
 
 #ifndef WINDOWS_MODE
@@ -124,19 +138,19 @@ enum pageIndex
     //过程数据
     uDeviceData_TrainOutline,
     uDeviceData_TracBrake,
-    uDeviceData_breaker,
+    uDeviceData_Breaker,
     uDeviceData_ACU,
     uDeviceData_MainConv,
     uDeviceData_Online,
     uDeviceData_Version,
     uDeviceData_IO,
-    //机车设置
-    uSettng_Wheel,
-    uSettng_Datetime,
-    uSettng_Others,
-    uSettng_Calibrate,
-    uSettng_Lubrication,
-    uSettng_Separation,
+    //数据输入
+    uDataInputWheelPage,
+    uDataInputDateTimePage,
+    uDataInputOther,
+    uDataInputCalibratePage,
+    uDataInputLubricatePage,
+    uDataInputSplitLinePage,
     //维护测试
     uMain_Simulate,
     uMain_Lubrication,
@@ -144,10 +158,12 @@ enum pageIndex
     uMain_380,
     uMain_Separation,
     uMain_DoublePanto,
+    uMain_Allportdata,
     //故障查询
     uFault_Current,
     uFault_History,
     uFault_Download,
+
 };
 enum keyboardIndex{
     key_NULL = 0,
@@ -184,6 +200,9 @@ enum keyboardIndex{
     key_Spear1,
     key_Spear2,
 };
+
+
+
 #define _LOG qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") << __FILE__ << __LINE__
 
 #endif // GLOBAL_H
