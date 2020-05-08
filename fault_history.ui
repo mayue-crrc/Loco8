@@ -2788,7 +2788,7 @@ font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2p
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="LBLTotalpage">
    <property name="geometry">
     <rect>
      <x>390</x>
@@ -2807,7 +2807,7 @@ font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2p
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="LBLCurrentpage">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -2840,7 +2840,7 @@ font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2p
 border:transparent;</string>
    </property>
    <property name="text">
-    <string>共</string>
+    <string>第</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3032,7 +3032,7 @@ image: url(:/images/images/Cheti_L.png);
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTNPre_2">
+  <widget class="QPushButton" name="BTNMode1">
    <property name="geometry">
     <rect>
      <x>210</x>
@@ -3042,10 +3042,10 @@ image: url(:/images/images/Cheti_L.png);
     </rect>
    </property>
    <property name="text">
-    <string>上一页</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="BTNNext_2">
+  <widget class="QPushButton" name="BTNMode2">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -3055,7 +3055,7 @@ image: url(:/images/images/Cheti_L.png);
     </rect>
    </property>
    <property name="text">
-    <string>下一页</string>
+    <string/>
    </property>
   </widget>
  </widget>

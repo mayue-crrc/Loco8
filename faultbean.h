@@ -2,7 +2,12 @@
 #define FAULTBEAN_H
 
 #include "QString"
-
+enum Directions{
+    forward = 1,
+    backword,
+    zero,
+    nullp
+};
 class FaultBean
 {
 public:
@@ -17,7 +22,7 @@ public:
     float Speed;
     float Voltage;
     float Current;
-    QString Direction;
+    unsigned char Direction;
     float Grade;
 
 };
