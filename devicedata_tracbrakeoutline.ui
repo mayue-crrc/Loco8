@@ -1,0 +1,5755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceData_TracBrakeOutline</class>
+ <widget class="QWidget" name="DeviceData_TracBrakeOutline">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QPushButton
+{
+	font:16px;
+    color: rgb(192,192,192);
+	background-color: rgb(0, 0, 0);
+	border-top: 2px solid white;	
+	border-left: 2px solid white;
+}
+QLabel
+{
+	font:12px;
+   color: white;
+   border:1px solid white;
+}</string>
+  </property>
+  <widget class="QProgressBar" name="BARTrain1Act1_2">
+   <property name="geometry">
+    <rect>
+     <x>77</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>20</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Act1_1">
+   <property name="geometry">
+    <rect>
+     <x>76</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set2_1">
+   <property name="geometry">
+    <rect>
+     <x>104</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Act2_2">
+   <property name="geometry">
+    <rect>
+     <x>117</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set2_2">
+   <property name="geometry">
+    <rect>
+     <x>105</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Act2_1">
+   <property name="geometry">
+    <rect>
+     <x>116</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set3_1">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set3_2">
+   <property name="geometry">
+    <rect>
+     <x>145</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set1_1">
+   <property name="geometry">
+    <rect>
+     <x>64</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set1_2">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_9">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>276</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>196</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px solid white;font:10px;color:white</string>
+   </property>
+   <property name="text">
+    <string>-20</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>518</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(240,0,0);
+font:14px;</string>
+   </property>
+   <property name="text">
+    <string>制动</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>327</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-100</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_12">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>210</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_15">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>177</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_14">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>309</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_18">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>45</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>64</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>60</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>162</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>[kN] 0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>295</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-80</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_13">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>243</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>229</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-40</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_17">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>144</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>262</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-60</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_22">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>78</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>32</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>80</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>130</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>20</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_16">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>111</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>-2</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>100</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_27">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>12</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_17">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>518</y>
+     <width>16</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+font:14px;
+background-color:transparent;</string>
+   </property>
+   <property name="text">
+    <string>/</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_36">
+   <property name="geometry">
+    <rect>
+     <x>59</x>
+     <y>12</y>
+     <width>1</width>
+     <height>332</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1">
+   <property name="geometry">
+    <rect>
+     <x>49</x>
+     <y>343</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>29</x>
+     <y>98</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>40</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Act4_2">
+   <property name="geometry">
+    <rect>
+     <x>197</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Act3_1">
+   <property name="geometry">
+    <rect>
+     <x>156</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Act3_2">
+   <property name="geometry">
+    <rect>
+     <x>157</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set4_2">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Act4_1">
+   <property name="geometry">
+    <rect>
+     <x>196</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain1Set4_1">
+   <property name="geometry">
+    <rect>
+     <x>184</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_27">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>20</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_28">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>28</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_29">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>37</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_30">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>61</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_31">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>53</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_32">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>70</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_33">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>103</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_34">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>94</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_35">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>86</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_36">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>169</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_37">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>160</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_38">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>152</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_39">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>201</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_40">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>192</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_41">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>184</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_42">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>268</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_43">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>259</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_44">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>251</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_45">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>335</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_46">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>326</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_47">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>318</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_48">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>137</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_49">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>128</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_50">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>120</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_51">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>302</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_52">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>293</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_53">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>285</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_54">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>227</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_55">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>219</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_56">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>236</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_59">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>397</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>轴:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_61">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>103</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_63">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>28</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_64">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>197</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-20</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_19">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>144</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_65">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>86</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_20">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>243</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_21">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>45</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_67">
+   <property name="geometry">
+    <rect>
+     <x>243</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>轴：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_68">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>268</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_69">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>32</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>80</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_70">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>137</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_71">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>293</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_74">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>128</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_75">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>219</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_2">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>343</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_76">
+   <property name="geometry">
+    <rect>
+     <x>238</x>
+     <y>369</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>设定：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_77">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>37</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_78">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>227</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_79">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>162</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>[kN] 0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_80">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>152</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_81">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>70</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_23">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>78</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_82">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>318</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_83">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>94</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_24">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>309</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_25">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>177</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_84">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>335</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_85">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>326</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_86">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>53</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_87">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>259</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_88">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>130</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>20</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_89">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>236</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_91">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>201</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_92">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>-2</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>100</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_93">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>20</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_94">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>192</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_96">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>326</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-100</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_97">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>98</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>40</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_98">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>229</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-40</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_99">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>285</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_26">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>111</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_10">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>276</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_37">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>12</y>
+     <width>1</width>
+     <height>332</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_104">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>251</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_105">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>120</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_106">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>262</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-60</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_107">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>295</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-80</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_108">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>61</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_109">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>184</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_110">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>160</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_111">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>169</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_112">
+   <property name="geometry">
+    <rect>
+     <x>263</x>
+     <y>302</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_113">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>64</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>60</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_28">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>210</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_29">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>12</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_115">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>247</y>
+     <width>24</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-300</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_116">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>90</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_117">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>158</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_118">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>239</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_119">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>33</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_120">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>275</y>
+     <width>24</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-400</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_122">
+   <property name="geometry">
+    <rect>
+     <x>737</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_30">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>205</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_123">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>160</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>[kN] 0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_124">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>53</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_125">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>184</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_126">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>197</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_127">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>132</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_128">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>112</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_129">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>-2</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>600</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_31">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>66</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_130">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>164</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetTrain1">
+   <property name="geometry">
+    <rect>
+     <x>613</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	color:yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_32">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>96</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_132">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>26</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>500</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_133">
+   <property name="geometry">
+    <rect>
+     <x>618</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_134">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>110</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_33">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>12</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_34">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>177</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_136">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>219</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_35">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>232</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_3">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>316</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_137">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>19</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_138">
+   <property name="geometry">
+    <rect>
+     <x>658</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_139">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>81</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetTrain4">
+   <property name="geometry">
+    <rect>
+     <x>733</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_141">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>59</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_142">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>302</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_143">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>274</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_145">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>301</y>
+     <width>24</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-500</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_146">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>46</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_38">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>289</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_147">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>246</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetTrain3">
+   <property name="geometry">
+    <rect>
+     <x>693</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_149">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>295</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetTrain2">
+   <property name="geometry">
+    <rect>
+     <x>653</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_151">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>82</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>300</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_152">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>267</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_154">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>26</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_155">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>52</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>400</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_156">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>282</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_157">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>102</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_11">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>261</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_158">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>192</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-100</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_159">
+   <property name="geometry">
+    <rect>
+     <x>697</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_160">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>191</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_161">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>219</y>
+     <width>24</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_39">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>40</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_40">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>125</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_162">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>212</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_163">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>73</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_164">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>253</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_165">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>347</y>
+     <width>51</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>车号:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_166">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>226</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_167">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>370</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>设定：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_168">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>308</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_41">
+   <property name="geometry">
+    <rect>
+     <x>602</x>
+     <y>12</y>
+     <width>1</width>
+     <height>332</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string>0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_169">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>118</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_170">
+   <property name="geometry">
+    <rect>
+     <x>573</x>
+     <y>398</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>车:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActSpeed">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>37</y>
+     <width>100</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:12px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>0km/h</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_172">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>77</y>
+     <width>100</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+	font:14px;
+    color: white;
+}</string>
+   </property>
+   <property name="text">
+    <string>实际速度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetSpeed">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>117</y>
+     <width>100</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:12px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>0km/h</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>154</y>
+     <width>100</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+	font:14px;
+    color: white;
+}</string>
+   </property>
+   <property name="text">
+    <string>设定速度</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>226</y>
+     <width>100</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:0px solid white;
+	font:14px;
+    color: white;
+}</string>
+   </property>
+   <property name="text">
+    <string>司控器级位</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_LEvel">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>190</y>
+     <width>100</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	font:12px;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActTrain4">
+   <property name="geometry">
+    <rect>
+     <x>733</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActTrain2">
+   <property name="geometry">
+    <rect>
+     <x>653</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActTrain3">
+   <property name="geometry">
+    <rect>
+     <x>693</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActTrain1">
+   <property name="geometry">
+    <rect>
+     <x>613</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	color:yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_178">
+   <property name="geometry">
+    <rect>
+     <x>285</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_179">
+   <property name="geometry">
+    <rect>
+     <x>325</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis7">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis6">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_182">
+   <property name="geometry">
+    <rect>
+     <x>366</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis7">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis8">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis8">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis6">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis5">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>369</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	color:yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_188">
+   <property name="geometry">
+    <rect>
+     <x>406</x>
+     <y>347</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis5">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>393</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	color:yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis1">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>392</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	color:yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>392</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_90">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>368</y>
+     <width>41</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>设定：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>368</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis3">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>368</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_194">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>346</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_60">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>396</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>轴:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis4">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>368</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_72">
+   <property name="geometry">
+    <rect>
+     <x>33</x>
+     <y>345</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>轴：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_196">
+   <property name="geometry">
+    <rect>
+     <x>115</x>
+     <y>346</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_197">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>346</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis4">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>392</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_SetAxis1">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>368</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+	color:yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_200">
+   <property name="geometry">
+    <rect>
+     <x>156</x>
+     <y>346</y>
+     <width>31</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ActAxis3">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>392</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	border:1px solid white;
+    color: yellow;
+}</string>
+   </property>
+   <property name="text">
+    <string>-200</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_42">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>152</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_43">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>138</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_44">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>145</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_202">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>136</y>
+     <width>20</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>100</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_121">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>171</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_203">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>336</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_204">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>328</y>
+     <width>24</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;color:white;
+border:0px solid white;</string>
+   </property>
+   <property name="text">
+    <string>-600</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_205">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>323</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_206">
+   <property name="geometry">
+    <rect>
+     <x>595</x>
+     <y>330</y>
+     <width>7</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L1_4">
+   <property name="geometry">
+    <rect>
+     <x>592</x>
+     <y>343</y>
+     <width>10</width>
+     <height>1</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:1px solid white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act2_2">
+   <property name="geometry">
+    <rect>
+     <x>329</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act4_2">
+   <property name="geometry">
+    <rect>
+     <x>409</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act1_1">
+   <property name="geometry">
+    <rect>
+     <x>288</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set1_1">
+   <property name="geometry">
+    <rect>
+     <x>276</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set4_1">
+   <property name="geometry">
+    <rect>
+     <x>396</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set3_2">
+   <property name="geometry">
+    <rect>
+     <x>357</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act1_2">
+   <property name="geometry">
+    <rect>
+     <x>289</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act3_2">
+   <property name="geometry">
+    <rect>
+     <x>369</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act4_1">
+   <property name="geometry">
+    <rect>
+     <x>408</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set4_2">
+   <property name="geometry">
+    <rect>
+     <x>397</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set2_2">
+   <property name="geometry">
+    <rect>
+     <x>317</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set3_1">
+   <property name="geometry">
+    <rect>
+     <x>356</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act2_1">
+   <property name="geometry">
+    <rect>
+     <x>328</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set1_2">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Set2_1">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrain2Act3_1">
+   <property name="geometry">
+    <rect>
+     <x>368</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct2_2">
+   <property name="geometry">
+    <rect>
+     <x>659</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct4_2">
+   <property name="geometry">
+    <rect>
+     <x>739</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct1_1">
+   <property name="geometry">
+    <rect>
+     <x>619</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet1_1">
+   <property name="geometry">
+    <rect>
+     <x>607</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet4_1">
+   <property name="geometry">
+    <rect>
+     <x>727</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet3_2">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct1_2">
+   <property name="geometry">
+    <rect>
+     <x>619</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct3_2">
+   <property name="geometry">
+    <rect>
+     <x>699</x>
+     <y>178</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct4_1">
+   <property name="geometry">
+    <rect>
+     <x>739</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet4_2">
+   <property name="geometry">
+    <rect>
+     <x>727</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet2_2">
+   <property name="geometry">
+    <rect>
+     <x>647</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet3_1">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct2_1">
+   <property name="geometry">
+    <rect>
+     <x>659</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet1_2">
+   <property name="geometry">
+    <rect>
+     <x>607</x>
+     <y>178</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :blue;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:gray;
+}</string>
+   </property>
+   <property name="value">
+    <number>100</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainSet2_1">
+   <property name="geometry">
+    <rect>
+     <x>647</x>
+     <y>11</y>
+     <width>10</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="BARTrainAct3_1">
+   <property name="geometry">
+    <rect>
+     <x>699</x>
+     <y>11</y>
+     <width>25</width>
+     <height>165</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar{
+               border: 0px;
+				 border-radius: 0px;
+			    background-color :gray;
+}
+QProgressBar::chunk:enabled {
+               border-radius: 0px; 
+               background:blue;
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="textDirection">
+    <enum>QProgressBar::TopToBottom</enum>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

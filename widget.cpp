@@ -17,6 +17,8 @@
 #include "maindata_trainoutline.h"
 #include "settng_bypass.h"
 #include "devicedata_trainoutline.h"
+#include "devicedata_tracbrakeoutline.h"
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -78,9 +80,15 @@ Widget::Widget(QWidget *parent) :
     this->settng_Bypass->hide();
 
     //add driver pages
-    this->mainData_DriverOutline = new DeviceData_TrainOutline(this);
-    this->mainData_DriverOutline->setMyBase(uMiddleControl,QString("驱动概述"));
-    this->mainData_DriverOutline->hide();
+    this->deviceData_TrainOutline = new DeviceData_TrainOutline(this);
+    this->deviceData_TrainOutline->setMyBase(uMiddleDeviceData,QString("驱动概述"));
+    this->deviceData_TrainOutline->hide();
+
+    //add tracbrake pages
+    this->deviceData_TracBrakeOutline = new DeviceData_TracBrakeOutline(this);
+    this->deviceData_TracBrakeOutline->setMyBase(uMiddleDeviceData,QString("驱动概述"));
+    this->deviceData_TracBrakeOutline->hide();
+
     //add device_data pages
     this->deviceData_Online = new DeviceData_Online(this);
     this->deviceData_Online->setMyBase(uMiddleDeviceData,QString("在线状态"));
@@ -89,8 +97,8 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
-    this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
-
+    this->widgets.insert(uDeviceData_TrainOutline,this->deviceData_TrainOutline);
+    this->widgets.insert(uDeviceData_TracBrake,this->deviceData_TracBrakeOutline);
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);

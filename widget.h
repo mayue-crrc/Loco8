@@ -25,6 +25,8 @@ class DeviceData_Online;
 class MainData_TrainOutline;
 class Settng_Bypass;
 class DeviceData_TrainOutline;
+class DeviceData_TracBrakeOutline;
+
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -58,7 +60,8 @@ private:
 
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
-    DeviceData_TrainOutline* mainData_DriverOutline;
+    DeviceData_TrainOutline* deviceData_TrainOutline;
+    DeviceData_TracBrakeOutline* deviceData_TracBrakeOutline;
 };
 
 #endif // WIDGET_H
