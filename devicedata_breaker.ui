@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>425</height>
+    <height>445</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,7 @@ background-color:rgb(255,0,0);
 border:1px solid white;
 }</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>165</x>
@@ -183,7 +183,7 @@ border:1px solid white;
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>455</x>
