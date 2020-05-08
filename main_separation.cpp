@@ -54,15 +54,37 @@ void Main_Separation::functionButtonPressEvent()
 
     switch (funcEum)
     {
-        case 11:
+        case active:
+
 
             break;
-        case 12:
+        case cancel:
 
             break;
-        case 13:
+        case send:
 
             break;
     }
 
+}
+
+void Main_Separation::releaseAllButtons()
+{
+    foreach (QPushButton* button, funCButtons) {
+        button->setStyleSheet(BUTTONRELEASE);
+    }
+}
+
+void Main_Separation::enableAllButtons()
+{
+    foreach (QPushButton* button, funCButtons) {
+        button->setEnabled(true);
+    }
+}
+
+void Main_Separation::unEnaleAllButtons()
+{
+    foreach (QPushButton* button, funCButtons) {
+        button->setEnabled(false);
+    }
 }
