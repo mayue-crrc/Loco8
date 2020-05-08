@@ -27,7 +27,7 @@ font:16px
 
 QPushButton
 {
-	font:20px;
+	font:16px;
     color: rgb(240,240,240);
 	background-color: rgb(0, 0, 0);
 	border-top: 2px solid white;	
@@ -46,7 +46,7 @@ QPushButton
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>返回0秒</string>
@@ -93,6 +93,9 @@ QPushButton
      <height>51</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
    <property name="text">
     <string>运行测试</string>
    </property>
@@ -106,8 +109,37 @@ QPushButton
      <height>51</height>
     </rect>
    </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
    <property name="text">
     <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>180</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>180</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>2</string>
    </property>
   </widget>
  </widget>
