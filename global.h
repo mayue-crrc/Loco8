@@ -5,6 +5,15 @@
 #define NButtonUP    "font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;"
 #define NButtonDOWN  "font: 16px;color: rgb(0, 0, 0);background-color: rgb(240, 240, 0);border-bottom: 2px solid white;border-right: 2px solid white;"
 
+#define TRAINDOWNL "image: url(:/images/images/TrainLogo.png);"
+#define TRAINDOWNR "image: url(:/images/images/TrainLogo-reverse.png);"
+#define TRAINUPL   "image: url(:/images/images/TrainLogoUp.png);"
+#define TRAINUPR   "image: url(:/images/images/TrainLogoUp-reverse.png);"
+#define PANTOSETDOWN "image: url(:/images/images/pantoSetDOWN.png);"
+#define PANTOSETUP "image: url(:/images/images/pantoSetUP.png);"
+#define PANTOSETISO "image: url(:/images/images/pantoSetISO.png);"
+
+
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
 
@@ -86,6 +95,7 @@
 
 #define BUTTONRELEASE "font:16px;color: rgb(240,240,240);background-color: rgb(0, 0, 0);border-top: 2px solid white;	border-left: 2px solid white;border-right: 1px solid white;border-bottom: 1px solid white;"
 #define BUTTONPRESSED "font:16px;color: rgb(0,0,0);background-color: rgb(240,240,0);border-top: 1px solid white;	border-left: 1px solid white;border-right: 2px solid white;border-bottom: 2px solid white;"
+
 
 #include <stdlib.h>
 

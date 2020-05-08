@@ -40,7 +40,6 @@
         <file>images/tingfanggeli.png</file>
         <file>images/tingfanghuanjie.png</file>
         <file>images/tingfangshijia.png</file>
-        <file>images/TrainLogo.png</file>
         <file>images/up.png</file>
         <file>images/wangya.png</file>
         <file>images/weihu.png</file>
@@ -85,6 +84,7 @@
         <file>images/shengqi.png</file>
         <file>images/left.png</file>
         <file>images/right.png</file>
+        <file>images/TrainLogo.png</file>
         <file>images/TrainLogo-reverse.png</file>
         <file>images/TrainLogoUp.png</file>
         <file>images/TrainLogoUp-reverse.png</file>

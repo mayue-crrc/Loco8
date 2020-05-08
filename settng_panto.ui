@@ -22,14 +22,7 @@ QLabel
 {
 color:white;
 }
-QPushButton
-{
-background-color:black;
-border:1px solid white;
-border-left:2px solid white;
-border-top:2px solid white;
-color:white;
-}</string>
+</string>
   </property>
   <widget class="QLabel" name="LBL_4Train3">
    <property name="geometry">
@@ -105,56 +98,9 @@ color:rgb(255,255,255);</string>
     <string>0</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti_L.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL_4HS1">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>43</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL_2HS2">
-   <property name="geometry">
-    <rect>
-     <x>476</x>
-     <y>176</y>
-     <width>41</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL_4HS4">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>43</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+    <string notr="true">image: url(:/images/images/TrainLogoUp.png);
+background-color:black;
+</string>
    </property>
    <property name="text">
     <string/>
@@ -192,24 +138,9 @@ image: url(:/images/images/Cheti_L.png);</string>
     <string>2</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti_L.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL_4HS2">
-   <property name="geometry">
-    <rect>
-     <x>246</x>
-     <y>43</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
+    <string notr="true">image: url(:/images/images/TrainLogoUp.png);
+background-color:black;
+</string>
    </property>
    <property name="text">
     <string/>
@@ -263,8 +194,9 @@ image: url(:/images/images/Cheti_L.png);</string>
     <string>1</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti-reverse.png);</string>
+    <string notr="true">image: url(:/images/images/TrainLogoUp-reverse.png);
+background-color:black;
+</string>
    </property>
    <property name="text">
     <string/>
@@ -308,6 +240,12 @@ color:rgb(255,255,255);</string>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:black;
+border-left:2px solid white;
+border-top:2px solid white;
+color:white;</string>
+   </property>
    <property name="text">
     <string>受电弓隔离</string>
    </property>
@@ -328,8 +266,9 @@ color:rgb(255,255,255);</string>
     <string>3</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti-reverse.png);</string>
+    <string notr="true">image: url(:/images/images/TrainLogoUp-reverse.png);
+background-color:black;
+</string>
    </property>
    <property name="text">
     <string/>
@@ -346,22 +285,6 @@ image: url(:/images/images/Cheti-reverse.png);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/Cheti-reverse.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL_2HS1">
-   <property name="geometry">
-    <rect>
-     <x>266</x>
-     <y>176</y>
-     <width>41</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -533,6 +456,12 @@ color:rgb(255,255,255);</string>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:black;
+border-left:2px solid white;
+border-top:2px solid white;
+color:white;</string>
+   </property>
    <property name="text">
     <string>受电弓隔离取消</string>
    </property>
@@ -548,22 +477,6 @@ color:rgb(255,255,255);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-image: url(:/images/images/Cheti_L.png);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LBL_4HS3">
-   <property name="geometry">
-    <rect>
-     <x>510</x>
-     <y>43</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/HSCutout.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -646,23 +559,14 @@ color:rgb(255,255,255);</string>
   <zorder>LBL_4Train3</zorder>
   <zorder>LBL_Train1Num</zorder>
   <zorder>BTN_Train1</zorder>
-  <zorder>LBL_4HS1</zorder>
-  <zorder>LBL_2HS2</zorder>
-  <zorder>LBL_4HS4</zorder>
-  <zorder>LBL_4Active1</zorder>
   <zorder>BTN_Train3</zorder>
-  <zorder>LBL_4HS2</zorder>
   <zorder>LBL_4Train2</zorder>
   <zorder>BTN_Train2</zorder>
   <zorder>LBL_Train4Num</zorder>
   <zorder>BTN_PANTO_Cutout</zorder>
   <zorder>BTN_Train4</zorder>
   <zorder>LBL_2Train2</zorder>
-  <zorder>LBL_2HS1</zorder>
-  <zorder>LBL_2Active1</zorder>
-  <zorder>LBL_2Active2</zorder>
   <zorder>LBL_4Train1</zorder>
-  <zorder>LBL_4Active4</zorder>
   <zorder>LBL_Train2Num</zorder>
   <zorder>LBL_4Active3</zorder>
   <zorder>LBL_4Train4</zorder>
@@ -670,13 +574,16 @@ color:rgb(255,255,255);</string>
   <zorder>LBL_4PANTO2</zorder>
   <zorder>BTN_PANTO_CancelCutout</zorder>
   <zorder>LBL_2Train1</zorder>
-  <zorder>LBL_4HS3</zorder>
   <zorder>LBL_Train3Num</zorder>
   <zorder>LBL_2PANTO1</zorder>
   <zorder>LBL_4PANTO3</zorder>
   <zorder>LBL_4Active2</zorder>
   <zorder>LBL_4PANTO1</zorder>
   <zorder>LBL_4PANTO4</zorder>
+  <zorder>LBL_4Active1</zorder>
+  <zorder>LBL_4Active4</zorder>
+  <zorder>LBL_2Active1</zorder>
+  <zorder>LBL_2Active2</zorder>
  </widget>
  <resources/>
  <connections/>
