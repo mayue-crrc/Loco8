@@ -37,6 +37,8 @@ private:
     sqlite3* databaseFaultType;
     sqlite3* databaseHistoryFault;
 
+    Directions getdirections(char* c);
+
 };
 
 #endif // CRRCFAULTMAPPER_H

@@ -27,7 +27,7 @@ font:16px
 
 QPushButton
 {
-	font:20px;
+	font:16px;
     color: rgb(240,240,240);
 	background-color: rgb(0, 0, 0);
 	border-top: 2px solid white;	
@@ -62,7 +62,7 @@ QPushButton
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:green;</string>
+    <string notr="true">color: yellow;</string>
    </property>
    <property name="text">
     <string>仿真模式：关</string>
