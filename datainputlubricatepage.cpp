@@ -2,6 +2,7 @@
 #include "ui_datainputlubricatepage.h"
 #include "buttonrectutil.h"
 #include <QButtonGroup>
+#include <QTimer>
 
 enum setGroupID
 {
@@ -28,7 +29,11 @@ DataInputLubricatePage::DataInputLubricatePage(QWidget *parent) :
     // set time default
     this->currentSetId = setTime;
     onSetGroupClicked(setTime);
-    //ui->labelInput->setText(...);
+    ui->labelInput->setText(QString::number(this->database->data_CCU->FLL_TIME));
+
+    this->timer = new QTimer;
+    this->timer->stop();
+    connect(this->timer, SIGNAL(timeout()), this, SLOT(onTimerTimeout()));
 }
 
 DataInputLubricatePage::~DataInputLubricatePage()
@@ -39,7 +44,7 @@ DataInputLubricatePage::~DataInputLubricatePage()
 void DataInputLubricatePage::showEvent(QShowEvent *)
 {
     ui->labelSetTime->setText(QString::number(this->database->data_CCU->FLL_TIME));
-    //ui->labelSetDIstance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
+    ui->labelSetDistance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
 }
 
 void DataInputLubricatePage::onButtonsClicked(int buttonId)
@@ -72,18 +77,24 @@ void DataInputLubricatePage::onSetGroupClicked(int setId)
     }
 }
 
-
-
 void DataInputLubricatePage::on_btnStore_clicked()
 {
     if (setTime == this->currentSetId)
     {
-        //sent time value and sign
+        //sent time value
+        this->database->data_CCU->FLL_TIMEDDU = ui->labelInput->text().toInt();
     }
     else if (setDistance == this->currentSetId)
     {
         //set distance value and sign
+        this->database->data_CCU->FLL_DIS = ui->labelInput->text().toInt();
     }
+    this->database->data_CCU->FLL_SET = true;
     ui->labelSetTime->setText(QString::number(this->database->data_CCU->FLL_TIME));
-    //ui->labelSetDIstance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
+    ui->labelSetDistance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
+}
+
+void DataInputLubricatePage::onTimerTimeout()
+{
+
 }
