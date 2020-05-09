@@ -2,6 +2,9 @@
 #define DATAINPUTWHEELPAGE_H
 
 #include "mybase.h"
+class ButtonRectUtil;
+class QButtonGroup;
+class QTimer;
 
 namespace Ui {
 class DataInputWheelPage;
