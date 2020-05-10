@@ -392,6 +392,8 @@ void Data_TCN::updateData()
             }
         }
 
+
+
     }
 
     //本项目无法从TCN端口读取本车TCN数据，在此把train数组对象赋给本车数据。方便调用

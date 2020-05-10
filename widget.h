@@ -49,6 +49,8 @@ class Main_AssistantDevice;
 class Main_380;
 class Main_Separation;
 class Main_DoublePanto;
+class Fault_Current;
+class Fault_Detail;
 
 class Widget : public QWidget
 {
@@ -111,6 +113,8 @@ private:
     Main_DoublePanto* main_DoublePanto;
 
     CtrlDialog* ctrlDialog;
+    Fault_Current* fault_Current;
+    Fault_Detail* fault_Detail;
 };
 
 #endif // WIDGET_H

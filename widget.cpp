@@ -42,6 +42,8 @@
 #include "main_separation.h"
 #include "main_doublepanto.h"
 #include "devicedata_tracbrakeoutline.h"
+#include "fault_current.h"
+#include "fault_detail.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -206,6 +208,14 @@ Widget::Widget(QWidget *parent) :
     this->main_Allportdata->setMyBase(uMiddleFault,QString("数据监控"));
     this->main_Allportdata->hide();
 
+    this->fault_Current = new Fault_Current(this);
+    this->fault_Current->setMyBase(uMiddle,QString("当前故障"));
+    this->fault_Current->hide();
+
+    this->fault_Detail = new Fault_Detail(this);
+    this->fault_Detail->setMyBase(uMiddle,QString("故障详情"));
+    this->fault_Detail->hide();
+
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
@@ -242,15 +252,19 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uMain_Separation,this->main_Separation);
     this->widgets.insert(uMain_DoublePanto,this->main_DoublePanto);
 
+    this->widgets.insert(uFault_Current,this->fault_Current);
+    this->widgets.insert(uFault_Detail,this->fault_Detail);
+
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
 
 
     ctrlDialog = new CtrlDialog(this);
-    ctrlDialog->setGeometry(125,150,ctrlDialog->width(),ctrlDialog->height());
+    ctrlDialog->setGeometry(this->x()+125,this->y()+150,ctrlDialog->width(),ctrlDialog->height());
+    ctrlDialog->setWindowFlags(Qt::Dialog| Qt::FramelessWindowHint);
     ctrlDialog->hide();
-    connect(ctrlDialog,SIGNAL(passwordResponse()),navigator,SLOT(getpasswordResponse()));
-    connect(navigator,SIGNAL(passwordRequest()),ctrlDialog,SLOT(getpasswordRequest()));
+    connect(ctrlDialog,SIGNAL(passwordResponse(pageIndex)),navigator,SLOT(getpasswordResponse(pageIndex)));
+    connect(navigator,SIGNAL(passwordRequest(pageIndex)),ctrlDialog,SLOT(getpasswordRequest(pageIndex)));
 }
 
 Widget::~Widget()
@@ -262,7 +276,7 @@ void Widget::updatePage()
     static int counter = 1;
     this->navigator->updatePage();
     this->widgets[MyBase::currentPage]->updatePage();
-
+    this->header->updatePage();
     // update comm data,some base logic
     if(counter%2 == 0)
     {
