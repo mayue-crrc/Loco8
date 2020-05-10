@@ -6,7 +6,7 @@
 #include <QMap>
 #include "log4qt/logger.h"
 #include "global.h"
-
+#include "widgets/ctrldialog.h"
 namespace Ui {
     class Widget;
 }
@@ -40,6 +40,7 @@ class DataInputLubricatePage;
 class DataInputSplitLinePage;
 class Fault_HIstory;
 class DeviceData_TrainOutline;
+class DeviceData_TracBrakeOutline;
 class Main_Allportdata;
 
 class Main_Simulate;
@@ -86,6 +87,8 @@ private:
     DeviceData_IO* deviceData_IO;
     MainData_TrainOutline* mainData_TrainOutline;
     Settng_Bypass* settng_Bypass;
+    DeviceData_TrainOutline* deviceData_TrainOutline;
+    DeviceData_TracBrakeOutline* deviceData_TracBrakeOutline;
     Settng_Test* settng_Test;
     Settng_Panto* settng_Panto;
     Settng_Distance* settng_Distance;
@@ -106,6 +109,8 @@ private:
     Main_380* main_380;
     Main_Separation* main_Separation;
     Main_DoublePanto* main_DoublePanto;
+
+    CtrlDialog* ctrlDialog;
 };
 
 #endif // WIDGET_H

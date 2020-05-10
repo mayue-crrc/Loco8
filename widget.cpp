@@ -41,7 +41,7 @@
 #include "main_380.h"
 #include "main_separation.h"
 #include "main_doublepanto.h"
-
+#include "devicedata_tracbrakeoutline.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -141,6 +141,14 @@ Widget::Widget(QWidget *parent) :
 
 
     //add driver pages
+    this->deviceData_TrainOutline = new DeviceData_TrainOutline(this);
+    this->deviceData_TrainOutline->setMyBase(uMiddleDeviceData,QString("驱动概述"));
+    this->deviceData_TrainOutline->hide();
+
+    //add tracbrake pages
+    this->deviceData_TracBrakeOutline = new DeviceData_TracBrakeOutline(this);
+    this->deviceData_TracBrakeOutline->setMyBase(uMiddleDeviceData,QString("驱动概述"));
+    this->deviceData_TracBrakeOutline->hide();
     this->mainData_DriverOutline = new DeviceData_TrainOutline(this);
     this->mainData_DriverOutline->setMyBase(uMiddleControl,QString("驱动概述"));
     this->mainData_DriverOutline->hide();
@@ -201,6 +209,8 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uVehicleRunStatePage,this->vehicleRunStatePage);
     this->widgets.insert(uMainData_TrainOutline,this->mainData_TrainOutline);
     this->widgets.insert(uSettng_Bypass,this->settng_Bypass);
+    this->widgets.insert(uDeviceData_TrainOutline,this->deviceData_TrainOutline);
+    this->widgets.insert(uDeviceData_TracBrake,this->deviceData_TracBrakeOutline);
 
     this->widgets.insert(uSettng_Test,this->settng_Test);
     this->widgets.insert(uSettng_Panto,this->settng_Panto);
@@ -210,8 +220,6 @@ Widget::Widget(QWidget *parent) :
     this->widgets.insert(uDeviceData_Version,this->deviceData_Version);
 
     this->widgets.insert(uDeviceData_TrainOutline,this->mainData_DriverOutline);
-
-
     this->widgets.insert(uDeviceData_Online,this->deviceData_Online);
     this->widgets.insert(uDeviceData_MainConv,this->deviceData_MainConv);
     this->widgets.insert(uDeviceData_IO,this->deviceData_IO);
@@ -236,6 +244,13 @@ Widget::Widget(QWidget *parent) :
 
     this->navigator->setPageName(this->widgets[uVehicleRunStatePage]->name);
     crrcMvb = CrrcMvb::getCrrcMvb();
+
+
+    ctrlDialog = new CtrlDialog(this);
+    ctrlDialog->setGeometry(125,150,ctrlDialog->width(),ctrlDialog->height());
+    ctrlDialog->hide();
+    connect(ctrlDialog,SIGNAL(passwordResponse()),navigator,SLOT(getpasswordResponse()));
+    connect(navigator,SIGNAL(passwordRequest()),ctrlDialog,SLOT(getpasswordRequest()));
 }
 
 Widget::~Widget()

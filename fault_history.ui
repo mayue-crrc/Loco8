@@ -494,7 +494,7 @@ font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2p
     </rect>
    </property>
    <property name="text">
-    <string>2020/11/22 12:55:55</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

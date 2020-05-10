@@ -31,8 +31,6 @@ QPushButton
 	background-color: rgb(0, 0, 0);
 	border-top: 2px solid white;	
 	border-left: 2px solid white;
-
-
 }</string>
   </property>
   <widget class="QPushButton" name="NButton1">

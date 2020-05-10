@@ -128,7 +128,7 @@ void CrrcFault::run()
                        else
                            t_direction = nullp;
                        t_faultBean.Direction = t_direction;
-                       t_faultBean.Grade =  (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,12)/10-100;
+                       t_faultBean.Grade =  (float)(CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,12)-200)/10;
                        //create insert faultbean hash
                        this->InsertHistoryFaultHash.insert(t_circlefaultcnt,t_faultBean);
                        t_circlefaultcnt++;
