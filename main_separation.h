@@ -23,6 +23,16 @@ public:
 
 private:
     Ui::Main_Separation *ui;
+    enum funcSignal{
+        active=11,
+        cancel,
+        send,
+    };
+
+    void releaseAllButtons();
+    void enableAllButtons();
+    void unEnaleAllButtons();
+
 private slots:
     void numberButtonPressEvent();
     void functionButtonPressEvent();

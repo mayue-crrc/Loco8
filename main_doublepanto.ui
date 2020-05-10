@@ -27,7 +27,7 @@ font:16px
 
 QPushButton
 {
-	font:20px;
+	font:16px;
     color: rgb(240,240,240);
 	background-color: rgb(0, 0, 0);
 	border-top: 2px solid white;	
@@ -44,6 +44,9 @@ QPushButton
      <width>171</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
    </property>
    <property name="text">
     <string>激活</string>
@@ -70,6 +73,9 @@ QPushButton
      <width>171</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
    </property>
    <property name="text">
     <string>激活关闭</string>
