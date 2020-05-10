@@ -91,7 +91,7 @@ font:16px;
     <rect>
      <x>185</x>
      <y>105</y>
-     <width>111</width>
+     <width>121</width>
      <height>35</height>
     </rect>
    </property>
@@ -137,7 +137,7 @@ font:16px;
     <string notr="true">font:14px;
 color: rgb(255,255,255);
 background-color: rgb(0, 0, 0);
-border:2px solid rgb(255,255,255);</string>
+</string>
    </property>
    <property name="text">
     <string>清除故障</string>
@@ -184,9 +184,9 @@ border:2px solid rgb(255,255,255);</string>
   <widget class="QPushButton" name="BTN_AutoSandCutout">
    <property name="geometry">
     <rect>
-     <x>675</x>
+     <x>670</x>
      <y>223</y>
-     <width>101</width>
+     <width>111</width>
      <height>35</height>
     </rect>
    </property>
@@ -329,8 +329,7 @@ color:rgb(255,255,255);</string>
     <string>3</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti-reverse.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp-reverse.png);
 background-color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
@@ -528,7 +527,7 @@ color:white;</string>
     <rect>
      <x>357</x>
      <y>105</y>
-     <width>111</width>
+     <width>121</width>
      <height>35</height>
     </rect>
    </property>
@@ -640,7 +639,7 @@ color:rgb(255,255,255);</string>
     <rect>
      <x>497</x>
      <y>105</y>
-     <width>111</width>
+     <width>121</width>
      <height>35</height>
     </rect>
    </property>
@@ -680,9 +679,9 @@ color:rgb(255,255,255);</string>
   <widget class="QPushButton" name="BTN_4QR1">
    <property name="geometry">
     <rect>
-     <x>45</x>
+     <x>40</x>
      <y>105</y>
-     <width>111</width>
+     <width>121</width>
      <height>35</height>
     </rect>
    </property>
@@ -991,8 +990,7 @@ color:rgb(255,255,255);</string>
     <string>2</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti_L.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp.png);
 background-color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
@@ -1031,8 +1029,7 @@ background-color: rgb(0, 0, 0);</string>
     <string>0</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti_L.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp.png);
 background-color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
@@ -1081,9 +1078,9 @@ color:rgb(255,255,255);</string>
   <widget class="QPushButton" name="BTN_CombCutout">
    <property name="geometry">
     <rect>
-     <x>675</x>
+     <x>670</x>
      <y>273</y>
-     <width>101</width>
+     <width>111</width>
      <height>35</height>
     </rect>
    </property>
@@ -1110,7 +1107,7 @@ color:rgb(255,255,255);</string>
     <string>0</string>
    </property>
    <property name="text">
-    <string>☝牵引变流器1</string>
+    <string>牵引变流器1</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN_Train2">
@@ -1129,8 +1126,7 @@ color:rgb(255,255,255);</string>
     <string>1</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">border:1px solid black;
-image: url(:/images/images/Cheti-reverse.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp-reverse.png);
 background-color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
