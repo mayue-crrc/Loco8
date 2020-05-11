@@ -167,6 +167,9 @@ QPushButton
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -182,6 +185,9 @@ QPushButton
      <width>171</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -199,6 +205,9 @@ QPushButton
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -214,6 +223,9 @@ QPushButton
      <width>441</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
@@ -231,6 +243,9 @@ QPushButton
      <height>61</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -247,6 +262,9 @@ QPushButton
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
+   </property>
    <property name="text">
     <string/>
    </property>
@@ -262,6 +280,9 @@ QPushButton
      <width>91</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:yellow;</string>
    </property>
    <property name="text">
     <string/>
