@@ -550,8 +550,11 @@ public:
     ;bool       FAULT_DJ3_SPEEDA
     ;bool       FAULT_DJ3_SPEEDB
     ;bool       FAULT_DJ4_SPEEDA
-    ;bool       FAULT_DJ4_SPEEDB;
-
+    ;bool       FAULT_DJ4_SPEEDB
+    ;bool       BOGIE1ISO
+    ;bool       BOGIE2ISO
+    ;bool       BOGIE1HISO
+    ;bool       BOGIE2HISO;
 
 };
 

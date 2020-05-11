@@ -420,6 +420,12 @@ void Data_TCN::updateData()
         train[i]->FAULT_KYJ_HISO = CrrcMvb::getCrrcMvb()->getBool(0x262f,4,1);
         train[i]->FAULT_LUBRA_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1631,4,2);
 
+        train[i]->BOGIE1ISO = (train[i]->FAULT_COV1_ISO && train[i]->FAULT_COV2_ISO && train[i]->FAULT_INV1_ISO && train[i]->FAULT_INV2_ISO && train[i]->FAULT_ACU1_ISO);
+        train[i]->BOGIE2ISO = (train[i]->FAULT_COV3_ISO && train[i]->FAULT_COV4_ISO && train[i]->FAULT_INV3_ISO && train[i]->FAULT_INV4_ISO && train[i]->FAULT_ACU2_ISO);
+
+        train[i]->BOGIE1HISO = (train[i]->FAULT_COV1_HISO && train[i]->FAULT_COV2_HISO && train[i]->FAULT_INV1_HISO && train[i]->FAULT_INV2_HISO && train[i]->FAULT_ACU1_HISO);
+        train[i]->BOGIE2HISO = (train[i]->FAULT_COV3_HISO && train[i]->FAULT_COV4_HISO && train[i]->FAULT_INV3_HISO && train[i]->FAULT_INV4_HISO && train[i]->FAULT_ACU2_HISO);
+
     }
 
     //本项目无法从TCN端口读取本车TCN数据，在此把train数组对象赋给本车数据。方便调用
@@ -889,5 +895,12 @@ void Data_TCN::updateData()
     train[t_index]->FAULT_DLZD_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,7);
     train[t_index]->FAULT_KYJ_HISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,26,1);
     train[t_index]->FAULT_LUBRA_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,30,2);
+
+    train[t_index]->BOGIE1ISO = (train[t_index]->FAULT_COV1_ISO && train[t_index]->FAULT_COV2_ISO && train[t_index]->FAULT_INV1_ISO && train[t_index]->FAULT_INV2_ISO && train[t_index]->FAULT_ACU1_ISO);
+    train[t_index]->BOGIE2ISO = (train[t_index]->FAULT_COV3_ISO && train[t_index]->FAULT_COV4_ISO && train[t_index]->FAULT_INV3_ISO && train[t_index]->FAULT_INV4_ISO && train[t_index]->FAULT_ACU2_ISO);
+
+    train[t_index]->BOGIE1HISO = (train[t_index]->FAULT_COV1_HISO && train[t_index]->FAULT_COV2_HISO && train[t_index]->FAULT_INV1_HISO && train[t_index]->FAULT_INV2_HISO && train[t_index]->FAULT_ACU1_HISO);
+    train[t_index]->BOGIE2HISO = (train[t_index]->FAULT_COV3_HISO && train[t_index]->FAULT_COV4_HISO && train[t_index]->FAULT_INV3_HISO && train[t_index]->FAULT_INV4_HISO && train[t_index]->FAULT_ACU2_HISO);
+
 
 }
