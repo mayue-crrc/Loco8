@@ -1,13 +1,13 @@
 #ifndef CTRLDIALOG_H
 #define CTRLDIALOG_H
 
-#include <QWidget>
-
+#include <QDialog>
+#include "global.h"
 namespace Ui {
 class CtrlDialog;
 }
 
-class CtrlDialog : public QWidget
+class CtrlDialog : public QDialog
 {
     Q_OBJECT
 
@@ -20,13 +20,13 @@ private slots:
 
     void on_BTNOK_clicked();
     void ButtonPressEvent();
-    void getpasswordRequest();
+    void getpasswordRequest(pageIndex p);
 private:
     Ui::CtrlDialog *ui;
     QString  m_input;
-    int m_btnindex;
+    pageIndex m_btnindex;
 signals:
-    void passwordResponse();
+    void passwordResponse(pageIndex p);
 };
 
 #endif // CTRLDIALOG_H

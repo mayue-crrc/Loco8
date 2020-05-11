@@ -30,10 +30,10 @@ private slots:
     void NBpressEvent();
     void N2BpressEvent();
 
-    void getpasswordResponse();
+    void getpasswordResponse(pageIndex p);
 signals:
     void translateLanguage();
-    void passwordRequest();
+    void passwordRequest(pageIndex p);
 
 };
 

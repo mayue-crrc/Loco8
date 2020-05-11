@@ -147,7 +147,13 @@ void Navigator::NBpressEvent()
         ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
         buttons2[0]->setStyleSheet(NButtonDOWN);
     }
-    changePage(buttonIndexList.at(0));
+    if(buttonIndexList.at(0) == uDataInputWheelPage || buttonIndexList.at(0) == uMain_Separation)
+    {
+        passwordRequest(buttonIndexList.at(0));
+    }else
+    {
+        changePage(buttonIndexList.at(0));
+    }
 
 }
 void Navigator::N2BpressEvent()
@@ -168,7 +174,8 @@ void Navigator::N2BpressEvent()
                 ui->N2Button8->setStyleSheet(WEIHU);
             }else
             {
-                passwordRequest();
+                m_CurrentMainMode = true;
+                ui->N2Button8->setStyleSheet(YUNXING);
             }
             break;
         }
@@ -179,7 +186,16 @@ void Navigator::N2BpressEvent()
             buttons2[i]->setStyleSheet(NButtonUP);
         }
         ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
-        changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
+
+        if(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()) == uDataInputWheelPage ||
+           buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()) == uMain_Separation)
+        {
+            passwordRequest(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
+        }else
+        {
+            changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
+        }
+
     }
 }
 
@@ -187,9 +203,7 @@ void Navigator::updateLanguage()
 {
     this->ui->retranslateUi(this);
 }
-void Navigator::getpasswordResponse()
+void Navigator::getpasswordResponse(pageIndex p)
 {
-    m_CurrentMainMode = true;
-    ui->N2Button8->setStyleSheet(YUNXING);
-
+    changePage(p);
 }

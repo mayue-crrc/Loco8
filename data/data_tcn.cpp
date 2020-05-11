@@ -391,7 +391,7 @@ void Data_TCN::updateData()
                 break;
             }
         }
-
+      
         train[i]->FAULT_COV1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,2);
         train[i]->FAULT_COV2_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,3);
         train[i]->FAULT_COV3_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,4);

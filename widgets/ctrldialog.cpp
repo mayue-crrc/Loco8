@@ -2,7 +2,7 @@
 #include "ui_ctrldialog.h"
 #include "MainGetDefaultPara.h"
 CtrlDialog::CtrlDialog(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::CtrlDialog)
 {
     ui->setupUi(this);
@@ -35,7 +35,7 @@ void CtrlDialog::on_BTNOK_clicked()
     {
         m_input.clear();
         ui->LBLinput->clear();
-        passwordResponse();
+        passwordResponse(m_btnindex);
         this->hide();
     }else
     {
@@ -59,7 +59,8 @@ void CtrlDialog::ButtonPressEvent()
     ui->LBLinput->setText(m_input);
 
 }
-void CtrlDialog::getpasswordRequest()
+void CtrlDialog::getpasswordRequest(pageIndex p)
 {
-    this->show();
+    m_btnindex = p;
+    this->exec();
 }
