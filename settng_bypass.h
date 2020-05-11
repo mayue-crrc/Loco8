@@ -33,19 +33,20 @@ private slots:
 
 private:
     Ui::Settng_Bypass *ui;
-    QList<bool> Train1BrkISOstate,Train2BrkISOstate,Train3BrkISOstate,Train4BrkISOstate,
+    QList<bool> TrainBrkISOstate[4],TrainISOstate[4],TrainHISOstate[4],
+    Train1BrkISOstate,Train2BrkISOstate,Train3BrkISOstate,Train4BrkISOstate,
                 Train1ISOstate,Train2ISOstate,Train3ISOstate,Train4ISOstate,
                 Train1HISOstate,Train2HISOstate,Train3HISOstate,Train4HISOstate;
 
     QList<bool*> Train1CutSignal,Train2CutSignal,Train3CutSignal,Train4CutSignal,
                  Train1CancelSignal,Train2CancelSignal,Train3CancelSignal,Train4CancelSignal,FaultReset;
-    QList<QLabel*> BrkList;
+    QList<QLabel*> BrkList,TCUlabList;
     QList<QPushButton*> TrainSelect,TCUList;
     QList<QString> handISO,notISO;
     int TrainIndex,SelectIndex,timerISO,timerREL,timerResetFault;
     void hideAll();
     void setLabelState(QList<QLabel*> lblList,QList<bool> stateList);
-    void setButtonState(QList<QPushButton*> btnList,QList<bool> handISOList,QList<bool> ISOList);
+    void setLabelState(QList<QLabel*> lblList,QList<bool> handISOList,QList<bool> ISOList);
     void setButtonState(QPushButton* btn,bool iso,QString str1,QString str2);
 
 
