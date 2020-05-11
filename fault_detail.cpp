@@ -15,7 +15,7 @@ Fault_Detail::~Fault_Detail()
 
 void Fault_Detail::on_BTNCurrentFault_clicked()
 {
-
+    changePage(uFault_Current);
 }
 
 void Fault_Detail::on_BTNConfirm_clicked()

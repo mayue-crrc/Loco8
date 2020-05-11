@@ -62,7 +62,6 @@
         <file>images/weihuanxia.png</file>
         <file>images/weihuzhupinganxia.png</file>
         <file>images/yunxinganxia.png</file>
-        <file>images/yunxingzhupinanxia.png</file>
         <file>images/PHclose.png</file>
         <file>images/PHopen.png</file>
         <file>images/SWclose.png</file>
@@ -88,5 +87,6 @@
         <file>images/TrainLogoUp.png</file>
         <file>images/TrainLogoUp-reverse.png</file>
         <file>images/pantoSetISO.png</file>
+        <file>images/yunxingzhupinganxia.png</file>
     </qresource>
 </RCC>

@@ -62,6 +62,10 @@ public:
     void keyPressEvent(QKeyEvent *event);
     void showEvent(QShowEvent *);
     QMap<int, MyBase *> widgets;
+    void VCUtime2HMI10s();
+
+    bool systimeset(unsigned short int year,unsigned short int month,unsigned short int day,
+                     unsigned short int hour,unsigned short int min,unsigned short int sec);
 
     ~Widget();
 

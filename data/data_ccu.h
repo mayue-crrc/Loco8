@@ -1,11 +1,13 @@
 #ifndef DATA_CCU_H
 #define DATA_CCU_H
-
+#include "qdatetime.h"
 class Data_CCU
 {
 public:
     Data_CCU();
     void updateData();
+    bool CCUOnline;
+    QDateTime HMI_DateTime_foruse;
     //DDU-MPU
     //0x300
     ;bool	HEATING
@@ -377,6 +379,9 @@ public:
     ;unsigned char	DADMAN_TIMEALARM
     ;unsigned char	DDU_VX
     ;unsigned char	DDU_VY;
+
+    bool CheckLifesignal(unsigned char lifeSignal);
+
 };
 
 #endif // DATA_CCU_H
