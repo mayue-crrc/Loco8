@@ -34,17 +34,12 @@ DataInputLubricatePage::DataInputLubricatePage(QWidget *parent) :
     this->timer = new QTimer;
     this->timer->stop();
     connect(this->timer, SIGNAL(timeout()), this, SLOT(onTimerTimeout()));
+    ui->btnStore->setEnabled(true);
 }
 
 DataInputLubricatePage::~DataInputLubricatePage()
 {
     delete ui;
-}
-
-void DataInputLubricatePage::showEvent(QShowEvent *)
-{
-    ui->labelSetTime->setText(QString::number(this->database->data_CCU->FLL_TIME));
-    ui->labelSetDistance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
 }
 
 void DataInputLubricatePage::onButtonsClicked(int buttonId)
@@ -89,12 +84,24 @@ void DataInputLubricatePage::on_btnStore_clicked()
         //set distance value and sign
         this->database->data_CCU->FLL_DIS = ui->labelInput->text().toInt();
     }
-    this->database->data_CCU->FLL_SET = true;
-    ui->labelSetTime->setText(QString::number(this->database->data_CCU->FLL_TIME));
-    ui->labelSetDistance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
+
+    if (!this->timer->isActive())
+    {
+        this->timer->start(3000);
+        this->database->data_CCU->FLL_SET = true;
+        ui->btnStore->setEnabled(false);
+    }
 }
 
 void DataInputLubricatePage::onTimerTimeout()
 {
+    this->database->data_CCU->FLL_SET = false;
+    this->timer->stop();
+    ui->btnStore->setEnabled(true);
+}
 
+void DataInputLubricatePage::updatePage()
+{
+    ui->labelSetTime->setText(QString::number(this->database->data_CCU->FLL_TIME));
+    ui->labelSetDistance->setText(QString::number(this->database->data_CCU->FLL_DIS_STRAIGHT));
 }

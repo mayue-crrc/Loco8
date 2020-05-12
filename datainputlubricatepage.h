@@ -20,7 +20,6 @@ public:
 @brief:the object of keyboard;
 */
     ButtonRectUtil* buttonRectUtil;
-    void showEvent(QShowEvent *);
 
     QTimer *timer;
 private slots:
@@ -37,6 +36,7 @@ private slots:
     void onSetGroupClicked(int);
     void on_btnStore_clicked();
     void onTimerTimeout();
+    void updatePage();
 
 private:
     Ui::DataInputLubricatePage *ui;

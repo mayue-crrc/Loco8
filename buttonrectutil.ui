@@ -43,6 +43,9 @@ QPushButton
      <height>60</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="text">
     <string>3</string>
    </property>
@@ -55,6 +58,9 @@ QPushButton
      <width>60</width>
      <height>60</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>4</string>
@@ -69,6 +75,9 @@ QPushButton
      <height>60</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="text">
     <string>9</string>
    </property>
@@ -81,6 +90,9 @@ QPushButton
      <width>60</width>
      <height>60</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>5</string>
@@ -95,6 +107,9 @@ QPushButton
      <height>60</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="text">
     <string>2</string>
    </property>
@@ -107,6 +122,9 @@ QPushButton
      <width>60</width>
      <height>60</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>6</string>
@@ -121,6 +139,9 @@ QPushButton
      <height>60</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="text">
     <string>0</string>
    </property>
@@ -133,6 +154,9 @@ QPushButton
      <width>130</width>
      <height>60</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>清除</string>
@@ -147,6 +171,9 @@ QPushButton
      <height>60</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="text">
     <string>1</string>
    </property>
@@ -159,6 +186,9 @@ QPushButton
      <width>60</width>
      <height>60</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>7</string>
@@ -191,6 +221,9 @@ QPushButton
      <width>60</width>
      <height>60</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="text">
     <string>8</string>
