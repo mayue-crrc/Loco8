@@ -126,7 +126,9 @@ SOURCES += main.cpp\
     main_separation.cpp \
     main_doublepanto.cpp \
     widgets/ctrldialog.cpp \
-    devicedata_tracbrakeoutline.cpp
+    devicedata_tracbrakeoutline.cpp \
+    fault_current.cpp \
+    fault_detail.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -235,7 +237,9 @@ HEADERS  += widget.h \
     main_separation.h \
     main_doublepanto.h \
     widgets/ctrldialog.h \
-    devicedata_tracbrakeoutline.h
+    devicedata_tracbrakeoutline.h \
+    fault_current.h \
+    fault_detail.h
 
 FORMS    += widget.ui \
 header.ui \
@@ -278,7 +282,9 @@ header.ui \
     main_separation.ui \
     main_doublepanto.ui \
     widgets/ctrldialog.ui \
-    devicedata_tracbrakeoutline.ui
+    devicedata_tracbrakeoutline.ui \
+    fault_current.ui \
+    fault_detail.ui
 
 RESOURCES += \
     Resource.qrc
