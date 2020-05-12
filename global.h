@@ -15,7 +15,6 @@
 #define BYPASSDOWN "font: 16px;color: rgb(255,255,255);background-color: rgb(0, 0, 240);border:1px solid white;"
 #define BYPASSUP "font: 16px;color: rgb(255,255,255);background-color: rgb(140, 140, 140);border:1px solid white;"
 
-
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
 
