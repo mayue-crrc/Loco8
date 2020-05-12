@@ -7,7 +7,7 @@ class Data_TCU
 public:
     Data_TCU();
     void updateData();
-    ;bool	AXLE_ISO_REL_ALLOW[4]
+     bool	AXLE_ISO_REL_ALLOW[4]
     ;bool	EBRK_ISO_REL_ALLOW[4]
 
 
@@ -134,7 +134,7 @@ public:
 
 
 
-    ;bool	AXLE1_ISO_RQ
+     bool	AXLE1_ISO_RQ
     ;bool	AXLE2_ISO_RQ
     ;bool	AXLE3_ISO_RQ
     ;bool	AXLE4_ISO_RQ
@@ -194,7 +194,7 @@ public:
 
     ;bool	P531CHECK0
     ;bool	P531CHECK1;
-    ;unsigned short int	WHEEL_DIA_AXLE2
+     unsigned short int	WHEEL_DIA_AXLE2
     ;unsigned short int	MSCT_GRD
     ;unsigned short int	CS_VALUE
     ;unsigned short int	LOAD
@@ -204,7 +204,7 @@ public:
     ;unsigned short int	ACU1_OUTP
     ;unsigned short int	ACU2_OUTP;
 
-    ;unsigned char	CARB_MODE
+     unsigned char	CARB_MODE
     ;unsigned char	DIR_N
     ;unsigned char	DIR_B
     ;unsigned char	DIR_F
