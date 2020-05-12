@@ -76,8 +76,6 @@ Widget::Widget(QWidget *parent) :
         logger()->error("故障文件初始化错误");
     }
 
-
-
     this->simulation = new Simulation();
     this->simulation->hide();
 
