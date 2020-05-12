@@ -21,7 +21,7 @@
 QLabel
 {
 color:white;
-background-color:rgb(255,0,0);
+background-color:rgb(240,0,0);
 border:1px solid white;
 }</string>
   </property>
@@ -29,7 +29,7 @@ border:1px solid white;
    <property name="geometry">
     <rect>
      <x>165</x>
-     <y>40</y>
+     <y>20</y>
      <width>191</width>
      <height>348</height>
     </rect>
@@ -187,7 +187,7 @@ border:1px solid white;
    <property name="geometry">
     <rect>
      <x>455</x>
-     <y>90</y>
+     <y>70</y>
      <width>191</width>
      <height>246</height>
     </rect>
@@ -297,6 +297,214 @@ border:1px solid white;
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="LBL_Train3Num">
+   <property name="geometry">
+    <rect>
+     <x>176</x>
+     <y>375</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:black;
+color:rgb(255,255,255);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011C</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>394</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>1</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp-reverse.png);
+background-color:black;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>394</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>2</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp.png);
+background-color:black;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train4">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>394</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>3</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp-reverse.png);
+background-color:black;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train1Num">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>375</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:black;
+color:rgb(255,255,255);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011A</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train4Num">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>375</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:black;
+color:rgb(255,255,255);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011D</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN_Train1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>394</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="whatsThis">
+    <string>0</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp.png);
+background-color:black;
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Train2Num">
+   <property name="geometry">
+    <rect>
+     <x>94</x>
+     <y>375</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777212</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:10px;
+border:black;
+color:rgb(255,255,255);
+background-color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>HXD2  8011B</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources/>

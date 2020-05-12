@@ -1,9 +1,9 @@
 #include "devicedata_acu.h"
 #include "ui_devicedata_acu.h"
 
-#define SWITCHCLOSE"border-image: url(:/images/images/SWclose.png);"
+#define SWITCHCLOSE "border-image: url(:/images/images/SWclose.png);"
 #define SWITCHOPEN "border-image: url(:/images/images/SWopen.png);"
-#define SWITCHCLOSE_V"border-image: url(:/images/images/SWcloseV.png);"
+#define SWITCHCLOSE_V "border-image: url(:/images/images/SWcloseV.png);"
 #define SWITCHOPEN_V "border-image: url(:/images/images/SWopenV.png);"
 #define PHCLOSE "border-image: url(:/images/images/PHclose.png);"
 #define PHOPEN "border-image: url(:/images/images/PHopen.png);"
@@ -17,8 +17,8 @@ DeviceData_ACU::DeviceData_ACU(QWidget *parent) :
     ui(new Ui::DeviceData_ACU)
 {
     ui->setupUi(this);
-    hideAll();
     this->ui->BTN_Train1->setStyleSheet(TRAINDOWNL);
+    hideAll();
     TrainIndex = 0;
 
     TrainSelect<<this->ui->BTN_Train1<<this->ui->BTN_Train2<<this->ui->BTN_Train3<<this->ui->BTN_Train4;
