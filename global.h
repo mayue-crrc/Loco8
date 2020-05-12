@@ -162,6 +162,7 @@ enum pageIndex
     uMain_Allportdata,
     //故障查询
     uFault_Current,
+    uFault_Detail,
     uFault_History,
     uFault_Download,
 

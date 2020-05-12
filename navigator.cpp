@@ -31,7 +31,7 @@ Navigator::Navigator(QWidget *parent) :
     m_CurrentMainMode = false;
     QList<QString> t_style;
     t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<WEIHU;
-    this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
+    this->ui->NButton1->setStyleSheet(YUNXINGZHUPINGANXIA);
     for(int i = 0;i<buttons2.size();i++)
     {
         buttons2[i]->setText("");
@@ -81,7 +81,6 @@ void Navigator::NBpressEvent()
         buttons[i]->setStyleSheet(NButtonUP);
     }
 
-    this->ui->NButton1->setStyleSheet(YUNXING);
     buttonNameList.clear();
     buttonIndexList.clear();
     //m_ButtonIndex的值和position的枚举一致，在这里直接switch m_ButtonIndex
@@ -130,7 +129,15 @@ void Navigator::NBpressEvent()
     t_style<<""<<PINGBAO<<LIANGDUJIANGDI<<LIANGDUZENGJIA<<LIANGDUZIDONG<<QIEHUANYUYAN<<CASHISUOPING<<((m_CurrentMainMode) ? YUNXING:  WEIHU);
     if(m_position == uMiddleMainPage)    //主界面下，二级导航栏不changpage
     {
-        this->ui->NButton1->setStyleSheet(YUNXINGANXIA);
+
+        //
+        if(m_CurrentMainMode)
+        {
+            this->ui->NButton1->setStyleSheet(WEIHUZHUPINGANXIA);
+        }else
+        {
+            this->ui->NButton1->setStyleSheet(YUNXINGZHUPINGANXIA);
+        }
         for(int i = 0;i<buttons2.size();i++)
         {
             buttons2[i]->setText("");
@@ -139,6 +146,15 @@ void Navigator::NBpressEvent()
 
     }else
     {
+        //
+        if(m_CurrentMainMode)
+        {
+            this->ui->NButton1->setStyleSheet(WEIHUZHUPING);
+        }else
+        {
+            this->ui->NButton1->setStyleSheet(YUNXINGZHUPING);
+        }
+
         for(int i = 0;i<buttons2.size();i++)
         {
             buttons2[i]->setText(buttonNameList.at(i));
@@ -147,7 +163,14 @@ void Navigator::NBpressEvent()
         ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
         buttons2[0]->setStyleSheet(NButtonDOWN);
     }
-    changePage(buttonIndexList.at(0));
+
+    if(buttonIndexList.at(0) == uDataInputWheelPage || buttonIndexList.at(0) == uMain_Separation)
+    {
+        passwordRequest(buttonIndexList.at(0));
+    }else
+    {
+        changePage(buttonIndexList.at(0));
+    }
 
 }
 void Navigator::N2BpressEvent()
@@ -165,10 +188,13 @@ void Navigator::N2BpressEvent()
             if(m_CurrentMainMode)
             {
                 m_CurrentMainMode = false;
+                this->ui->NButton1->setStyleSheet(YUNXINGZHUPINGANXIA);
                 ui->N2Button8->setStyleSheet(WEIHU);
             }else
             {
-                passwordRequest();
+                m_CurrentMainMode = true;
+                this->ui->NButton1->setStyleSheet(WEIHUZHUPINGANXIA);
+                ui->N2Button8->setStyleSheet(YUNXING);
             }
             break;
         }
@@ -179,7 +205,16 @@ void Navigator::N2BpressEvent()
             buttons2[i]->setStyleSheet(NButtonUP);
         }
         ((QPushButton *)this->sender())->setStyleSheet(NButtonDOWN);
-        changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
+
+        if(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()) == uDataInputWheelPage ||
+           buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()) == uMain_Separation)
+        {
+            passwordRequest(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
+        }else
+        {
+            changePage(buttonIndexList.at(((QPushButton *)this->sender())->whatsThis().toInt()));
+        }
+
     }
 }
 
@@ -187,9 +222,7 @@ void Navigator::updateLanguage()
 {
     this->ui->retranslateUi(this);
 }
-void Navigator::getpasswordResponse()
+void Navigator::getpasswordResponse(pageIndex p)
 {
-    m_CurrentMainMode = true;
-    ui->N2Button8->setStyleSheet(YUNXING);
-
+    changePage(p);
 }

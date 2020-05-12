@@ -8,6 +8,12 @@ Data_CCU::Data_CCU()
 }
 void Data_CCU::updateData()
 {
+    //signals version
+    DDU_LIFE++;
+    DDU_VX = 1;
+    DDU_VY = 0;
+    CCUOnline = CheckLifesignal(this->MPU_LIFE);
+
 
     HEATING = CrrcMvb::getCrrcMvb()->getBool(0x710,20,0);//预加热
     NSC_START = CrrcMvb::getCrrcMvb()->getBool(0x710,20,1);//过分相开始
@@ -381,5 +387,39 @@ void Data_CCU::updateData()
     CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,19,DADMAN_TIMEALARM);//无人警惕报警时间
     CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,22,DDU_VX);//DDU版本号x
     CrrcMvb::getCrrcMvb()->setUnsignedChar(0x301,23,DDU_VY);//DDU版本号y
+
+}
+bool Data_CCU::CheckLifesignal(unsigned char lifeSignal)
+{
+    static unsigned short int temp = 0;
+    static int counter = 0;
+
+    if (temp == lifeSignal)
+    {
+        counter --;
+    }
+    else if (temp != lifeSignal)
+    {
+        counter ++;
+    }
+
+    temp = lifeSignal;
+
+    if (counter >= 10)
+    {
+        counter = 10;
+
+        return true;
+    }
+    else if (counter <= 0)
+    {
+        counter = 0;
+
+        return false;
+    }
+    else
+    {
+        return false;
+    }
 
 }

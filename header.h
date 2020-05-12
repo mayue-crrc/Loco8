@@ -20,6 +20,9 @@ public:
 
     ~Header();
 
+private slots:
+    void on_BTNCurrentfault_clicked();
+
 private:
     Ui::Header *ui;
 
