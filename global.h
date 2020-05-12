@@ -5,6 +5,16 @@
 #define NButtonUP    "font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;"
 #define NButtonDOWN  "font: 16px;color: rgb(0, 0, 0);background-color: rgb(240, 240, 0);border-bottom: 2px solid white;border-right: 2px solid white;"
 
+#define TRAINDOWNL "border: black;border-image: url(:/images/images/TrainLogo.png);"
+#define TRAINDOWNR "border: black;border-image: url(:/images/images/TrainLogo-reverse.png);"
+#define TRAINUPL   "border: black;border-image: url(:/images/images/TrainLogoUp.png);"
+#define TRAINUPR   "border: black;border-image: url(:/images/images/TrainLogoUp-reverse.png);"
+#define PANTOSETDOWN "image: url(:/images/images/pantoSetDOWN.png);"
+#define PANTOSETUP "image: url(:/images/images/pantoSetUP.png);"
+#define PANTOSETISO "image: url(:/images/images/pantoSetISO.png);"
+#define BYPASSDOWN "font: 16px;color: rgb(255,255,255);background-color: rgb(0, 0, 240);border:1px solid white;"
+#define BYPASSUP "font: 16px;color: rgb(255,255,255);background-color: rgb(140, 140, 140);border:1px solid white;"
+
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
 
@@ -19,6 +29,7 @@
 #define BLACK     "background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define REDBACKGROUND "background-color:rgb(240,0,0)"
 #define GREENBACKGROUND "background-color:rgb(0,240,0)"
+#define YELLOWBACKGROUND "background-color:rgb(240,240,0)"
 
 #define	PINGBAO   "image: url(:/images/images/pingbao.png);"
 #define	LIANGDUZIDONG   "image: url(:/images/images/auto.png);"
@@ -83,6 +94,10 @@
 #define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define	HIDEIMAGE	"background-color:transparent;border:0px solid lightgray;"
 
+#define BUTTONRELEASE "font:16px;color: rgb(240,240,240);background-color: rgb(0, 0, 0);border-top: 2px solid white;	border-left: 2px solid white;border-right: 1px solid white;border-bottom: 1px solid white;"
+#define BUTTONPRESSED "font:16px;color: rgb(0,0,0);background-color: rgb(240,240,0);border-top: 1px solid white;	border-left: 1px solid white;border-right: 2px solid white;border-bottom: 2px solid white;"
+
+
 #include <stdlib.h>
 
 #ifndef WINDOWS_MODE
@@ -124,7 +139,7 @@ enum pageIndex
     //过程数据
     uDeviceData_TrainOutline,
     uDeviceData_TracBrake,
-    uDeviceData_breaker,
+    uDeviceData_Breaker,
     uDeviceData_ACU,
     uDeviceData_MainConv,
     uDeviceData_Online,
@@ -144,8 +159,10 @@ enum pageIndex
     uMain_380,
     uMain_Separation,
     uMain_DoublePanto,
+    uMain_Allportdata,
     //故障查询
     uFault_Current,
+    uFault_Detail,
     uFault_History,
     uFault_Download,
 
@@ -185,6 +202,9 @@ enum keyboardIndex{
     key_Spear1,
     key_Spear2,
 };
+
+
+
 #define _LOG qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") << __FILE__ << __LINE__
 
 #endif // GLOBAL_H

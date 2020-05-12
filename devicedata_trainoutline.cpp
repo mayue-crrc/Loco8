@@ -34,6 +34,7 @@ DeviceData_TrainOutline::~DeviceData_TrainOutline()
 void DeviceData_TrainOutline::updatePage()
 {
     int num = database->data_CCU->RULOCO_NO;
+    int vehiclevalue,trainvalue;
 
     num = 3;
 //    int uic = database->data_CCU->UIC_ADDR;
@@ -114,6 +115,8 @@ void DeviceData_TrainOutline::updatePage()
     ui->LBL9_3->setText(QString::number((database->data_TCN->train[currentIndex]->WATER_TEMP3 + 50)));
     ui->LBL9_4->setText(QString::number((database->data_TCN->train[currentIndex]->WATER_TEMP4 + 50)));
     //实际牵引力/制动力[kN]:
+    //vehiclevalue =
+
     //ui->LBL10_1->setText(QString::number(database->data_TCN->train[currentIndex]->TE_AXLE1 + 100));
     //ui->LBL10_2->setText(QString::number(database->data_TCN->train[currentIndex]->TE_AXLE1 + 100));
     ui->LBL10_3->setText(QString::number(database->data_TCN->train[currentIndex]->TE_AXLE1 + 100));

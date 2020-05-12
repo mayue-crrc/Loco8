@@ -1,0 +1,209 @@
+#include "devicedata_io.h"
+#include "ui_devicedata_io.h"
+
+DeviceData_IO::DeviceData_IO(QWidget *parent) :
+    MyBase(parent),
+    ui(new Ui::DeviceData_IO)
+{
+    ui->setupUi(this);
+}
+
+DeviceData_IO::~DeviceData_IO()
+{
+    delete ui;
+}
+
+void DeviceData_IO::updatePage()
+{
+    //RIOM1-DI02-01
+    SetLabelState(this->ui->LBL_DI_02_01_10D,this->database->data_RIOM->RIOM1_DI1_16_MP_TF_N,0);
+    SetLabelState(this->ui->LBL_DI_02_01_10J,this->database->data_RIOM->RIOM1_DI1_15_MP_TF_T23,0);
+    SetLabelState(this->ui->LBL_DI_02_01_10K,this->database->data_RIOM->RIOM1_DI1_14_MP_TF_B23,0);
+    SetLabelState(this->ui->LBL_DI_02_01_10M,this->database->data_RIOM->RIOM1_DI1_13_MP_TF_T13,0);
+    SetLabelState(this->ui->LBL_DI_02_01_10N,this->database->data_RIOM->RIOM1_DI1_12_MP_TF_B13,0);
+    SetLabelState(this->ui->LBL_DI_02_01_10E,this->database->data_RIOM->RIOM1_DI1_11_MP_TF_T_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_10F,this->database->data_RIOM->RIOM1_DI1_10_MP_TF_B_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_159,this->database->data_RIOM->RIOM1_DI1_9_Z_MS_N,0);
+    SetLabelState(this->ui->LBL_DI_02_01_160,this->database->data_RIOM->RIOM1_DI1_8_Z_MS_B_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_158,this->database->data_RIOM->RIOM1_DI1_7_Z_MS_F_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_2028D,this->database->data_RIOM->RIOM1_DI1_6_BP_URG_E_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_10Q,this->database->data_RIOM->RIOM1_DI1_5_Z_DJ_K_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_32R,this->database->data_RIOM->RIOM1_DI1_4_Z_DJ_C_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_201D,this->database->data_RIOM->RIOM1_DI1_3_Z_PT_D_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_201E,this->database->data_RIOM->RIOM1_DI1_2_Z_PT_R_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_210,this->database->data_RIOM->RIOM1_DI1_1_Z_MES_1,0);
+    //RIOM1-DI02-02
+    SetLabelState(this->ui->LBL_DI_02_02_2028D,this->database->data_RIOM->RIOM1_DI2_10_BP_URG_E_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_10Q,this->database->data_RIOM->RIOM1_DI2_9_Z_DJ_K_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_32R,this->database->data_RIOM->RIOM1_DI2_8_Z_DJ_C_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_201D,this->database->data_RIOM->RIOM1_DI2_7_Z_PT_D_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_201E,this->database->data_RIOM->RIOM1_DI2_6_Z_PT_R_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_10E,this->database->data_RIOM->RIOM1_DI2_5_MP_TF_T_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_10F,this->database->data_RIOM->RIOM1_DI2_4_MP_TF_B_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_160,this->database->data_RIOM->RIOM1_DI2_3_Z_MS_B_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_158,this->database->data_RIOM->RIOM1_DI2_2_Z_MS_F_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_210,this->database->data_RIOM->RIOM1_DI2_1_Z_MES_2,0);
+    //RIOM1-DI02-03
+    SetLabelState(this->ui->LBL_DI_02_03_180C,this->database->data_RIOM->RIOM1_DI3_8_AC_FAULT,1);
+    SetLabelState(this->ui->LBL_DI_02_03_1916,this->database->data_RIOM->RIOM1_DI3_7_P_SA,0);
+    SetLabelState(this->ui->LBL_DI_02_03_1970F,this->database->data_RIOM->RIOM1_DI3_6_BP_MNSC,0);
+    SetLabelState(this->ui->LBL_DI_02_03_1970E,this->database->data_RIOM->RIOM1_DI3_5_BP_CONS,0);
+    SetLabelState(this->ui->LBL_DI_02_03_1970AA,this->database->data_RIOM->RIOM1_DI3_4_BP_RESET,0);
+    SetLabelState(this->ui->LBL_DI_02_03_1970B,this->database->data_RIOM->RIOM1_DI3_3_Z_CPR_P,0);
+    SetLabelState(this->ui->LBL_DI_02_03_1970C,this->database->data_RIOM->RIOM1_DI3_2_Z_CPR_R,0);
+    SetLabelState(this->ui->LBL_DI_02_03_1970A,this->database->data_RIOM->RIOM1_DI3_1_BP_VA,0);
+    SetLabelState(this->ui->LBL_DI_02_03_716TT,this->database->data_RIOM->RIOM1_DI3_12_HORN_E,0);
+    SetLabelState(this->ui->LBL_DI_02_03_256,this->database->data_RIOM->RIOM1_DI3_11_BP_MTS,0);
+    SetLabelState(this->ui->LBL_DI_02_03_26B,this->database->data_RIOM->RIOM1_DI3_10_BP_AVER,0);
+    SetLabelState(this->ui->LBL_DI_02_03_26A,this->database->data_RIOM->RIOM1_DI3_9_P_AVER,0);
+    //RIOM1-DO-07
+    SetLabelState(this->ui->LBL_DO_01_256A,this->database->data_RIOM->RIOM1_DO1_7_LS_MTS,0);
+    SetLabelState(this->ui->LBL_DO_01_253,this->database->data_RIOM->RIOM1_DO1_6_LS_SU_BA,0);
+    SetLabelState(this->ui->LBL_DO_01_299M,this->database->data_RIOM->RIOM1_DO1_5_LS_CPR,0);
+    SetLabelState(this->ui->LBL_DO_01_47,this->database->data_RIOM->RIOM1_DO1_4_LS_IS_CVS,0);
+    SetLabelState(this->ui->LBL_DO_01_200AJ,this->database->data_RIOM->RIOM1_DO1_3_LS_IS_ES,0);
+    SetLabelState(this->ui->LBL_DO_01_227,this->database->data_RIOM->RIOM1_DO1_1_LS_UT_CAB,0);
+    //级位原始数据
+    this->ui->LBL_Level_Value->setText(QString::number(this->database->data_RIOM->RIOM1_MSCT1));
+    //RIOM2/1-DI02-01
+    SetLabelState(this->ui->LBL_DI_02_01_417,this->database->data_RIOM->RIOM2_LOOP_GHV,1);
+    SetLabelState(this->ui->LBL_DI_02_01_612_1,this->database->data_RIOM->RIOM2_DI1_12_MA1_FD,0);
+    SetLabelState(this->ui->LBL_DI_02_01_611,this->database->data_RIOM->RIOM2_DI1_11_VE1_Q_P_COM_F,0);
+    SetLabelState(this->ui->LBL_DI_02_01_200BJ,this->database->data_RIOM->RIOM2_DI1_10_Q1_DF_PH,0);
+    SetLabelState(this->ui->LBL_DI_02_01_200BE,this->database->data_RIOM->RIOM2_DI1_9_Q_DZ_TFP_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_200BH,this->database->data_RIOM->RIOM2_DI1_8_Q1_TPH_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_781,this->database->data_RIOM->RIOM2_YV_PAN_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_195,this->database->data_RIOM->RIOM2_DI1_6_MA_CPR_AUX_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_30X,!this->database->data_RIOM->RIOM2_DI1_5_MA_SU_PT_1,1);
+    SetLabelState(this->ui->LBL_DI_02_01_201AK,this->database->data_RIOM->RIOM2_DI1_4_DJ_M_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_32H_1,this->database->data_RIOM->RIOM2_DI1_3_QS_GHV_1,0);
+    SetLabelState(this->ui->LBL_DI_02_01_31H,this->database->data_RIOM->RIOM2_DI1_2_H_HT,0);
+    //RIOM2/1-DI02-02
+    SetLabelState(this->ui->LBL_DI_02_02_612_2,this->database->data_RIOM->RIOM2_DI2_12_MA2_FD,0);
+    SetLabelState(this->ui->LBL_DI_02_02_623,this->database->data_RIOM->RIOM2_DI2_11_VE2_Q_P_COM_F,0);
+    SetLabelState(this->ui->LBL_DI_02_02_201,this->database->data_RIOM->RIOM2_DI2_10_Q2_DF_PH,0);
+    SetLabelState(this->ui->LBL_DI_02_02_200BE,this->database->data_RIOM->RIOM2_DI2_9_Q_DZ_TFP_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_200BH,this->database->data_RIOM->RIOM2_DI2_8_Q1_TPH_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_781,this->database->data_RIOM->RIOM2_YV_PAN_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_195,this->database->data_RIOM->RIOM2_DI2_6_MA_CPR_AUX_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_30X,!this->database->data_RIOM->RIOM2_DI2_5_MA_SU_PT_2,1);
+    SetLabelState(this->ui->LBL_DI_02_02_201AK,this->database->data_RIOM->RIOM2_DI2_4_DJ_M_2,0);
+    SetLabelState(this->ui->LBL_DI_02_02_32H_2,this->database->data_RIOM->RIOM2_DI1_3_QS_GHV_2,0);
+    //RIOM2/1-DI02-03
+    SetLabelState(this->ui->LBL_DI_02_03_4300B_2,this->database->data_RIOM->RIOM2_DI3_16_UM_4,0);
+    SetLabelState(this->ui->LBL_DI_02_03_4300A_2,this->database->data_RIOM->RIOM2_DI3_15_UM_3,0);
+    SetLabelState(this->ui->LBL_DI_02_03_4300B_1,this->database->data_RIOM->RIOM2_DI3_14_UM_2,0);
+    SetLabelState(this->ui->LBL_DI_02_03_4300A_1,this->database->data_RIOM->RIOM2_DI3_13_UM_1,0);
+    SetLabelState(this->ui->LBL_DI_02_03_655,this->database->data_RIOM->RIOM2_DI3_12_MA2_FS,0);
+    SetLabelState(this->ui->LBL_DI_02_03_653,this->database->data_RIOM->RIOM2_DI3_10_BCU_Ul,0);
+    SetLabelState(this->ui->LBL_DI_02_03_652,!this->database->data_RIOM->RIOM2_DI3_9_BCU_FAULT,1);
+    SetLabelState(this->ui->LBL_DI_02_03_651,this->database->data_RIOM->RIOM2_DI3_8_BCU_EM,0);
+    SetLabelState(this->ui->LBL_DI_02_03_638,this->database->data_RIOM->RIOM2_DI3_7_LKJ_EM,0);
+    SetLabelState(this->ui->LBL_DI_02_03_2029,this->database->data_RIOM->RIOM2_DI3_6_BP_EM,0);
+    SetLabelState(this->ui->LBL_DI_02_03_709,this->database->data_RIOM->RIOM2_DI3_5_N24V_1,1);
+    SetLabelState(this->ui->LBL_DI_02_03_636,this->database->data_RIOM->RIOM2_MA1_D1,0);
+    SetLabelState(this->ui->LBL_DI_02_03_637,this->database->data_RIOM->RIOM2_MA2_D1,0);
+    SetLabelState(this->ui->LBL_DI_02_03_635,this->database->data_RIOM->RIOM2_DI3_2_MA2_CP,0);
+    SetLabelState(this->ui->LBL_DI_02_03_634,this->database->data_RIOM->RIOM2_DI3_1_MA1_CP,0);
+    //RIOM2/1-DI02-04
+    SetLabelState(this->ui->LBL_DI_02_04_J141,this->database->data_RIOM->RIOM2_DI4_15_MONUL,0);
+    SetLabelState(this->ui->LBL_DI_02_04_2028F,this->database->data_RIOM->RIOM2_DI4_14_SBCM,0);
+    SetLabelState(this->ui->LBL_DI_02_04_164N,!this->database->data_RIOM->RIOM2_DI4_13_ANSC_FAULT,1);
+    SetLabelState(this->ui->LBL_DI_02_04_164L,this->database->data_RIOM->RIOM2_DI4_12_ANSC2,0);
+    SetLabelState(this->ui->LBL_DI_02_04_164K,this->database->data_RIOM->RIOM2_DI4_11_ANSC1,0);
+    SetLabelState(this->ui->LBL_DI_02_04_31J,this->database->data_RIOM->RIOM2_DI4_10_Q_PP_QUAI,0);
+    SetLabelState(this->ui->LBL_DI_02_04_200H,this->database->data_RIOM->RIOM2_DI4_9_C_IS_QUAI,0);
+    SetLabelState(this->ui->LBL_DI_02_04_200G,this->database->data_RIOM->RIOM2_DI4_8_C_PC_QUAI,0);
+    SetLabelState(this->ui->LBL_DI_02_04_200L,this->database->data_RIOM->RIOM2_DI4_6_DJ_QUAI,0);
+    SetLabelState(this->ui->LBL_DI_02_04_2033F,this->database->data_RIOM->RIOM2_DI4_5_RB_URG,0);
+    SetLabelState(this->ui->LBL_DI_02_04_200J,this->database->data_RIOM->RIOM2_DI4_4_C_QUAI,0);
+    SetLabelState(this->ui->LBL_DI_02_04_154,this->database->data_RIOM->RIOM2_DI4_3_C_CPR_AUX,0);
+    SetLabelState(this->ui->LBL_DI_02_04_687,this->database->data_RIOM->RIOM2_DI4_2_Z_QUAI_T,0);
+    SetLabelState(this->ui->LBL_DI_02_04_686,this->database->data_RIOM->RIOM2_DI4_1_Z_QUAI_M,0);
+    //RIOM2/2-DI02-05
+    SetLabelState(this->ui->LBL_DI_02_05_720,this->database->data_RIOM->RIOM2_DI5_15_RB_EMG_1,0);
+    SetLabelState(this->ui->LBL_DI_02_05_719_1,this->database->data_RIOM->RIOM2_DI5_14_RB_IS_CF1,0);
+    SetLabelState(this->ui->LBL_DI_02_05_718,this->database->data_RIOM->RIOM2_DI5_13_RB_IS_FS_1,0);
+    SetLabelState(this->ui->LBL_DI_02_05_200AA,this->database->data_RIOM->RIOM2_DI5_12_Q1L_M_1,0);
+    SetLabelState(this->ui->LBL_DI_02_05_192M,this->database->data_RIOM->RIOM2_DI5_10_DRY_FAULT,1);
+    SetLabelState(this->ui->LBL_DI_02_05_192P,this->database->data_RIOM->RIOM2_DI5_8_Q_REC,0);
+    SetLabelState(this->ui->LBL_DI_02_05_299D,this->database->data_RIOM->RIOM2_DI5_7_C1_CPR_1,0);
+    SetLabelState(this->ui->LBL_DI_02_05_192A,this->database->data_RIOM->RIOM2_DI5_6_Q_TH_CPR_1,0);
+    SetLabelState(this->ui->LBL_DI_02_05_192D,this->database->data_RIOM->RIOM2_DI5_3_C3_CPR_1,0);
+    SetLabelState(this->ui->LBL_DI_02_05_192C,this->database->data_RIOM->RIOM2_DI5_2_C2_CPR_1,0);
+    //RIOM2/2-DI02-06
+    SetLabelState(this->ui->LBL_DI_02_06_720,this->database->data_RIOM->RIOM2_DI6_15_RB_EMG_2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_719_2,this->database->data_RIOM->RIOM2_DI6_14_RB_IS_CF2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_718,this->database->data_RIOM->RIOM2_DI6_13_RB_IS_FS_2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_200AA,this->database->data_RIOM->RIOM2_DI6_12_Q1L_M_2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_200P,this->database->data_RIOM->RIOM2_DI6_11_C_PHEAT3,0);
+    SetLabelState(this->ui->LBL_DI_02_06_200M,this->database->data_RIOM->RIOM2_DI6_10_C_PHEAT1,0);
+    SetLabelState(this->ui->LBL_DI_02_06_200N,this->database->data_RIOM->RIOM2_DI6_9_C_PHEAT2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_299D,this->database->data_RIOM->RIOM2_DI6_7_C1_CPR_2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_192A,this->database->data_RIOM->RIOM2_DI6_6_Q_TH_CPR_2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_680M,this->database->data_RIOM->RIOM2_DI6_5_Q_PHEAT,0);
+    SetLabelState(this->ui->LBL_DI_02_06_298D,this->database->data_RIOM->RIOM2_DI6_4_FC_CLA_VT,0);
+    SetLabelState(this->ui->LBL_DI_02_06_192D,this->database->data_RIOM->RIOM2_DI6_3_C3_CPR_2,0);
+    SetLabelState(this->ui->LBL_DI_02_06_192C,this->database->data_RIOM->RIOM2_DI6_2_C2_CPR_2,0);
+    //RIOM2/2-DO02-01
+    SetLabelState(this->ui->LBL_DO_02_01_1970G,this->database->data_RIOM->RIOM2_DO1_10_Q_VA_1,0);
+    SetLabelState(this->ui->LBL_DO_02_01_1J_1,this->database->data_RIOM->RIOM2_Q_FLT_LOCK,0);
+    SetLabelState(this->ui->LBL_DO_02_01_217A,this->database->data_RIOM->RIOM2_DO1_8_C3_CPR,0);
+    SetLabelState(this->ui->LBL_DO_02_01_188B,this->database->data_RIOM->RIOM2_DO1_7_C1_CPR,0);
+    SetLabelState(this->ui->LBL_DO_02_01_1901,this->database->data_RIOM->RIOM2_DO1_5_Q_SA1,0);
+    SetLabelState(this->ui->LBL_DO_02_01_216A,this->database->data_RIOM->RIOM2_DO1_4_C2_CPR,0);
+    SetLabelState(this->ui->LBL_DO_02_01_24A,this->database->data_RIOM->RIOM2_DO1_3_Q2_PT,0);
+    SetLabelState(this->ui->LBL_DO_02_01_32M,this->database->data_RIOM->RIOM2_DO1_2_Q_DJM_1,0);
+    SetLabelState(this->ui->LBL_DO_02_01_24D,this->database->data_RIOM->RIOM2_DO1_1_Q1_PT,0);
+    //RIOM2/2-DO02-02
+    SetLabelState(this->ui->LBL_DO_02_02_152,this->database->data_RIOM->RIOM2_Q_FIRE1_T,0);
+    SetLabelState(this->ui->LBL_DO_02_02_150,this->database->data_RIOM->RIOM2_Q_FIRE1_B,0);
+    SetLabelState(this->ui->LBL_DO_02_02_188A,this->database->data_RIOM->RIOM2_DO2_12_BFL,0);
+    SetLabelState(this->ui->LBL_DO_02_02_151F,this->database->data_RIOM->RIOM2_DO2_11_Q_UAI,0);
+    SetLabelState(this->ui->LBL_DO_02_02_1970G,this->database->data_RIOM->RIOM2_DO2_10_Q_VA_2,0);
+    SetLabelState(this->ui->LBL_DO_02_02_188,this->database->data_RIOM->RIOM2_DO2_9_Q_KBA,0);
+    SetLabelState(this->ui->LBL_DO_02_02_151D,this->database->data_RIOM->RIOM2_DO2_8_C_PC_QUAI,0);
+    SetLabelState(this->ui->LBL_DO_02_02_780,this->database->data_RIOM->RIOM2_Q_DJM_F,0);
+    SetLabelState(this->ui->LBL_DO_02_02_172A,this->database->data_RIOM->RIOM2_BAT_LOW,0);
+    SetLabelState(this->ui->LBL_DO_02_02_1902,this->database->data_RIOM->RIOM2_DO2_5_Q_SA2,0);
+    SetLabelState(this->ui->LBL_DO_02_02_631,this->database->data_RIOM->RIOM2_DO2_4_Q_P_COM_F2,0);
+    SetLabelState(this->ui->LBL_DO_02_02_630,this->database->data_RIOM->RIOM2_DO2_3_Q_P_COM_F1,0);
+    SetLabelState(this->ui->LBL_DO_02_02_32M,this->database->data_RIOM->RIOM2_DO2_2_Q_DJM_2,0);
+    SetLabelState(this->ui->LBL_DO_02_02_151E,this->database->data_RIOM->RIOM2_DO2_1_C_IS_QUAI,0);
+    //RIOM2/2-DO02-03
+    SetLabelState(this->ui->LBL_DO_02_03_152,this->database->data_RIOM->RIOM2_Q_FIRE2_T,0);
+    SetLabelState(this->ui->LBL_DO_02_03_150,this->database->data_RIOM->RIOM2_Q_FIRE2_B,0);
+    SetLabelState(this->ui->LBL_DO_02_03_178,this->database->data_RIOM->RIOM2_DO3_12_Q_PK,0);
+    SetLabelState(this->ui->LBL_DO_02_03_185,this->database->data_RIOM->RIOM2_DO3_11_VE_PU_SR_AUX,0);
+    SetLabelState(this->ui->LBL_DO_02_03_961,this->database->data_RIOM->RIOM2_DO3_10_Q_BRB,0);
+    SetLabelState(this->ui->LBL_DO_02_03_210B,this->database->data_RIOM->RIOM2_DO3_9_Q2_CAB,0);
+    SetLabelState(this->ui->LBL_DO_02_03_210A,this->database->data_RIOM->RIOM2_DO3_8_Q1_CAB,0);
+    SetLabelState(this->ui->LBL_DO_02_03_681,this->database->data_RIOM->RIOM2_DO3_7_NOMAN_BCU,0);
+    SetLabelState(this->ui->LBL_DO_02_03_644,this->database->data_RIOM->RIOM2_DO3_6_SPEEDZERO,0);
+    SetLabelState(this->ui->LBL_DO_02_03_J194,this->database->data_RIOM->RIOM2_DO3_5_BRAKE,0);
+    SetLabelState(this->ui->LBL_DO_02_03_J195,this->database->data_RIOM->RIOM2_DO3_4_NEUTRAL,0);
+    SetLabelState(this->ui->LBL_DO_02_03_J193,this->database->data_RIOM->RIOM2_DO3_3_TRACTION,0);
+    SetLabelState(this->ui->LBL_DO_02_03_J192,this->database->data_RIOM->RIOM2_DO3_2_BACK,0);
+    SetLabelState(this->ui->LBL_DO_02_03_J191,this->database->data_RIOM->RIOM2_DO3_1_FORWARD,0);
+}
+
+void DeviceData_IO::SetLabelState(QLabel *lbl, bool state, int type)
+{
+    if(state)
+    {
+        switch (type) {
+        case 0:
+            lbl->setStyleSheet(GREEN);
+            break;
+        case 1:
+            lbl->setStyleSheet(RED);
+            break;
+        default:
+            break;
+        }
+    }else
+    {
+        lbl->setStyleSheet(BLACK);
+    }
+}
+

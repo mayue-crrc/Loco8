@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settng_Distance</class>
+ <widget class="QWidget" name="Settng_Distance">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>445</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background-color: black;
+}
+QLabel
+{
+color:white;
+color:rgb(255,255,0);
+font:18px;
+font: bold;
+}
+QPushButton
+{
+background-color:black;
+border:1px solid white;
+border-left:2px solid white;
+border-top:2px solid white;
+color:white;
+}</string>
+  </property>
+  <widget class="QPushButton" name="BTN_Reset">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>110</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>重设</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_ResetDis">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>110</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(255,255,255);
+color:rgb(255,255,0);
+font:20px;
+font: bold;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_MSCount">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>298</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(255,255,255);
+color:rgb(255,255,0);
+font:20px;
+font: bold;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Unit1">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>110</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,0);</string>
+   </property>
+   <property name="text">
+    <string>Km</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Unit2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>208</y>
+     <width>31</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,0);</string>
+   </property>
+   <property name="text">
+    <string>Km</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_tip2">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>188</y>
+     <width>51</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+font:14px;
+</string>
+   </property>
+   <property name="text">
+    <string>总里程</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_TotalDis">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>208</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:2px solid rgb(255,255,255);
+color:rgb(255,255,0);
+font:20px;
+font: bold;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_tip3">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>278</y>
+     <width>111</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+font:14px;
+</string>
+   </property>
+   <property name="text">
+    <string>主断路器闭合次数</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_Unit3">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>299</y>
+     <width>21</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,0);</string>
+   </property>
+   <property name="text">
+    <string>次</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LBL_tip1">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>90</y>
+     <width>81</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(255,255,255);
+font:14px;
+</string>
+   </property>
+   <property name="text">
+    <string>重设后里程</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

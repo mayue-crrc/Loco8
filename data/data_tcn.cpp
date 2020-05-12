@@ -391,6 +391,40 @@ void Data_TCN::updateData()
                 break;
             }
         }
+      
+        train[i]->FAULT_COV1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,2);
+        train[i]->FAULT_COV2_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,3);
+        train[i]->FAULT_COV3_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,4);
+        train[i]->FAULT_COV4_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,5);
+        train[i]->FAULT_INV1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,2);
+        train[i]->FAULT_INV2_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,3);
+        train[i]->FAULT_INV3_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,4);
+        train[i]->FAULT_INV4_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,5);
+        train[i]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,2);
+        train[i]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,3);
+
+        train[i]->FAULT_COV1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,6);
+        train[i]->FAULT_COV2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,7);
+        train[i]->FAULT_COV3_HISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,0);
+        train[i]->FAULT_COV4_HISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,1);
+        train[i]->FAULT_INV1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,6);
+        train[i]->FAULT_INV2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,7);
+        train[i]->FAULT_INV3_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,0);
+        train[i]->FAULT_INV4_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,1);
+        train[i]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,4);
+        train[i]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,5);
+
+        train[i]->FAULT_DEADMAN_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262f,4,2);
+        train[i]->FAULT_DLZD_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,6);
+        train[i]->FAULT_DLZD_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,7);
+        train[i]->FAULT_KYJ_HISO = CrrcMvb::getCrrcMvb()->getBool(0x262f,4,1);
+        train[i]->FAULT_LUBRA_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1631,4,2);
+
+        train[i]->BOGIE1ISO = (train[i]->FAULT_COV1_ISO && train[i]->FAULT_COV2_ISO && train[i]->FAULT_INV1_ISO && train[i]->FAULT_INV2_ISO && train[i]->FAULT_ACU1_ISO);
+        train[i]->BOGIE2ISO = (train[i]->FAULT_COV3_ISO && train[i]->FAULT_COV4_ISO && train[i]->FAULT_INV3_ISO && train[i]->FAULT_INV4_ISO && train[i]->FAULT_ACU2_ISO);
+
+        train[i]->BOGIE1HISO = (train[i]->FAULT_COV1_HISO && train[i]->FAULT_COV2_HISO && train[i]->FAULT_INV1_HISO && train[i]->FAULT_INV2_HISO && train[i]->FAULT_ACU1_HISO);
+        train[i]->BOGIE2HISO = (train[i]->FAULT_COV3_HISO && train[i]->FAULT_COV4_HISO && train[i]->FAULT_INV3_HISO && train[i]->FAULT_INV4_HISO && train[i]->FAULT_ACU2_HISO);
 
     }
 
@@ -811,6 +845,7 @@ void Data_TCN::updateData()
         train[t_index]->WATER_TEMP4 = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x703,17);//冷却液温度4 + 50
         train[t_index]->MPU_LIFE2 = CrrcMvb::getCrrcMvb()->getUnsignedChar(0x703,22);//MPU_LIFE2
 
+
         for(int j = 0;j<7;j++)
         {
             //对分时标志位做判断
@@ -831,8 +866,41 @@ void Data_TCN::updateData()
             }
         }
         TrainLocal = train[t_index];
-
     }
+
+    train[t_index]->FAULT_COV1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,2);
+    train[t_index]->FAULT_COV2_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,3);
+    train[t_index]->FAULT_COV3_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,4);
+    train[t_index]->FAULT_COV4_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,5);
+    train[t_index]->FAULT_INV1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,2);
+    train[t_index]->FAULT_INV2_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,3);
+    train[t_index]->FAULT_INV3_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,4);
+    train[t_index]->FAULT_INV4_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,5);
+    train[t_index]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,2);
+    train[t_index]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,3);
+
+    train[t_index]->FAULT_COV1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,6);
+    train[t_index]->FAULT_COV2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,7);
+    train[t_index]->FAULT_COV3_HISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,0);
+    train[t_index]->FAULT_COV4_HISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,1);
+    train[t_index]->FAULT_INV1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,6);
+    train[t_index]->FAULT_INV2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,7);
+    train[t_index]->FAULT_INV3_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,0);
+    train[t_index]->FAULT_INV4_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,1);
+    train[t_index]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,4);
+    train[t_index]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,5);
+
+    train[t_index]->FAULT_DEADMAN_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,26,2);
+    train[t_index]->FAULT_DLZD_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,6);
+    train[t_index]->FAULT_DLZD_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,7);
+    train[t_index]->FAULT_KYJ_HISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,26,1);
+    train[t_index]->FAULT_LUBRA_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,30,2);
+
+    train[t_index]->BOGIE1ISO = (train[t_index]->FAULT_COV1_ISO && train[t_index]->FAULT_COV2_ISO && train[t_index]->FAULT_INV1_ISO && train[t_index]->FAULT_INV2_ISO && train[t_index]->FAULT_ACU1_ISO);
+    train[t_index]->BOGIE2ISO = (train[t_index]->FAULT_COV3_ISO && train[t_index]->FAULT_COV4_ISO && train[t_index]->FAULT_INV3_ISO && train[t_index]->FAULT_INV4_ISO && train[t_index]->FAULT_ACU2_ISO);
+
+    train[t_index]->BOGIE1HISO = (train[t_index]->FAULT_COV1_HISO && train[t_index]->FAULT_COV2_HISO && train[t_index]->FAULT_INV1_HISO && train[t_index]->FAULT_INV2_HISO && train[t_index]->FAULT_ACU1_HISO);
+    train[t_index]->BOGIE2HISO = (train[t_index]->FAULT_COV3_HISO && train[t_index]->FAULT_COV4_HISO && train[t_index]->FAULT_INV3_HISO && train[t_index]->FAULT_INV4_HISO && train[t_index]->FAULT_ACU2_HISO);
 
 
 }

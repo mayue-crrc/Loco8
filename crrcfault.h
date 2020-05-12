@@ -117,6 +117,13 @@ public:
     void getLocalDateTime(QDateTime datetime);
     QString getFaultTypeVersion();
 
+    //2020 5/7 add rundata get
+    QList<QString> getHistoryRunData(unsigned short int index);
+    QString getHistoryRunData_Speed(unsigned short int index);
+    QString getHistoryRunData_Voltage(unsigned short int index);
+    QString getHistoryRunData_Current(unsigned short int index);
+    QString getHistoryRunData_Direction(unsigned short int index);
+    QString getHistoryRunData_Grade(unsigned short int index);
 
 
     //add close DB

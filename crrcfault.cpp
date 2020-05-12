@@ -105,6 +105,7 @@ void CrrcFault::run()
                    if (this->CurrentFaultHash.contains(key) == false)
                    {
 
+                       //insert logic
                        FaultBean t_faultBean;
                        t_faultBean.HistoryID = t_circlefaultcnt;
                        t_faultBean.StartTime = m_Localdatetime.toString("yyyy-MM-dd hh:mm:ss");
@@ -117,17 +118,17 @@ void CrrcFault::run()
                        t_faultBean.Speed = (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,14)/10;
                        t_faultBean.Voltage = (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,0);
                        t_faultBean.Current = (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,4);
-                       QString t_direction;
+                       Directions t_direction;
                        if(CrrcMvb::getCrrcMvb()->getBool(0x710,23,4))
-                           t_direction = "向前";
+                           t_direction = forward;
                        else if(CrrcMvb::getCrrcMvb()->getBool(0x710,23,5))
-                           t_direction = "向后";
+                           t_direction = backword;
                        else if(CrrcMvb::getCrrcMvb()->getBool(0x710,23,6))
-                           t_direction = "零位";
+                           t_direction = zero;
                        else
-                           t_direction = "";
+                           t_direction = nullp;
                        t_faultBean.Direction = t_direction;
-                       t_faultBean.Grade =  (float)CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,12)/10-100;
+                       t_faultBean.Grade =  (float)(CrrcMvb::getCrrcMvb()->getUnsignedInt(0x710,12)-200)/10;
                        //create insert faultbean hash
                        this->InsertHistoryFaultHash.insert(t_circlefaultcnt,t_faultBean);
                        t_circlefaultcnt++;
@@ -520,6 +521,7 @@ QString CrrcFault::getHistoryFaultName(unsigned short int index)
     }
     else
     {
+
         return this->FaultTypeHash[this->historyFaultList.at(index).ID].FaultName.trimmed();
     }
 }
@@ -874,4 +876,124 @@ bool CrrcFault::queryCurrentFaultCnt(QString system,int level,QString pos)
 
 
     return false;
+}
+QList<QString> CrrcFault::getHistoryRunData(unsigned short int index)
+{
+//    QMutexLocker locker(&m_lock);
+//    QList<QString> t_list;
+//    t_list.clear();
+
+//    if (index >= this->historyFaultList.size())
+//    {
+//        qDebug() << "the index: "<<index<<" is larger than the history fault list"<<this->historyFaultList.size()<<", please check it" << __FILE__ << __LINE__;
+
+//        return t_list;
+//    }
+//    else
+//    {
+//        t_list<<QString::number(this->historyFaultList.at(index).Speed,10,1)
+//                <<QString::number(this->historyFaultList.at(index).Voltage,10,1)
+//                <<QString::number(this->historyFaultList.at(index).Current,10,1)
+//                <<this->historyFaultList.at(index).Direction
+//                <<QString::number(this->historyFaultList.at(index).Grade,10,1);
+
+
+//        return t_list;
+//    }
+}
+QString CrrcFault::getHistoryRunData_Speed(unsigned short int index)
+{
+    QMutexLocker locker(&m_lock);
+
+    if (index >= this->historyFaultList.size())
+    {
+        qDebug() << "the index: "<<index<<" is larger than the history fault list"<<this->historyFaultList.size()<<", please check it" << __FILE__ << __LINE__;
+
+        return QString("");
+    }
+    else
+    {
+        return QString::number(this->historyFaultList.at(index).Speed,10,1);
+    }
+}
+
+QString CrrcFault::getHistoryRunData_Voltage(unsigned short int index)
+{
+    QMutexLocker locker(&m_lock);
+
+    if (index >= this->historyFaultList.size())
+    {
+        qDebug() << "the index: "<<index<<" is larger than the history fault list"<<this->historyFaultList.size()<<", please check it" << __FILE__ << __LINE__;
+
+        return QString("");
+    }
+    else
+    {
+        return QString::number(this->historyFaultList.at(index).Voltage,10,1);
+    }
+}
+
+QString CrrcFault::getHistoryRunData_Current(unsigned short int index)
+{
+    QMutexLocker locker(&m_lock);
+
+    if (index >= this->historyFaultList.size())
+    {
+        qDebug() << "the index: "<<index<<" is larger than the history fault list"<<this->historyFaultList.size()<<", please check it" << __FILE__ << __LINE__;
+
+        return QString("");
+    }
+    else
+    {
+        return QString::number(this->historyFaultList.at(index).Current,10,1);
+    }
+}
+
+QString CrrcFault::getHistoryRunData_Direction(unsigned short int index)
+{
+    QMutexLocker locker(&m_lock);
+
+    if (index >= this->historyFaultList.size())
+    {
+        qDebug() << "the index: "<<index<<" is larger than the history fault list"<<this->historyFaultList.size()<<", please check it" << __FILE__ << __LINE__;
+
+        return QString("");
+    }
+    else
+    {
+        QString t;
+        switch (this->historyFaultList.at(index).Direction)
+        {
+        case forward:
+            t = "向前";
+            break;
+        case backword:
+            t = "向后";
+            break;
+        case zero:
+            t = "中立";
+            break;
+        case nullp:
+            t = "未知";
+            break;
+        }
+
+        return t;
+    }
+}
+
+QString CrrcFault::getHistoryRunData_Grade(unsigned short int index)
+{
+    QMutexLocker locker(&m_lock);
+
+    if (index >= this->historyFaultList.size())
+    {
+        qDebug() << "the index: "<<index<<" is larger than the history fault list"<<this->historyFaultList.size()<<", please check it" << __FILE__ << __LINE__;
+
+        return QString("");
+    }
+    else
+    {
+        return QString::number(this->historyFaultList.at(index).Grade,10,1);
+    }
 }
