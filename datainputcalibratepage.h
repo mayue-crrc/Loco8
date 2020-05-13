@@ -14,6 +14,14 @@ class DataInputCalibratePage : public MyBase
 public:
     explicit DataInputCalibratePage(QWidget *parent = 0);
     ~DataInputCalibratePage();
+    void showInfo(bool show);
+
+private slots:
+    void on_btnCalibrate_clicked();
+
+    void on_btnYes_clicked();
+
+    void on_btnCancel_clicked();
 
 private:
     Ui::DataInputCalibratePage *ui;

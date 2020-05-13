@@ -5,14 +5,15 @@
 #define NButtonUP    "font: 16px;color: rgb(192,192,192);background-color: rgb(0, 0, 0);border-top: 2px solid white;border-left: 2px solid white;"
 #define NButtonDOWN  "font: 16px;color: rgb(0, 0, 0);background-color: rgb(240, 240, 0);border-bottom: 2px solid white;border-right: 2px solid white;"
 
-#define TRAINDOWNL "image: url(:/images/images/TrainLogo.png);"
-#define TRAINDOWNR "image: url(:/images/images/TrainLogo-reverse.png);"
-#define TRAINUPL   "image: url(:/images/images/TrainLogoUp.png);"
-#define TRAINUPR   "image: url(:/images/images/TrainLogoUp-reverse.png);"
+#define TRAINDOWNL "border: black;border-image: url(:/images/images/TrainLogo.png);"
+#define TRAINDOWNR "border: black;border-image: url(:/images/images/TrainLogo-reverse.png);"
+#define TRAINUPL   "border: black;border-image: url(:/images/images/TrainLogoUp.png);"
+#define TRAINUPR   "border: black;border-image: url(:/images/images/TrainLogoUp-reverse.png);"
 #define PANTOSETDOWN "image: url(:/images/images/pantoSetDOWN.png);"
 #define PANTOSETUP "image: url(:/images/images/pantoSetUP.png);"
 #define PANTOSETISO "image: url(:/images/images/pantoSetISO.png);"
-
+#define BYPASSDOWN "font: 16px;color: rgb(255,255,255);background-color: rgb(0, 0, 240);border:1px solid white;"
+#define BYPASSUP "font: 16px;color: rgb(255,255,255);background-color: rgb(140, 140, 140);border:1px solid white;"
 
 //#define WINDOWS_MODE
 #define QT_VERSION_5_6
@@ -161,6 +162,7 @@ enum pageIndex
     uMain_Allportdata,
     //故障查询
     uFault_Current,
+    uFault_Detail,
     uFault_History,
     uFault_Download,
 

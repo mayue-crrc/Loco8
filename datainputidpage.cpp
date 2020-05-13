@@ -12,3 +12,8 @@ DataInputIDPage::~DataInputIDPage()
 {
     delete ui;
 }
+
+void DataInputIDPage::on_btnStore_clicked()
+{
+
+}

@@ -49,6 +49,8 @@ class Main_AssistantDevice;
 class Main_380;
 class Main_Separation;
 class Main_DoublePanto;
+class Fault_Current;
+class Fault_Detail;
 
 class Widget : public QWidget
 {
@@ -60,6 +62,10 @@ public:
     void keyPressEvent(QKeyEvent *event);
     void showEvent(QShowEvent *);
     QMap<int, MyBase *> widgets;
+    void VCUtime2HMI10s();
+
+    bool systimeset(unsigned short int year,unsigned short int month,unsigned short int day,
+                     unsigned short int hour,unsigned short int min,unsigned short int sec);
 
     ~Widget();
 
@@ -111,6 +117,8 @@ private:
     Main_DoublePanto* main_DoublePanto;
 
     CtrlDialog* ctrlDialog;
+    Fault_Current* fault_Current;
+    Fault_Detail* fault_Detail;
 };
 
 #endif // WIDGET_H

@@ -59,7 +59,7 @@ color:white;
   <widget class="QLabel" name="LBL_Train1Num">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>68</x>
      <y>348</y>
      <width>75</width>
      <height>20</height>
@@ -85,7 +85,7 @@ color:rgb(255,255,255);</string>
   <widget class="QPushButton" name="BTN_Train1">
    <property name="geometry">
     <rect>
-     <x>64</x>
+     <x>62</x>
      <y>370</y>
      <width>85</width>
      <height>45</height>
@@ -98,7 +98,7 @@ color:rgb(255,255,255);</string>
     <string>0</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/images/images/TrainLogoUp.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp.png);
 background-color:black;
 </string>
    </property>
@@ -125,7 +125,7 @@ background-color:black;
   <widget class="QPushButton" name="BTN_Train3">
    <property name="geometry">
     <rect>
-     <x>232</x>
+     <x>230</x>
      <y>370</y>
      <width>85</width>
      <height>45</height>
@@ -138,7 +138,7 @@ background-color:black;
     <string>2</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/images/images/TrainLogoUp.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp.png);
 background-color:black;
 </string>
    </property>
@@ -181,7 +181,7 @@ background-color:black;
   <widget class="QPushButton" name="BTN_Train2">
    <property name="geometry">
     <rect>
-     <x>148</x>
+     <x>146</x>
      <y>370</y>
      <width>85</width>
      <height>45</height>
@@ -194,7 +194,7 @@ background-color:black;
     <string>1</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/images/images/TrainLogoUp-reverse.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp-reverse.png);
 background-color:black;
 </string>
    </property>
@@ -205,7 +205,7 @@ background-color:black;
   <widget class="QLabel" name="LBL_Train4Num">
    <property name="geometry">
     <rect>
-     <x>323</x>
+     <x>321</x>
      <y>348</y>
      <width>75</width>
      <height>20</height>
@@ -253,7 +253,7 @@ color:white;</string>
   <widget class="QPushButton" name="BTN_Train4">
    <property name="geometry">
     <rect>
-     <x>316</x>
+     <x>314</x>
      <y>370</y>
      <width>85</width>
      <height>45</height>
@@ -266,7 +266,7 @@ color:white;</string>
     <string>3</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">image: url(:/images/images/TrainLogoUp-reverse.png);
+    <string notr="true">border-image: url(:/images/images/TrainLogoUp-reverse.png);
 background-color:black;
 </string>
    </property>
@@ -357,7 +357,7 @@ background-color:black;
   <widget class="QLabel" name="LBL_Train2Num">
    <property name="geometry">
     <rect>
-     <x>155</x>
+     <x>153</x>
      <y>348</y>
      <width>75</width>
      <height>20</height>
@@ -485,7 +485,7 @@ color:white;</string>
   <widget class="QLabel" name="LBL_Train3Num">
    <property name="geometry">
     <rect>
-     <x>238</x>
+     <x>236</x>
      <y>348</y>
      <width>75</width>
      <height>20</height>

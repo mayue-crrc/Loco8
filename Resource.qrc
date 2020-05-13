@@ -62,7 +62,6 @@
         <file>images/weihuanxia.png</file>
         <file>images/weihuzhupinganxia.png</file>
         <file>images/yunxinganxia.png</file>
-        <file>images/yunxingzhupinanxia.png</file>
         <file>images/PHclose.png</file>
         <file>images/PHopen.png</file>
         <file>images/SWclose.png</file>
@@ -76,7 +75,6 @@
         <file>images/Cheti_L.png</file>
         <file>images/Active.png</file>
         <file>images/pantoSetDOWN.png</file>
-        <file>images/pantoSetISO.png</file>
         <file>images/pantoSetUP.png</file>
         <file>images/Cheti.png</file>
         <file>images/qudongiso.png</file>
@@ -88,5 +86,8 @@
         <file>images/TrainLogo-reverse.png</file>
         <file>images/TrainLogoUp.png</file>
         <file>images/TrainLogoUp-reverse.png</file>
+        <file>images/pantoSetISO.png</file>
+        <file>images/Circle_Green.png</file>
+        <file>images/yunxingzhupinganxia.png</file>
     </qresource>
 </RCC>

@@ -27,11 +27,20 @@ font:16px
 
 QPushButton
 {
-	font:20px;
+	font:16px;
     color: rgb(240,240,240);
 	background-color: rgb(0, 0, 0);
 	border-top: 2px solid white;	
 	border-left: 2px solid white;
+}
+
+QPushButton::disabled
+{
+	font:16px;
+	color: rgb(147, 148, 148);
+	background-color: black;
+	border-bottom: 2px solid white;	
+	border-right: 2px solid white;
 }</string>
   </property>
   <widget class="QLabel" name="label1">
@@ -58,7 +67,7 @@ QPushButton
     <rect>
      <x>175</x>
      <y>100</y>
-     <width>451</width>
+     <width>391</width>
      <height>41</height>
     </rect>
    </property>
@@ -77,25 +86,6 @@ QPushButton
    </property>
    <property name="styleSheet">
     <string notr="true"/>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignHCenter|Qt::AlignTop</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label2_2">
-   <property name="geometry">
-    <rect>
-     <x>336</x>
-     <y>170</y>
-     <width>310</width>
-     <height>220</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font:25px;</string>
    </property>
    <property name="text">
     <string/>
@@ -145,174 +135,40 @@ QPushButton
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font:20px;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>存储</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn1">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>180</y>
-     <width>60</width>
-     <height>60</height>
+     <x>580</x>
+     <y>100</y>
+     <width>41</width>
+     <height>35</height>
     </rect>
    </property>
-   <property name="text">
-    <string>1</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn2">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>180</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">border:0px;
+font:20px;</string>
    </property>
    <property name="text">
-    <string>2</string>
+    <string>mm</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn3">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>180</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>3</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn4">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>180</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>4</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn5">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>250</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>5</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn6">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>250</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>6</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn8">
-   <property name="geometry">
-    <rect>
-     <x>560</x>
-     <y>250</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>8</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn7">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>250</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>7</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn9">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>320</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>9</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn0">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>320</y>
-     <width>60</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>0</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnClear">
-   <property name="geometry">
-    <rect>
-     <x>490</x>
-     <y>320</y>
-     <width>130</width>
-     <height>60</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>清除</string>
-   </property>
-  </widget>
-  <zorder>label2_2</zorder>
   <zorder>label2</zorder>
   <zorder>label1</zorder>
   <zorder>labelCurrentValue</zorder>
   <zorder>label</zorder>
   <zorder>labelInput</zorder>
   <zorder>btnStore</zorder>
-  <zorder>btn1</zorder>
-  <zorder>btn2</zorder>
-  <zorder>btn3</zorder>
-  <zorder>btn4</zorder>
-  <zorder>btn5</zorder>
-  <zorder>btn6</zorder>
-  <zorder>btn8</zorder>
-  <zorder>btn7</zorder>
-  <zorder>btn9</zorder>
-  <zorder>btn0</zorder>
-  <zorder>btnClear</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>
