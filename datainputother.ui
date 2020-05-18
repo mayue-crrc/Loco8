@@ -27,11 +27,20 @@ font:16px
 
 QPushButton
 {
-	font:20px;
+	font:16px;
     color: rgb(240,240,240);
 	background-color: rgb(0, 0, 0);
 	border-top: 2px solid white;	
 	border-left: 2px solid white;
+}
+
+QPushButton::disabled
+{
+	font:16px;
+	color: rgb(147, 148, 148);
+	background-color: black;
+	border-bottom: 2px solid white;	
+	border-right: 2px solid white;
 }</string>
   </property>
   <widget class="QLabel" name="label">
@@ -53,7 +62,7 @@ QPushButton
     <set>Qt::AlignHCenter|Qt::AlignTop</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnWinterMode">
+  <widget class="QPushButton" name="btnNormalMode">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -61,6 +70,9 @@ QPushButton
      <width>120</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">color:yellow;</string>
@@ -78,6 +90,9 @@ QPushButton
      <height>51</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true">color:yellow;</string>
    </property>
@@ -88,14 +103,14 @@ QPushButton
   <widget class="QLabel" name="labelInfo">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>130</x>
      <y>260</y>
-     <width>171</width>
+     <width>81</width>
      <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>目前模式：冬季模式</string>
+    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="labelCurrentValue">
@@ -112,7 +127,7 @@ QPushButton
 color:yellow;</string>
    </property>
    <property name="text">
-    <string>0</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -182,8 +197,11 @@ border:0px;</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font:20px;</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>存储</string>
@@ -205,9 +223,25 @@ border:0px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="labelInfo_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>260</y>
+     <width>71</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border:0px;</string>
+   </property>
+   <property name="text">
+    <string>目前模式:</string>
+   </property>
+  </widget>
   <zorder>label2</zorder>
   <zorder>label</zorder>
-  <zorder>btnWinterMode</zorder>
+  <zorder>btnNormalMode</zorder>
   <zorder>btnSummerMode</zorder>
   <zorder>labelInfo</zorder>
   <zorder>labelCurrentValue</zorder>
@@ -215,6 +249,7 @@ border:0px;</string>
   <zorder>label_2</zorder>
   <zorder>btnStore</zorder>
   <zorder>labelInput</zorder>
+  <zorder>labelInfo_2</zorder>
  </widget>
  <resources/>
  <connections/>

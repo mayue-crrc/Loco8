@@ -33,10 +33,7 @@ private slots:
 
 private:
     Ui::Settng_Bypass *ui;
-    QList<bool> TrainBrkISOstate[4],TrainISOstate[4],TrainHISOstate[4],
-    Train1BrkISOstate,Train2BrkISOstate,Train3BrkISOstate,Train4BrkISOstate,
-                Train1ISOstate,Train2ISOstate,Train3ISOstate,Train4ISOstate,
-                Train1HISOstate,Train2HISOstate,Train3HISOstate,Train4HISOstate;
+    QList<bool> TrainBrkISOstate[4],TrainISOstate[4],TrainHISOstate[4];
 
     QList<bool*> Train1CutSignal,Train2CutSignal,Train3CutSignal,Train4CutSignal,
                  Train1CancelSignal,Train2CancelSignal,Train3CancelSignal,Train4CancelSignal,FaultReset;

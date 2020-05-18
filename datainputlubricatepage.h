@@ -4,6 +4,7 @@
 #include "mybase.h"
 class ButtonRectUtil;
 class QButtonGroup;
+class QTimer;
 namespace Ui {
 class DataInputLubricatePage;
 }
@@ -19,8 +20,8 @@ public:
 @brief:the object of keyboard;
 */
     ButtonRectUtil* buttonRectUtil;
-    void showEvent(QShowEvent *);
 
+    QTimer *timer;
 private slots:
 /**
 @brief:display the input value in real time
@@ -34,6 +35,8 @@ private slots:
  */
     void onSetGroupClicked(int);
     void on_btnStore_clicked();
+    void onTimerTimeout();
+    void updatePage();
 
 private:
     Ui::DataInputLubricatePage *ui;
