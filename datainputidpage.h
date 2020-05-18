@@ -15,6 +15,9 @@ public:
     explicit DataInputIDPage(QWidget *parent = 0);
     ~DataInputIDPage();
     
+private slots:
+    void on_btnStore_clicked();
+
 private:
     Ui::DataInputIDPage *ui;
 };
