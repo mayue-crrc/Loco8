@@ -358,7 +358,7 @@ public:
     ;bool	P302CHECK0
     ;bool	P302CHECK1;
 
-    ;unsigned short int	SPEED_SET
+    unsigned short int	SPEED_SET
     ;unsigned short int	SIM_LINE_VOLT
     ;unsigned short int	SIM_SPEED
     ;unsigned short int	LOADDDU
@@ -368,7 +368,7 @@ public:
     ;unsigned short int	WHEEL_DIADDU
     ;unsigned short int	FLL_DIS;
 
-    ;unsigned char	DDU_LIFE
+    unsigned char	DDU_LIFE
     ;unsigned char	MONTHDDU
     ;unsigned char	DAYDDU
     ;unsigned char	HOURDDU
