@@ -392,6 +392,12 @@ QString CrrcFaultMapper::GetTypeDBInfo()
 }
 Directions CrrcFaultMapper::getdirections(char* c)
 {
+
+    if (c == NULL)
+    {
+        return nullp;
+    }
+
     Directions t_dir;
     switch (*c)
     {
