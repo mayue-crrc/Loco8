@@ -217,9 +217,9 @@ QPushButton
   <widget class="QLabel" name="LBL7_2">
    <property name="geometry">
     <rect>
-     <x>453</x>
+     <x>454</x>
      <y>171</y>
-     <width>109</width>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
@@ -398,7 +398,7 @@ QPushButton
   <widget class="QLabel" name="LBL5_3">
    <property name="geometry">
     <rect>
-     <x>561</x>
+     <x>564</x>
      <y>129</y>
      <width>111</width>
      <height>22</height>
@@ -982,7 +982,7 @@ QPushButton
   <widget class="QLabel" name="LBL6_2">
    <property name="geometry">
     <rect>
-     <x>453</x>
+     <x>454</x>
      <y>150</y>
      <width>111</width>
      <height>22</height>
@@ -1301,7 +1301,7 @@ QPushButton
   <widget class="QLabel" name="LBL6_3">
    <property name="geometry">
     <rect>
-     <x>561</x>
+     <x>564</x>
      <y>150</y>
      <width>111</width>
      <height>22</height>
@@ -1411,7 +1411,7 @@ QPushButton
   <widget class="QLabel" name="LBL7_3">
    <property name="geometry">
     <rect>
-     <x>561</x>
+     <x>564</x>
      <y>171</y>
      <width>111</width>
      <height>22</height>
@@ -1432,7 +1432,7 @@ QPushButton
   <widget class="QLabel" name="LBL5_2">
    <property name="geometry">
     <rect>
-     <x>453</x>
+     <x>454</x>
      <y>129</y>
      <width>111</width>
      <height>22</height>
@@ -1613,7 +1613,7 @@ QPushButton
     <rect>
      <x>344</x>
      <y>150</y>
-     <width>110</width>
+     <width>111</width>
      <height>22</height>
     </rect>
    </property>
@@ -1725,7 +1725,6 @@ QPushButton
   <zorder>LBL10_4</zorder>
   <zorder>label_22</zorder>
   <zorder>label_54</zorder>
-  <zorder>LBL6_4</zorder>
   <zorder>LBL12_6</zorder>
   <zorder>LBL3_2</zorder>
   <zorder>LBL5_3</zorder>
@@ -1762,7 +1761,6 @@ QPushButton
   <zorder>label</zorder>
   <zorder>LBL10_2</zorder>
   <zorder>LBL6_2</zorder>
-  <zorder>LBL7_4</zorder>
   <zorder>LBL10_3</zorder>
   <zorder>label_49</zorder>
   <zorder>label_71</zorder>
@@ -1798,6 +1796,8 @@ QPushButton
   <zorder>label_63</zorder>
   <zorder>LBLCode4</zorder>
   <zorder>LBL6_1</zorder>
+  <zorder>LBL6_4</zorder>
+  <zorder>LBL7_4</zorder>
  </widget>
  <resources/>
  <connections/>

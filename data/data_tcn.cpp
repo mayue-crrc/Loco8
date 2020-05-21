@@ -437,7 +437,6 @@ void Data_TCN::updateData()
     {
         t_index = 0;
     }
-
     //MPU->GW
 
     {
@@ -901,6 +900,5 @@ void Data_TCN::updateData()
 
     train[t_index]->BOGIE1HISO = (train[t_index]->FAULT_COV1_HISO && train[t_index]->FAULT_COV2_HISO && train[t_index]->FAULT_INV1_HISO && train[t_index]->FAULT_INV2_HISO && train[t_index]->FAULT_ACU1_HISO);
     train[t_index]->BOGIE2HISO = (train[t_index]->FAULT_COV3_HISO && train[t_index]->FAULT_COV4_HISO && train[t_index]->FAULT_INV3_HISO && train[t_index]->FAULT_INV4_HISO && train[t_index]->FAULT_ACU2_HISO);
-
 
 }

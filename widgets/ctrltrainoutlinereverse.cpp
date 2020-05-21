@@ -18,6 +18,9 @@ CtrlTrainOutLineReverse::~CtrlTrainOutLineReverse()
 
 void CtrlTrainOutLineReverse::updateData(QList<QList<bool> > bo, QList<QList<QString> > str)
 {
+//    if (bo.size() != str.size())
+//        return;
+
     for (int i = 0; i< labels.size(); i++)
     {
         setLBLpic(labels.at(i),bo.at(i),str.at(i));
