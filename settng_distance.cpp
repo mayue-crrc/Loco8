@@ -33,3 +33,8 @@ void Settng_Distance::timerEvent(QTimerEvent *)
     this->database->data_CCU->MILEAGE_RESET = false;
     this->ui->BTN_Reset->setStyleSheet(NButtonUP);
 }
+
+void Settng_Distance::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->MILEAGE_RESET = false;
+}

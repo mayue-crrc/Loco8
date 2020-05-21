@@ -16,6 +16,7 @@ public:
     ~Settng_Distance();
     void updatePage();
     void timerEvent(QTimerEvent*);
+    void hideEvent(QHideEvent*);
 
 private slots:
     void on_BTN_Reset_pressed();
