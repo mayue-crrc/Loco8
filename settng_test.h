@@ -15,6 +15,7 @@ public:
     explicit Settng_Test(QWidget *parent = 0);
     ~Settng_Test();
     void timerEvent(QTimerEvent*);
+    void hideEvent(QHideEvent*);
 
 private slots:
     void on_BTN_LightTest_pressed();

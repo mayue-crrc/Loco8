@@ -401,7 +401,7 @@ void Data_TCN::updateData()
         train[i]->FAULT_INV3_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,4);
         train[i]->FAULT_INV4_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262e,4,5);
         train[i]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,2);
-        train[i]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,3);
+        train[i]->FAULT_ACU2_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,3);
 
         train[i]->FAULT_COV1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,6);
         train[i]->FAULT_COV2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162e,4,7);
@@ -412,7 +412,7 @@ void Data_TCN::updateData()
         train[i]->FAULT_INV3_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,0);
         train[i]->FAULT_INV4_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,1);
         train[i]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,4);
-        train[i]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,5);
+        train[i]->FAULT_ACU2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,5);
 
         train[i]->FAULT_DEADMAN_ISO = CrrcMvb::getCrrcMvb()->getBool(0x262f,4,2);
         train[i]->FAULT_DLZD_ISO = CrrcMvb::getCrrcMvb()->getBool(0x162f,4,6);
@@ -876,7 +876,7 @@ void Data_TCN::updateData()
     train[t_index]->FAULT_INV3_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,4);
     train[t_index]->FAULT_INV4_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,24,5);
     train[t_index]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,2);
-    train[t_index]->FAULT_ACU1_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,3);
+    train[t_index]->FAULT_ACU2_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,3);
 
     train[t_index]->FAULT_COV1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,6);
     train[t_index]->FAULT_COV2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,24,7);
@@ -887,7 +887,7 @@ void Data_TCN::updateData()
     train[t_index]->FAULT_INV3_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,0);
     train[t_index]->FAULT_INV4_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,1);
     train[t_index]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,4);
-    train[t_index]->FAULT_ACU1_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,5);
+    train[t_index]->FAULT_ACU2_HISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,5);
 
     train[t_index]->FAULT_DEADMAN_ISO = CrrcMvb::getCrrcMvb()->getBool(0x2702,26,2);
     train[t_index]->FAULT_DLZD_ISO = CrrcMvb::getCrrcMvb()->getBool(0x1702,26,6);
