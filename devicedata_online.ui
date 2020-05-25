@@ -242,7 +242,7 @@ background-color:rgb(240,0,0);
     </rect>
    </property>
    <property name="text">
-    <string>ACU3</string>
+    <string>ACU1</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
