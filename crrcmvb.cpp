@@ -129,11 +129,11 @@ void CrrcMvb::synchronizeMvbData()
                 return;
             }else
             {
-                printf("\n Read Port = %d OK,result = %d cycle = %d",pointer->port,portData[pointer->port]->status,portData[pointer->port]->cycle);
+                //printf("\n Read Port = %d OK,result = %d cycle = %d",pointer->port,portData[pointer->port]->status,portData[pointer->port]->cycle);
                 for(int i = 0;i<32;i++){
-                    printf(" %2x ",portData[pointer->port]->data[i]);
+                    //printf(" %2x ",portData[pointer->port]->data[i]);
                 }
-		printf("\n");
+        //printf("\n");
             }
 
         }
@@ -151,7 +151,7 @@ void CrrcMvb::synchronizeMvbData()
                 return;
             }else
             {
-                qDebug("dugon Write OK");
+                //qDebug("dugon Write OK");
 
             }
         }

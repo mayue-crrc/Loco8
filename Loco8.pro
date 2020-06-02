@@ -297,10 +297,12 @@ INCLUDEPATH += $$PWD/ss2xdd_2
 DEPENDPATH += $$PWD/ss2xdd_2
 
 unix:!macx: PRE_TARGETDEPS += $$PWD/ss2xdd_2/lib/libssmv2xdd_linux.a
+LIBS += -lcurses
+
 }
 
 
 
 
 
-LIBS += -lcurses
+

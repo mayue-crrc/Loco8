@@ -14,6 +14,8 @@ MUE_RESULT c_mvbSock::MVB_Init()
     UNSIGNED32 device_config = DEVICE_BASE_ADDR;
     GF_DEVICE_ERROR device_error;
     int time_out = 1000;
+#ifndef     USER_DEBUG_MODE
+
     initial();
     do{
         gf_result = gf_open_device(&device_config, 0, &device_error);
@@ -22,6 +24,8 @@ MUE_RESULT c_mvbSock::MVB_Init()
     } while ((gf_result != GF_OK) && ((time_out--)>0));
 
     gf_result = dev_init ();
+#endif
+
     if(gf_result != LP_OK){
         qDebug("dev_init err = %d \n",gf_result);
     }
@@ -38,6 +42,7 @@ MUE_RESULT c_mvbSock::MVB_Init()
 void c_mvbSock::AddPortDaddrToMVB(UNSIGNED16 port, int size, INTEGER8 type, UNSIGNED16 cycle)
 {
     static int clean_data_buf = 0;
+#ifndef     USER_DEBUG_MODE
 
     if(clean_data_buf == 0){
         memset(PD_snk_port_address,0,sizeof(PD_snk_port_address));
@@ -64,6 +69,8 @@ void c_mvbSock::AddPortDaddrToMVB(UNSIGNED16 port, int size, INTEGER8 type, UNSI
             soure_port_num++;
         }
     }
+#endif
+
 }
 
 void c_mvbSock::MVB_Set_Rev_Port(UNSIGNED16 port_addr)
@@ -93,8 +100,13 @@ MUE_RESULT c_mvbSock::MVB_init_port(void *p_bus_ctrl,UNSIGNED32 port_dir,UNSIGNE
 //开始mvb工作
 int c_mvbSock::MVB_Start()
 {
-       int res = init_port();
+    int res;
+#ifndef     USER_DEBUG_MODE
+
+       res = init_port();
        isStop = false;
+#endif
+
        return res;
 }
 
@@ -110,9 +122,12 @@ UNSIGNED16 c_mvbSock::MVB_Get_Data(WORD16 port_addr,UNSIGNED8 *status,WORD8 *dat
     if(isStop == true){
         return LP_ERROR;
     }
+#ifndef     USER_DEBUG_MODE
 
     lp_result = lp_get_dataset(&ds_name,data,cycle);
     *status = (UNSIGNED8)lp_result;
+#endif
+
     return lp_result;
 }
 //mvb发送数据
@@ -124,13 +139,20 @@ UNSIGNED16 c_mvbSock::MVB_Put_Data(WORD16 port_addr,WORD8 *data)
         return LP_ERROR;
     ds_name.ts_id = 0;
     ds_name.port_address = port_addr;
+#ifndef     USER_DEBUG_MODE
+
     lp_result = lp_put_dataset(&ds_name,data);
+#endif
+
     return lp_result;
 }
 
 void c_mvbSock::_MVBClose()
 {
-    	isStop = true;
+#ifndef     USER_DEBUG_MODE
+        isStop = true;
 	gf_mvb_stop();
 	gf_close_device();
+#endif
+
 }
