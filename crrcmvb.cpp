@@ -1,6 +1,9 @@
 #include "crrcmvb.h"
-#include "global.h"
 
+#ifndef     USER_DEBUG_MODE
+#include <curses.h>
+#endif
+#include "ss2xdd_2/ss2xdd_2.h"
 #define CRRC_MVB_DEBUG_MODE
 
 CrrcMvb::CrrcMvb()
@@ -34,54 +37,7 @@ bool CrrcMvb::initializeMvb()
 }
 bool CrrcMvb::InitReadPortData()
 {
-
-
-    /// init receive
-    for(int i = 0;i<portConfigure.size();i++)
-    {
-        if(portConfigure.at(i)->type == MVB_Sink)
-        {
-            M_MVB.MVB_Set_Rev_Port((WORD16)portConfigure.at(i)->port);
-        }else if(portConfigure.at(i)->type == MVB_Source)
-        {
-            M_MVB.MVB_Set_Put_Port((WORD16)portConfigure.at(i)->port);
-        }
-    }
-
-    if(result == MUE_RESULT_OK)
-    {
-        for(int i = 0;i<portConfigure.size();i++)
-        {
-            if(portConfigure.at(i)->type == MVB_Sink)
-            {
-                result = M_MVB.MVB_init_port(M_MVB.p_bus_ctrl,MUE_PD_FULL_PORT_CONFIG_SINK,(WORD16)portConfigure.at(i)->port,portConfigure.at(i)->size);
-            }else if(portConfigure.at(i)->type == MVB_Source)
-            {
-                result = M_MVB.MVB_init_port(M_MVB.p_bus_ctrl,MUE_PD_FULL_PORT_CONFIG_SRC,(WORD16)portConfigure.at(i)->port,portConfigure.at(i)->size);
-            }else if(portConfigure.at(i)->type == MVB_Virtual)
-            {
-                result = MUE_RESULT_OK;
-            }
-            else
-            {
-                qDebug("MVB_Init error %d %d",result,(WORD16)portConfigure.at(i)->port);
-                return false;
-            }
-        }
-    }
-
-
-    //启动MVB
-    if(result == MUE_RESULT_OK)
-    {
-        qDebug("MVB_init_port Msg.No %d",Msg.No);
-        M_MVB.MVB_Start(M_MVB.p_bus_ctrl,0x011);//MVB地址
-    }
-    else
-    {
-        qDebug("MVB_init_port SRC error %d",result);
-        return false;
-    }
+    M_MVB.MVB_Start();
     Msg.MVBisOK = true;
 }
 bool CrrcMvb::setMvbStop()
@@ -89,7 +45,7 @@ bool CrrcMvb::setMvbStop()
     //._MVBClose();
 }
 
-bool CrrcMvb::addPort(unsigned short port, FCode size, PortType type, unsigned short cycle)
+bool CrrcMvb::addPort(unsigned short port, FCode size, int type, unsigned short cycle)
 {
     if (port > 0x0FFF && type != MVB_Virtual)
     {
@@ -102,19 +58,19 @@ bool CrrcMvb::addPort(unsigned short port, FCode size, PortType type, unsigned s
     switch (size)
     {
         case MVB_FCode4:
-        t_size = MUE_PD_FULL_PORT_CONFIG_FC4;
+        t_size = TS_PORT_SIZE_16;
         break;
         case MVB_FCode3:
-        t_size = MUE_PD_FULL_PORT_CONFIG_FC3;
+        t_size = TS_PORT_SIZE_8;
         break;
         case MVB_FCode2:
-        t_size = MUE_PD_FULL_PORT_CONFIG_FC2;
+        t_size = TS_PORT_SIZE_4;
         break;
         case MVB_FCode1:
-        t_size = MUE_PD_FULL_PORT_CONFIG_FC1;
+        t_size = TS_PORT_SIZE_2;
         break;
         case MVB_FCode0:
-        t_size = MUE_PD_FULL_PORT_CONFIG_FC0;
+        t_size = TS_PORT_SIZE_1;
         break;
 
     default:
@@ -127,21 +83,21 @@ bool CrrcMvb::addPort(unsigned short port, FCode size, PortType type, unsigned s
     {
         this->portData.insert(port, new crrc_port_data(cycle));
         this->portConfigure << new struct crrc_port(port, t_size, type, cycle);
+        M_MVB.AddPortDaddrToMVB(port, t_size, type, cycle);
     }
-    else
-    {
+    else{
         qDebug() << "the port has already been in the port list"<< __FILE__ << __LINE__;;
     }
 }
 
 bool CrrcMvb::addSourcePort(unsigned short port, enum FCode size, unsigned short cycle)
 {
-    return this->addPort(port, size, MVB_Source, cycle);
+    return this->addPort(port, size, TS_PORT_SOURCE, cycle);
 }
 
 bool CrrcMvb::addSinkPort(unsigned short port, enum FCode size, unsigned short cycle)
 {
-    return this->addPort(port, size, MVB_Sink, cycle);
+    return this->addPort(port, size, TS_PORT_SINK, cycle);
 }
 
 bool CrrcMvb::addVirtualPort(unsigned short port, FCode size)
@@ -167,31 +123,35 @@ void CrrcMvb::synchronizeMvbData()
             result = M_MVB.MVB_Get_Data((WORD16)pointer->port,&portData[pointer->port]->status,portData[pointer->port]->data,&portData[pointer->port]->cycle);
 #endif
             //检测读取是否成功
-            if(result != MUE_RESULT_OK)
+            if(result != LP_OK)
             {
-                qDebug("dugon Read Error");
+                //qDebug(" Read Error code = %d \n",result);
                 return;
             }else
             {
-                qDebug("dugon Read OK");
-
+                printf("\n Read Port = %d OK,result = %d cycle = %d",pointer->port,portData[pointer->port]->status,portData[pointer->port]->cycle);
+                for(int i = 0;i<32;i++){
+                    printf(" %2x ",portData[pointer->port]->data[i]);
+                }
+		printf("\n");
             }
 
         }
         else if (MVB_Source == pointer->type)
         {
-#ifndef     USER_DEBUG_MODE
-            result = M_MVB.MVB_Put_Data((WORD16)pointer->port,portData[pointer->port]->data);
+		static unsigned int i = 0;
+		i++;	
+		memcpy(portData[pointer->port]->data,&i,sizeof(unsigned int));
+#ifndef USER_DEBUG_MODE
+        result = M_MVB.MVB_Put_Data((WORD16)pointer->port,portData[pointer->port]->data);
 #endif
-
             //检测写取是否成功
-            if(result != MUE_RESULT_OK)
-            {
-                //qDebug("dugon Write Error");
+        if(result != LP_OK){
+                qDebug("dugon Write Error");
                 return;
             }else
             {
-                //qDebug("dugon Write OK");
+                qDebug("dugon Write OK");
 
             }
         }

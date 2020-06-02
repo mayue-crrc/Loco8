@@ -1,7 +1,12 @@
 #ifndef CRRCMVB_H
 #define CRRCMVB_H
-#include "mvbcx/c_mvbsock.h"
-
+// MVB Client API
+#include "mvb_gf.h"
+#include "mvb_lp.h"
+#include "mvb_ap.h"
+#include "mvb_md.h"
+#include "mvb_dsw.h"
+#include "mvb_cls.h"
 #define _CRRC_MVB_VERSION 1
 #define _CRRC_MVB_SUPERVISION_TIME 1
 #include "QMap"
@@ -32,10 +37,10 @@ struct crrc_port
 {
     unsigned short int port;
     int size;
-    enum PortType type;
+    int type;
     unsigned short int cycle;
 
-    crrc_port(unsigned short int port, int size, enum PortType type, unsigned short int cycle)
+    crrc_port(unsigned short int port, int size, int type, unsigned short int cycle)
     {
         this->port = port;
         this->size = size;
@@ -80,7 +85,7 @@ public:
     //type：端口类型(源 宿）
     //cycle：特征周期
     //**********************
-    bool addPort(unsigned short int port, enum FCode size, enum PortType type, unsigned short int cycle);
+    bool addPort(unsigned short int port, enum FCode size,  int type, unsigned short int cycle);
 
     //**********************直接调用addport（），只配置一次
     bool addSourcePort(unsigned short int port, enum FCode size, unsigned short int cycle);
@@ -89,7 +94,7 @@ public:
     //**********************
 
     //**********************MVB通信同步，在主程序循环中调用，完成数据接受、发送功能。
-    ////目前做法，接受到的、要发送的数据均放入portData数据结构中
+    //目前做法，接受到的、要发送的数据均放入portData数据结构中
     void synchronizeMvbData();
 
     //**********************获取MVB接受数据，被外部调用
@@ -145,7 +150,7 @@ private:
     QMap<int, struct crrc_port_data *> portData;
 
     c_mvbSock M_MVB;
-    MUE_RESULT  result;
+    UNSIGNED16  result;
     M_MVBData Msg;
 
 //    uint16_t Regtabreg[16];

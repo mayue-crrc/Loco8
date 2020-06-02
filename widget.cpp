@@ -534,10 +534,10 @@ void Widget::showEvent(QShowEvent *)
         }
 #endif
 
-        if(crrcMvb->InitReadPortData())
-        {
-            logger()->error("MVB板卡设置操作模式失败");
-        }
+//        if(crrcMvb->InitReadPortData())
+//        {
+//            logger()->error("MVB板卡设置操作模式失败");
+//        }
 
         timer->start(333);
     }else

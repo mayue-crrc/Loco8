@@ -19,6 +19,8 @@ LIBS += -L$$PWD/../../../lib/ -lsqlite3
 INCLUDEPATH += $$PWD/../../../
 DEPENDPATH += $$PWD/../../../
 
+INCLUDEPATH += ./ss2xdd_2/drvkits/libs/linux_x86/inc
+
 
 DEPENDPATH += . log4qt log4qt/helpers log4qt/spi log4qt/varia
 INCLUDEPATH += . log4qt log4qt/helpers log4qt/spi log4qt/varia
@@ -77,12 +79,6 @@ SOURCES += main.cpp\
     faulttypebean.cpp \
     faultbean.cpp \
     log4qt/log4qt_init.cpp \
-    mvbcx/MVBC02C/BBD_C02C.c \
-    mvbcx/MVBC02C/bus_opt.c \
-    mvbcx/MVBC02C/os_hal.c \
-    mvbcx/c_mvbsock.cpp \
-    cxExtDev/blacklightthread.cpp \
-    cxExtDev/externaldevicelib.cpp \
     data/data_ccu.cpp \
     maindata_trainoutline.cpp \
     settng_bypass.cpp \
@@ -128,7 +124,8 @@ SOURCES += main.cpp\
     widgets/ctrldialog.cpp \
     devicedata_tracbrakeoutline.cpp \
     fault_current.cpp \
-    fault_detail.cpp
+    fault_detail.cpp \
+    mvb_cls.cpp
 
 HEADERS  += widget.h \
     mybase.h \
@@ -185,15 +182,6 @@ HEADERS  += widget.h \
     faulttypebean.h \
     faultbean.h \
     log4qt/custom.h \
-    mvbcx/MVBC02C/BBD_C02C.h \
-    mvbcx/MVBC02C/bus_opt.h \
-    mvbcx/MVBC02C/C02C_Def.h \
-    mvbcx/MVBC02C/mue_pd_full.h \
-    mvbcx/MVBC02C/os_hal.h \
-    mvbcx/MVBC02C/tcn_def.h \
-    mvbcx/c_mvbsock.h \
-    cxExtDev/blacklightthread.h \
-    cxExtDev/externaldevicelib.h \
     data/data_ccu.h \
     maindata_trainoutline.h \
     settng_bypass.h \
@@ -239,7 +227,8 @@ HEADERS  += widget.h \
     widgets/ctrldialog.h \
     devicedata_tracbrakeoutline.h \
     fault_current.h \
-    fault_detail.h
+    fault_detail.h \
+    mvb_cls.h
 
 FORMS    += widget.ui \
 header.ui \
@@ -292,3 +281,26 @@ RESOURCES += \
 OTHER_FILES += \
     log4qt/log4qt.pri \
     log4qt/Log4Qt.pri
+
+if(!contains(DEFINES, USER_DEBUG_MODE)){
+
+unix:!macx: LIBS += -L$$PWD/ss2xdd_2/lib/ -lclt_drv
+
+INCLUDEPATH += $$PWD/ss2xdd_2
+DEPENDPATH += $$PWD/ss2xdd_2
+
+unix:!macx: PRE_TARGETDEPS += $$PWD/ss2xdd_2/lib/libclt_drv.a
+
+unix:!macx: LIBS += -L$$PWD/ss2xdd_2/lib/ -lssmv2xdd_linux
+
+INCLUDEPATH += $$PWD/ss2xdd_2
+DEPENDPATH += $$PWD/ss2xdd_2
+
+unix:!macx: PRE_TARGETDEPS += $$PWD/ss2xdd_2/lib/libssmv2xdd_linux.a
+}
+
+
+
+
+
+LIBS += -lcurses
