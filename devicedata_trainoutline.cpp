@@ -36,17 +36,7 @@ void DeviceData_TrainOutline::updatePage()
     int num = database->data_CCU->RULOCO_NO;
     int vehiclevalue,trainvalue;
 
-    num = 3;
-//    int uic = database->data_CCU->UIC_ADDR;
-    if (num == 0)
-    {
-        this->hide();
-        return;
-    }
-    else{
-        this->show();
-    }
-
+    //num = 3;
     for(int i =0; i < buttons.size(); i++)
     {
         if (i < num)
@@ -62,12 +52,6 @@ void DeviceData_TrainOutline::updatePage()
             labels.at(i)->hide();
         }
     }
-/*
-    database->data_TCN->train[0]->NET_VOLT = 100;
-    database->data_TCN->train[1]->NET_VOLT = 200;
-    database->data_TCN->train[2]->NET_VOLT = 255;
-    database->data_TCN->train[3]->NET_VOLT = 1;
-*/
     //原边电压
     ui->LBL1_1->setText(QString::number(database->data_TCN->train[currentIndex]->NET_VOLT / 128));
     //主变压器温度1

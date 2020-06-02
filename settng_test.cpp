@@ -27,3 +27,8 @@ void Settng_Test::timerEvent(QTimerEvent *)
     this->database->data_CCU->LAMP_TEST = false;
 }
 
+void Settng_Test::hideEvent(QHideEvent *)
+{
+    this->database->data_CCU->LAMP_TEST = false;
+}
+

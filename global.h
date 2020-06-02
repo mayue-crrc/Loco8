@@ -41,10 +41,10 @@
 #define	YUNXINGANXIA   "image: url(:/images/images/yunxinganxia.png);"
 #define	YUNXINGZHUPING   "image: url(:/images/images/yunxingzhuping.png);"
 #define	YUNXINGZHUPINGANXIA   "image: url(:/images/images/yunxingzhupinganxia.png);"
-#define	PANTOUP	"image: url(:/images/images/shenggong.png);"
+#define	PANTOUP	"image: url(:/images/images/shengqi.png);"
 #define	PANTODOWN	"image: url(:/images/images/jianggong.png);"
 #define	PANTOISOLATE	"image: url(:/images/images/gonggeli.png);"
-#define	PANTOIRISE	"image: url(:/images/images/shengqi.png);"
+#define	PANTOIRISE	"image: url(:/images/images/shenggong.png);"
 #define	WEIHU   "image: url(:/images/images/weihu.png);"
 #define	WEIHUZHUPING   "image: url(:/images/images/weihuzhuping.png);"
 #define	WEIHUANXIA   "image: url(:/images/images/weihuanxia.png);"
@@ -81,7 +81,6 @@
 #define	HUAXING	"image: url(:/images/images/huaxing.png);"
 #define	TINGFANGZHIDONGSHIJIA	"image: url(:/images/images/tingfangshijia.png);"
 #define	TINGFANGZHIDONGHUANJIE	"image: url(:/images/images/tingfanghuanjie.png);"
-#define	TINGFANGZHIDONGGELI	"image: url(:/images/images/tingfanggeli.png);"
 #define	TINGFANGZHIDONGELI	"image: url(:/images/images/tingfanggeli.png);"
 #define	SASHA	"image: url(:/images/images/sasha.png);"
 #define	JINJIZHIDONG	"image: url(:/images/images/jinjizhidong.png);"
@@ -93,10 +92,11 @@
 #define QUDONGGELI    "image: url(:/images/images/qudongiso.png);"
 #define	NULLIMAGE	"background-color:rgb(0,0,0);border:1px solid lightgray;"
 #define	HIDEIMAGE	"background-color:transparent;border:0px solid lightgray;"
-
+#define SIJISHIJIHUO    "image: url(:/images/images/Active.png);"
 #define BUTTONRELEASE "font:16px;color: rgb(240,240,240);background-color: rgb(0, 0, 0);border-top: 2px solid white;	border-left: 2px solid white;border-right: 1px solid white;border-bottom: 1px solid white;"
 #define BUTTONPRESSED "font:16px;color: rgb(0,0,0);background-color: rgb(240,240,0);border-top: 1px solid white;	border-left: 1px solid white;border-right: 2px solid white;border-bottom: 2px solid white;"
-
+#define GAOYABIHE  "image: url(:/images/images/gaoyabihe.png);"
+#define GAOYADUANKAI "image: url(:/images/images/gaoyaduankai.png);"
 
 #include <stdlib.h>
 

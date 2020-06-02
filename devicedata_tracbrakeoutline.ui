@@ -36,7 +36,7 @@ QLabel
   <widget class="QProgressBar" name="BARTrain1Act1_2">
    <property name="geometry">
     <rect>
-     <x>77</x>
+     <x>76</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -153,7 +153,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain1Act2_2">
    <property name="geometry">
     <rect>
-     <x>117</x>
+     <x>116</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -192,7 +192,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain1Set2_2">
    <property name="geometry">
     <rect>
-     <x>105</x>
+     <x>104</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>
@@ -309,7 +309,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain1Set3_2">
    <property name="geometry">
     <rect>
-     <x>145</x>
+     <x>144</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>
@@ -387,7 +387,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain1Set1_2">
    <property name="geometry">
     <rect>
-     <x>65</x>
+     <x>64</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>
@@ -914,7 +914,7 @@ border:0px solid white;</string>
   <widget class="QProgressBar" name="BARTrain1Act4_2">
    <property name="geometry">
     <rect>
-     <x>197</x>
+     <x>196</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -992,7 +992,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain1Act3_2">
    <property name="geometry">
     <rect>
-     <x>157</x>
+     <x>156</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -1031,7 +1031,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain1Set4_2">
    <property name="geometry">
     <rect>
-     <x>185</x>
+     <x>184</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>
@@ -2728,7 +2728,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -2958,7 +2958,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3085,7 +3085,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3121,7 +3121,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3670,7 +3670,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3693,7 +3693,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3716,7 +3716,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3739,7 +3739,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3802,7 +3802,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3825,7 +3825,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3868,7 +3868,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3891,7 +3891,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3914,7 +3914,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3937,7 +3937,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -3960,7 +3960,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4003,7 +4003,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4026,7 +4026,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4049,7 +4049,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4092,7 +4092,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4115,7 +4115,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4178,7 +4178,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4261,7 +4261,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4284,7 +4284,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4327,7 +4327,7 @@ border:0px solid white;</string>
 }</string>
    </property>
    <property name="text">
-    <string>-200</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -4504,7 +4504,7 @@ border:0px solid white;</string>
   <widget class="QProgressBar" name="BARTrain2Act2_2">
    <property name="geometry">
     <rect>
-     <x>329</x>
+     <x>328</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -4543,7 +4543,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain2Act4_2">
    <property name="geometry">
     <rect>
-     <x>409</x>
+     <x>408</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -4699,7 +4699,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain2Set3_2">
    <property name="geometry">
     <rect>
-     <x>357</x>
+     <x>356</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>
@@ -4738,7 +4738,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain2Act1_2">
    <property name="geometry">
     <rect>
-     <x>289</x>
+     <x>288</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -4777,7 +4777,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain2Act3_2">
    <property name="geometry">
     <rect>
-     <x>369</x>
+     <x>368</x>
      <y>178</y>
      <width>25</width>
      <height>165</height>
@@ -4855,7 +4855,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain2Set4_2">
    <property name="geometry">
     <rect>
-     <x>397</x>
+     <x>396</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>
@@ -4894,7 +4894,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain2Set2_2">
    <property name="geometry">
     <rect>
-     <x>317</x>
+     <x>316</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>
@@ -5011,7 +5011,7 @@ QProgressBar::chunk:enabled {
   <widget class="QProgressBar" name="BARTrain2Set1_2">
    <property name="geometry">
     <rect>
-     <x>277</x>
+     <x>276</x>
      <y>178</y>
      <width>10</width>
      <height>165</height>

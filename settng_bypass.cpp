@@ -324,6 +324,7 @@ void Settng_Bypass::on_BTN_HandISO_pressed()
     default:
         break;
     }
+    this->ui->BTN_Close->setDisabled(true);
     timerISO = startTimer(3000);
 }
 
@@ -346,6 +347,7 @@ void Settng_Bypass::on_BTN_ISOCancel_pressed()
     default:
         break;
     }
+    this->ui->BTN_Close->setDisabled(true);
     timerREL = startTimer(3000);
 }
 
@@ -372,6 +374,7 @@ void Settng_Bypass::timerEvent(QTimerEvent *e)
             break;
         }
         timerISO = 0;
+        this->ui->BTN_Close->setDisabled(false);
     }
 
     if(timerREL == e->timerId())
@@ -394,6 +397,7 @@ void Settng_Bypass::timerEvent(QTimerEvent *e)
         default:
             break;
         }
+        this->ui->BTN_Close->setDisabled(false);
         timerREL = 0;
     }
 
@@ -402,6 +406,7 @@ void Settng_Bypass::timerEvent(QTimerEvent *e)
         killTimer(timerResetFault);
         *FaultReset[TrainIndex] = false;
         this->ui->BTN_ClearFault->setStyleSheet(NButtonUP);
+        timerResetFault = 0;
     }
 
     this->ui->setBox->hide();
@@ -413,9 +418,11 @@ void Settng_Bypass::on_BTN_AutoSandCutout_pressed()
     if(this->database->data_CCU->SAND_CUT)
     {
         this->database->data_CCU->SAND_CUTDDU = false;
+        this->ui->BTN_AutoSandCutout->setStyleSheet(NButtonUP);
     }else
     {
         this->database->data_CCU->SAND_CUTDDU = true;
+        this->ui->BTN_AutoSandCutout->setStyleSheet(NButtonDOWN);
     }
 }
 
@@ -424,9 +431,11 @@ void Settng_Bypass::on_BTN_CombCutout_pressed()
     if(this->database->data_CCU->ELEC_AIR_CUT)
     {
         this->database->data_CCU->ELEC_AIR_CUTDDU = false;
+        this->ui->BTN_CombCutout->setStyleSheet(NButtonUP);
     }else
     {
         this->database->data_CCU->ELEC_AIR_CUTDDU = true;
+        this->ui->BTN_CombCutout->setStyleSheet(NButtonDOWN);
     }
 }
 
@@ -441,4 +450,17 @@ void Settng_Bypass::on_BTN_ClearFault_pressed()
         *FaultReset[TrainIndex] = true;
         timerResetFault = startTimer(3000);
     }
+}
+
+void Settng_Bypass::hideEvent(QHideEvent *)
+{
+    *FaultReset[TrainIndex] = false;
+    *Train1CutSignal.at(SelectIndex) = false;
+    *Train2CutSignal.at(SelectIndex) = false;
+    *Train3CutSignal.at(SelectIndex) = false;
+    *Train4CutSignal.at(SelectIndex) = false;
+    *Train1CancelSignal.at(SelectIndex) = false;
+    *Train2CancelSignal.at(SelectIndex) = false;
+    *Train3CancelSignal.at(SelectIndex) = false;
+    *Train4CancelSignal.at(SelectIndex) = false;
 }

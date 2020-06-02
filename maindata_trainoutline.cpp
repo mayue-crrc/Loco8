@@ -21,35 +21,34 @@ MainData_TrainOutline::~MainData_TrainOutline()
 void MainData_TrainOutline::updatePage()
 {
     int num = database->data_CCU->RULOCO_NO;
-//    int curtrain = database->data_CCU->UIC_ADDR;
 
     num = 3;
 
     switch(num)
     {
         case 1:
-            showTrainData(ui->Train1,num);
+            showTrainData(ui->Train1,0);
             ui->Train2->hide();
             ui->Train3->hide();
             ui->Train4->hide();
         break;
         case 2:
-             showTrainData(ui->Train1,num);
-             showTrainData(ui->Train2,num);
+             showTrainData(ui->Train1,0);
+             showTrainData(ui->Train2,1);
              ui->Train3->hide();
              ui->Train4->hide();
         break;
         case 3:
-            showTrainData(ui->Train1,num);
-            showTrainData(ui->Train2,num);
-            showTrainData(ui->Train3,num);
+            showTrainData(ui->Train1,0);
+            showTrainData(ui->Train2,1);
+            showTrainData(ui->Train3,2);
              ui->Train4->hide();
         break;
         case 4:
-            showTrainData(ui->Train1,num);
-            showTrainData(ui->Train2,num);
-            showTrainData(ui->Train3,num);
-            showTrainData(ui->Train4,num);
+            showTrainData(ui->Train1,0);
+            showTrainData(ui->Train2,1);
+            showTrainData(ui->Train3,2);
+            showTrainData(ui->Train4,3);
         break;
         default:
             ui->Train1->hide();
@@ -99,8 +98,9 @@ void MainData_TrainOutline::SetAllData(int n)
     // 电钥匙激活
     data.clear();
     t_style.clear();
-    t_style<< HIDEIMAGE<< HIDEIMAGE;
+    t_style<< SIJISHIJIHUO<< HIDEIMAGE;
     data<< database->data_TCN->train[n]->STATE_CAB_ACT<< true;
+
     allBoolData<< data;
     allImageData<< t_style;
     //方向
@@ -129,27 +129,18 @@ void MainData_TrainOutline::SetAllData(int n)
     t_style.clear();
     data<<database->data_TCN->train[n]->STATE_H_HT
          <<true;
-    t_style<<HIDEIMAGE<<HIDEIMAGE;
+    t_style<<GAOYABIHE<<GAOYADUANKAI;
     allBoolData<< data;
     allImageData<< t_style;
     //主断
     data.clear();
     t_style.clear();
     data<<database->data_TCN->train[n]->STATE_QFM_ON
-           <<database->data_TCN->train[n]->STATE_QFM_ISO
            <<database->data_TCN->train[n]->STATE_QFM_OFF
            <<database->data_TCN->train[n]->STATE_QFM_K
+           <<database->data_TCN->train[n]->STATE_QFM_ISO
            <<true;
-    t_style<<ZHUDUANBIHE<<ZHUDUANJIUXU<<ZHUDUANDUANKAI<<ZHUDUANGELI<<HIDEIMAGE;
-    allBoolData<< data;
-    allImageData<< t_style;
-    //停放制动
-    data.clear();
-    t_style.clear();
-    data<<database->data_TCN->train[n]->STATE_PARK_BRK_I
-           <<database->data_TCN->train[n]->STATE_PARK_BRK_ON
-           <<true;
-    t_style<<TINGFANGZHIDONGGELI<<TINGFANGZHIDONGSHIJIA<<TINGFANGZHIDONGHUANJIE;
+    t_style<<ZHUDUANBIHE<<ZHUDUANDUANKAI<<ZHUDUANJIUXU<<ZHUDUANGELI<<HIDEIMAGE;
     allBoolData<< data;
     allImageData<< t_style;
     //空气制动
@@ -169,6 +160,15 @@ void MainData_TrainOutline::SetAllData(int n)
          <<database->data_TCN->train[n]->STATE_AIR_BRK2_I
          <<true;
     t_style<<CHANGYONGZHIDONGGELI<<CHANGYONGZHIDONGSHIJIA<<CHANGYONGZHIDONGHUANJIE;
+    allBoolData<< data;
+    allImageData<< t_style;
+    //停放制动
+    data.clear();
+    t_style.clear();
+    data<<database->data_TCN->train[n]->STATE_PARK_BRK_I
+           <<database->data_TCN->train[n]->STATE_PARK_BRK_ON
+           <<true;
+    t_style<<TINGFANGZHIDONGELI<<TINGFANGZHIDONGSHIJIA<<TINGFANGZHIDONGHUANJIE;
     allBoolData<< data;
     allImageData<< t_style;
     //轴隔离状态

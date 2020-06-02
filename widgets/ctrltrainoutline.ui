@@ -262,7 +262,7 @@ QPushButton
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/images/images/linevbreakerfault.png);</string>
+    <string notr="true">border-image: url(:/images/images/gaoyabihe.png);</string>
    </property>
    <property name="text">
     <string/>
