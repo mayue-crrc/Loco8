@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
 #ifdef QT_VERSION_5_6
     QTextCodec *codec = QTextCodec::codecForName("UTF-8");
     QTextCodec::setCodecForLocale(codec);
+//    QTextCodec::setCodecForCStrings( QTextCodec::codecForLocale() );
+//    QTextCodec::setCodecForTr( QTextCodec::codecForName( "UTF-8" ) );
 #else
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
